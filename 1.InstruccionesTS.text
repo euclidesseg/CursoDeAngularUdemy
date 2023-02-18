@@ -1,0 +1,28 @@
+---- let puntos: number ! string = 95       |De esta manera en TS establezco que una variable resibira estos dos tipos de datos
+                                            |No me permite agregarle objetos
+
+----let habilidades :string[] = ['uno','dos','3'];                      |Arreglo de JS se le puede agrear el tipo
+----let habilidades:(bollean ! string ! number) [] = ['uno','dos','3']; |Arreglo de JS se le puede agrear varios tipos de datos
+
+----arreglo en ts en ts para estableces arreglos primero establecemos una interfaz la cual tendra las propiedades del arreglo
+
+  interface Personaje{
+  nombre:string;
+  hp:number;
+  habilidades:string[];
+  arma?:string;          | que sea opcional 
+}
+
+const personaje: Personaje = {   |ahora estariamos obligados a usar todas las propiedades de la clase
+  nombre: 'hernest',
+  hp: 100,
+  habilidades:['adsfads','asdf']
+}
+
+
+----Funciones en ts                             
+function Sumar(a: number, b: number): number{    |acabamos de especificar que si o si esta funcion va a retornar un number
+    return a + b;
+}
+
+=====SIEMPRE ES BUENA PRACTICA PONERLE EL TIPO DE ARGUMENTO Y DE RETORNO QUE RESIBE UNA FUNCION 
