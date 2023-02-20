@@ -2,7 +2,7 @@ interface SuperHeore {
     nombre: string;
     edad?: number;
     direccion:  Direccion;
-    mostrarDireccion: () => string
+    mostrarDireccion: () => string //funcion que me retornara un string
 }
 
 interface Direccion {
