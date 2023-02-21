@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'BasesAngular';
+
+  // Usando la interpolacion
+  public numero    : number = 10;
+  public numeroBase: number = 3;
+
+  public operar(numero:number): void {
+    this.numero = this.numero + numero;
+  }
+
 }
