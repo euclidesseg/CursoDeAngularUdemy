@@ -1,0 +1,3 @@
+----Algo fundamental para las aplicaciones en angular es un buen manejo de arbol de direcciones
+----Las buenas pracitvas es trabajar de manera modularizadas es decir creando carpetas de modulos que 
+----en su interior tendran un archivo que se llamaran igual como "nombre.module.ts"
