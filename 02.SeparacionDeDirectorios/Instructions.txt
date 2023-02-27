@@ -1,3 +1,25 @@
-----Algo fundamental para las aplicaciones en angular es un buen manejo de arbol de direcciones
-----Las buenas pracitvas es trabajar de manera modularizadas es decir creando carpetas de modulos que 
-----en su interior tendran un archivo que se llamaran igual como "nombre.module.ts"
+---- Algo fundamental para las aplicaciones en angular es un buen manejo de arbol de direcciones
+---- Las buenas pracitvas es trabajar de manera modularizadas es decir creando carpetas de modulos que 
+---- en su interior tendran un archivo que se llamaran igual como "nombre.module.ts, y los archivos relacionados 
+---- al componente como nombre.component.ts nombre.component.css o nombre.component.html"
+---- estos modulos iran dentro de nuestro modulo principal de app
+---- par eso crearemos otro componente llamado heroe
+
+---- para  que lo que hagamos en este modulo se vea devemos importar su componente hasta un modulo,
+---- y como tenemos un solo modulo que es el de app lo importamos hasta ahi en algunos casos tambien se importara
+---- en nuestro modulo mas cercano o modulo respectivo
+
+---- Crearemos una carpeta para el listado de heroes
+---- Crear un componente de forma automatica
+
+
+
+---- ========= Directiva ngFor ============
+
+---- *ngFor Es una directiva estructural ya que modifica el DOM
+---- para ver esta directiva vamos a continuar trabajando en el componente de listado
+
+---- ========= Directiva *ngIF ============
+
+---- *ngIF tambien es una directiva estructural ya que modifica el DOM
+---- para ver esta directiva vamos a continuar trabajando en el componente de listado
