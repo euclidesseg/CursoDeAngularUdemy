@@ -5,11 +5,15 @@
     </li>
 </ul>
 
-
-<div *ngIf="heroeBorrado !== ''">
+<div *ngIf="heroeBorrado !== ''; else noBorrado">
 <!-- Si herore borrado es diferente de vacio se mostrara lo que esta dentro del div -->
     <h1>Heroe Borrado</h1>
     <span>{{heroeBorrado}}</span>
 </div>
+
+<ng-template #noBorrado>
+    <p>No ha borrado nada</p>
+</ng-template>
+
 
 <button (click)="borrarHeroe()"> Eliminar</button>
