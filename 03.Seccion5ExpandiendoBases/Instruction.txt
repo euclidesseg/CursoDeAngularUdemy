@@ -1,0 +1,22 @@
+---- Recordemos que para hacer que el html de un componente se muestre
+---- Exportamos este componente en su modulo,
+---- Luego importamos ese modulo en el Modulo principal de la aplicacion,
+---- Y agregamos ese el selector del componente en el template del componente principal
+
+
+----DISEÑO DE LA PANTALLA A TRABAJAR----
+
+=========FORMSMODULE=========
+---- Evitar AutRefress
+---- Primero hacemos que sea al formulario quien escuche la 
+---- De la siguiente ndicamos que quien va a mandar el evento es el formulaio 
+---- <form (submit)="agregar( $event )" >
+
+---- Con $event  mando el evento que se desencadena en el form, como argumento a la funcion agregar
+---- y ahi podre manipular el DOM usando event.target.classlist.add('nueva-clase')
+---- console.log(event) // para ver todo el evento que se dispara
+
+---- Angular para evitar todo eso de mandar el evento dispone de un modulo llamado ==FormsModule==
+---- y para usarlo devemos importarlo en nuestro modulo mas sercano mas bien en el de nustro componente
+---- Luego para usarlo reemplazamos el submit del formulario y agregamos ngSubmit para evitar asi el AutRefress
+---- con ng tambien po

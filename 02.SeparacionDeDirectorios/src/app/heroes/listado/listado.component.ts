@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 export class ListadoComponent {
 
   // pra comprender la directiva *ngFor crearemos un arreglo de heroes
-
   heroes: string[] = ['Ironman', 'Spiderman', 'Goku'];
 
   heroeBorrado:string = '';
