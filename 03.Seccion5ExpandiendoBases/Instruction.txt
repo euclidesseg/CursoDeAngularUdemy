@@ -6,7 +6,7 @@
 
 ----DISEÑO DE LA PANTALLA A TRABAJAR----
 
-=========FORMSMODULE=========
+=========FormsModule=========
 ---- Evitar AutRefress
 ---- Primero hacemos que sea al formulario quien escuche la 
 ---- De la siguiente ndicamos que quien va a mandar el evento es el formulaio 
@@ -20,3 +20,33 @@
 ---- y para usarlo devemos importarlo en nuestro modulo mas sercano mas bien en el de nustro componente
 ---- Luego para usarlo reemplazamos el submit del formulario y agregamos ngSubmit para evitar asi el AutRefress
 ---- con ng tambien po
+
+
+===== ngModel ======
+---- Vamos a ver la forma de obtener la informacion de las cajas de texto de un formulario 
+---- con ngModel, ng model hace referencia al termino bananainbox  y es usado para hacer un binding bidireccional
+---- Ahora cuando usamos ngModel devemos estableces una propiedad nombre al input o etiqueta que usemos
+
+====== Mostrar Listado de Personajes ======
+---- Para este ejempli creamo una interfaz Personaje a partir de la cual crearemos el arreglo que va
+---- a contener cada objeto con los datos de personaje en el componente se muestra la informacion
+
+
+====== Crear Componentes Hijos ======
+---- Cuando se tiene hasta ahora seria la pagina que se quiere mostrar es decir, el div principal 
+---- Pero tanto como la columna donde esta rl formulario y la lista puden ser componentes independientes
+---- Cada uno es decir, podriamos tener un componente que emita un super Heroe con su poder y un componente
+---- que me muestre cada heroe, en este orden de idea esos dos componentes se agregarian a nuestro componente
+---- main-Page, para esto vamos a crear un nuevo componente para personajes
+
+---- Este modulo solo se va a utlizar cuando alguien imprima el componente Main-Page-component
+---- A continuacion de aqui la informacion estara en el componente personajes
+
+======== @Input =============
+---- @Input es una directiva que se usa dentro de un componente hijo para indicar que va a recibir datos
+---- desde un componente padre
+---- para manterner una estructura mas oganizada vamos a crear una interface dentro de 
+---- la carpeta interface para agregar el modelo de super heroes
+
+======= Tarea realizar un nuevo componente para el formulario y enviar el arreglo con los datos iniciales 
+======= Desde el componente padre hasta el componente hijo

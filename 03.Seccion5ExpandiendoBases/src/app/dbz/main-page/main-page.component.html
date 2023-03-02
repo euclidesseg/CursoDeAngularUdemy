@@ -3,23 +3,20 @@
 
 <div class="row">
     <div class="col">
-        <h3>Personajes</h3>
-        <hr>
-        <ul>
-            <li>Krillin - 7,000</li>
-            <li>Goku - 15,000</li>
-            <li>Vegeta - 8,500</li>
-        </ul>
-    </div>
-    <div class="col">
-        <h3>Agregar</h3>
-        <hr>
+        <!--# Mandaremos el arreglo de personajes hasta el componente personajesList-->
+        <!--# El nombre de personajes es poe el areglo qu esta en el componente hijo personajes-->
+        <app-personajes
+         [personajes]="personajes">
+        </app-personajes>
 
-        <!-- Indicamos que quien va a mandar el evento es el formulaio -->
-        <form (ngSubmit)="agregar()" >
-            <input type="text" placeholder="Nimbre"/>
-            <input type="number" placeholder="Nivel"/>
-            <button type="submit">Agregar</button>
-        </form>
+    </div>
+
+    <div class="col">
+
+        <app-form
+         [personajes] = "personajes"
+         [nuevo] = "nuevo"
+        ></app-form>
+
     </div>
 </div>

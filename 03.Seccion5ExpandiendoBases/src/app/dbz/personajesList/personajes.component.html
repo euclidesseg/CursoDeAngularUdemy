@@ -1,0 +1,10 @@
+
+<h3>Personajes</h3>
+<hr>
+<ul *ngFor="let personaje of personajes">
+    <li>Nombre: {{personaje.nombre}} Poder: {{personaje.poder | number}}</li>
+    <!-- Con | el cual es un pipe indico que quiero graficar el dato como numero -->
+</ul>
+
+<!-- # Para que no nos de errores devemos pasar informacion desde nuestro componente padre
+     # Hasta nuestro componente hijo esto se logra con @Input -->
