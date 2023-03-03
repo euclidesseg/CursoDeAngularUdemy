@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
 
 @Component({
@@ -9,24 +9,25 @@ import { Personaje } from '../interfaces/dbz.interface';
 export class FormComponent {
 
   // Recibe el arreglo con datos iniciales desde el componente padre
-  @Input() personajes: Personaje[] = [];
-
   @Input() nuevo: Personaje = {
     nombre: '',
     poder :  0
   }
 
+
+  @Output() onNewPersonaje: EventEmitter<Personaje>= new EventEmitter<Personaje>();
+  //# Indicamos que nuestro evento va a emitir un nuevo personaje es decir una onjeto de tipo personaje
   agregar() {
     if (this.nuevo.nombre.trim().length === 0) {
       return;
     }
-    this.personajes.push(this.nuevo)
-    console.log('se ha agregado el personaje ' + this.nuevo.nombre);
+    this.onNewPersonaje.emit(this.nuevo)
+    //# se envia el objeto personaje porque es el unico que satisface la interfaz de personaje
+    console.log( this.nuevo);
 
     this.nuevo = {
       nombre: '',
       poder: 0
     }
-    console.log(this.personajes);
   }
 }

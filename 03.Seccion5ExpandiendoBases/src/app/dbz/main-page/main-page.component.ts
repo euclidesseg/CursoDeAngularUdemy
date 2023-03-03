@@ -21,8 +21,13 @@ export class MainPageComponent {
     }
   ]
 
+
   nuevo: Personaje = {
     nombre: 'Goten',
     poder  : 7000
+  }
+
+  agregarNuevoPersonaje(parametro:Personaje){
+    this.personajes.push(parametro);
   }
 }

@@ -25,7 +25,7 @@
 ===== ngModel ======
 ---- Vamos a ver la forma de obtener la informacion de las cajas de texto de un formulario 
 ---- con ngModel, ng model hace referencia al termino bananainbox  y es usado para hacer un binding bidireccional
----- Ahora cuando usamos ngModel devemos estableces una propiedad nombre al input o etiqueta que usemos
+---- Ahora, cuando usamos ngModel devemos estableces una propiedad nombre al input o etiqueta que usemos
 
 ====== Mostrar Listado de Personajes ======
 ---- Para este ejempli creamo una interfaz Personaje a partir de la cual crearemos el arreglo que va
@@ -43,10 +43,21 @@
 ---- A continuacion de aqui la informacion estara en el componente personajes
 
 ======== @Input =============
----- @Input es una directiva que se usa dentro de un componente hijo para indicar que va a recibir datos
+---- @Input() es una directiva que se usa dentro de un componente hijo para indicar que va a recibir datos
 ---- desde un componente padre
 ---- para manterner una estructura mas oganizada vamos a crear una interface dentro de 
 ---- la carpeta interface para agregar el modelo de super heroes
 
 ======= Tarea realizar un nuevo componente para el formulario y enviar el arreglo con los datos iniciales 
 ======= Desde el componente padre hasta el componente hijo
+
+======= @Outputs Y EventEmitter
+---- @Output() es una directiva de angular que se usa dentro de un componente hijo para definir que se va a enviar
+---- datos hacia un componente padre para esto vamos a agregar un personaje usando eventEmitt
+---- para eso borramos el arreglo ue le enviamos a form desde el componente padre y tambien el input que recibe 
+---- ese arreglo 
+
+---- Con @Output y eventEmiter se crea un nuevo evento personalizado para que cando algo suceda en el componente 
+---- hijo se vea reflejado en el componente padre
+---- despues de configurar el evento personalizado vamos a el template del componente padre 
+---- y en la etiqueda del componente app-form vamos a ejecutar ese evento emitido

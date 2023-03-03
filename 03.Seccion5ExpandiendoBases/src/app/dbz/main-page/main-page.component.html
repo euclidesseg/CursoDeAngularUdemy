@@ -14,9 +14,10 @@
     <div class="col">
 
         <app-form
-         [personajes] = "personajes"
          [nuevo] = "nuevo"
+         (onNewPersonaje)="agregarNuevoPersonaje( $event )"
         ></app-form>
-
+        <!--# No es necesario agregar un boton para activar la funcion agregarNuevoPersonaje() porque esta se activa
+            # automaticamente cuando se activa el boton del componente hijo y se emite el evento -->
     </div>
 </div>
