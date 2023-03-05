@@ -61,3 +61,14 @@
 ---- hijo se vea reflejado en el componente padre
 ---- despues de configurar el evento personalizado vamos a el template del componente padre 
 ---- y en la etiqueda del componente app-form vamos a ejecutar ese evento emitido
+
+=======SERVICIOS==========
+---- En Angular, los servicios son clases que se utilizan para compartir datos o lógica de 
+---- negocio entre componentes de una aplicación. Los servicios se definen
+---- una vez y se pueden inyectar en varios componentes para su uso
+
+---- Para esto entonces creamos una carpeta llamada Services que en la que figuraran 
+---- Para tener en cuenta los servicios obligaroriamente deben tener el decorador injectable para especificar
+---- que se va a inyectar en otros componentes
+---- para que se puedan inyectar tambien se deben registrar en el archivo module de nuestro modulo
+---- y se registran en un arreglo llamado providers
