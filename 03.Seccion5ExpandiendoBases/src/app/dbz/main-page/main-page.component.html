@@ -5,17 +5,14 @@
     <div class="col">
         <!--# Mandaremos el arreglo de personajes hasta el componente personajesList-->
         <!--# El nombre de personajes es poe el areglo qu esta en el componente hijo personajes-->
-        <app-personajes
-         [personajes]="personajes">
+        <app-personajes>
         </app-personajes>
 
     </div>
 
     <div class="col">
-
         <app-form
          [nuevo] = "nuevo"
-         (onNewPersonaje)="agregarNuevoPersonaje( $event )"
         ></app-form>
         <!--# No es necesario agregar un boton para activar la funcion agregarNuevoPersonaje() porque esta se activa
             # automaticamente cuando se activa el boton del componente hijo y se emite el evento -->

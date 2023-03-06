@@ -72,3 +72,11 @@
 ---- que se va a inyectar en otros componentes
 ---- para que se puedan inyectar tambien se deben registrar en el archivo module de nuestro modulo
 ---- y se registran en un arreglo llamado providers
+
+======== CENTRALIZAR EL ACCESO DE LOS PERSONAJES EN EL CERVICIO ========
+---- Para centralizar los datos del modulo creamos la nueva rama de git llamada feature/services esto para no 
+---- cambiar todo lo aprendido y los apuntes anteriores.
+
+==== Refactorizar nuestra app
+---- Lo primero que se hara sera pasar toda la informacion de los personajes que esta en main-component
+---- hasta nuestro servicio DbzService, incluido el evento para crear agrear un personaje
