@@ -1,0 +1,6 @@
+----tsconfig.spec.json === archivo que refiere a pruebas
+----tsconfig.json      === otro archivo de configuracion
+----package.json       === se agregaran los paquetes y dependencias
+----angular.json         === contiene configuraciones importantes de la aplicacion como 
+                            recursos estaticos estilos etc
+----node_module        === contiene modulos como los que traducen el typescript a javascript

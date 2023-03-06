@@ -1,0 +1,14 @@
+
+====BLOQUES FUNDAMENTALES DE ANGULAR====
+----COMPONENTES
+----DIRECTIVAS
+----SERVICIOS
+----MODULOS
+----RUTAS
+
+
+====npm install -g @angular/cli====
+----Instalar angular de maneral global en el equipo
+
+====ng new my-first-project====
+----generar un nuevo proyecto

@@ -1,0 +1,56 @@
+---- Algo fundamental para las aplicaciones en angular es un buen manejo de arbol de direcciones
+---- Las buenas pracitvas es trabajar de manera modularizadas es decir creando carpetas de modulos que 
+---- en su interior tendran un archivo que se llamaran igual como "nombre.module.ts, y los archivos relacionados 
+---- al componente como nombre.component.ts nombre.component.css o nombre.component.html"
+---- estos modulos iran dentro de nuestro modulo principal de app
+---- par eso crearemos otro componente llamado heroe
+
+---- para  que lo que hagamos en este modulo se vea devemos importar su componente hasta un modulo,
+---- y como tenemos un solo modulo que es el de app lo importamos hasta ahi en algunos casos tambien se importara
+---- en nuestro modulo mas cercano o modulo respectivo
+
+---- Crearemos una carpeta para el listado de heroes
+---- Crear un componente de forma automatica
+
+
+
+========= Directiva ngFor ============
+
+---- *ngFor Es una directiva estructural ya que modifica el DOM
+---- para ver esta directiva vamos a continuar trabajando en el componente de listado
+
+========= Directiva *ngIF ============
+
+---- *ngIF tambien es una directiva estructural ya que modifica el DOM
+---- para ver esta directiva vamos a continuar trabajando en el componente de listado
+
+
+========= Ng-Template y ngIf-else ======
+---- Ng-Template es una estructura propia de angular la cual no representa una estructura como tal dentro del 
+---- html, funciona mas bien como una referencia local para el componente html
+---- nos sierve principal mente para mostrar un contenido en funcion de una condicion 
+---- si se va a usar en un condicional funcionar agregando el template debajo de la condision
+
+
+========= MODULOS ========
+---- Los módulos permiten dividir la aplicación en unidades funcionales y establecer las dependencias
+---- entre ellas. Cada módulo puede tener sus propias rutas, componentes, servicios, directivas, etc.
+
+---- Actual mente tenemos un solo modulo el app.module.ts o el modulo principal de cualquier app
+---- y es ahi donde se cargaran los componentes que ejecutara la aplicacion angular
+
+---- Imaginemos que tenemos 100 componentes tendriamos que tener 100 lineas de importacion para y otras 100 
+---- lineas para declarar cada uno de esos componentes
+---- El objetivo de los modulos es ayudarnos a agrupar componentes y piezas de la aplicacion que tienen
+---- sentido entre si.
+
+---- La estructura que tenemos es que tenemos una carpeta heroes que agrupa todo lo que tiene que ver 
+---- con ella como el heroe y el listado de heroe entonces en la carpeta heroes iria nuestro modulo 
+---- que se llamaria igual que la carpeta
+
+---- Luego de agregar nuestro modulo en nuestra carpeta de heroes vamos al modulo principarl y quitamos 
+---- las declaraciones del componente ya que no es necesario tenerlos ahi, pero esto nos dara herror,
+---- ya que para mostrar el listado necesitamos importar nuestro modulo en algun lugar y este si se agregara
+---- en los imports de nuestro modulo principal.
+
+---- El common module es fundamental cuando estamos trabajando con directivas personalizadas de angular

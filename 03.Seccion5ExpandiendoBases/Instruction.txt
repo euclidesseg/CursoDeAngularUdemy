@@ -1,0 +1,82 @@
+---- Recordemos que para hacer que el html de un componente se muestre
+---- Exportamos este componente en su modulo,
+---- Luego importamos ese modulo en el Modulo principal de la aplicacion,
+---- Y agregamos ese el selector del componente en el template del componente principal
+
+
+----DISEÑO DE LA PANTALLA A TRABAJAR----
+
+=========FormsModule=========
+---- Evitar AutRefress
+---- Primero hacemos que sea al formulario quien escuche la 
+---- De la siguiente ndicamos que quien va a mandar el evento es el formulaio 
+---- <form (submit)="agregar( $event )" >
+
+---- Con $event  mando el evento que se desencadena en el form, como argumento a la funcion agregar
+---- y ahi podre manipular el DOM usando event.target.classlist.add('nueva-clase')
+---- console.log(event) // para ver todo el evento que se dispara
+
+---- Angular para evitar todo eso de mandar el evento dispone de un modulo llamado ==FormsModule==
+---- y para usarlo devemos importarlo en nuestro modulo mas sercano mas bien en el de nustro componente
+---- Luego para usarlo reemplazamos el submit del formulario y agregamos ngSubmit para evitar asi el AutRefress
+---- con ng tambien po
+
+
+===== ngModel ======
+---- Vamos a ver la forma de obtener la informacion de las cajas de texto de un formulario 
+---- con ngModel, ng model hace referencia al termino bananainbox  y es usado para hacer un binding bidireccional
+---- Ahora, cuando usamos ngModel devemos estableces una propiedad nombre al input o etiqueta que usemos
+
+====== Mostrar Listado de Personajes ======
+---- Para este ejempli creamo una interfaz Personaje a partir de la cual crearemos el arreglo que va
+---- a contener cada objeto con los datos de personaje en el componente se muestra la informacion
+
+
+====== Crear Componentes Hijos ======
+---- Cuando se tiene hasta ahora seria la pagina que se quiere mostrar es decir, el div principal 
+---- Pero tanto como la columna donde esta rl formulario y la lista puden ser componentes independientes
+---- Cada uno es decir, podriamos tener un componente que emita un super Heroe con su poder y un componente
+---- que me muestre cada heroe, en este orden de idea esos dos componentes se agregarian a nuestro componente
+---- main-Page, para esto vamos a crear un nuevo componente para personajes
+
+---- Este modulo solo se va a utlizar cuando alguien imprima el componente Main-Page-component
+---- A continuacion de aqui la informacion estara en el componente personajes
+
+======== @Input =============
+---- @Input() es una directiva que se usa dentro de un componente hijo para indicar que va a recibir datos
+---- desde un componente padre
+---- para manterner una estructura mas oganizada vamos a crear una interface dentro de 
+---- la carpeta interface para agregar el modelo de super heroes
+
+======= Tarea realizar un nuevo componente para el formulario y enviar el arreglo con los datos iniciales 
+======= Desde el componente padre hasta el componente hijo
+
+======= @Outputs Y EventEmitter
+---- @Output() es una directiva de angular que se usa dentro de un componente hijo para definir que se va a enviar
+---- datos hacia un componente padre para esto vamos a agregar un personaje usando eventEmitt
+---- para eso borramos el arreglo ue le enviamos a form desde el componente padre y tambien el input que recibe 
+---- ese arreglo 
+
+---- Con @Output y eventEmiter se crea un nuevo evento personalizado para que cando algo suceda en el componente 
+---- hijo se vea reflejado en el componente padre
+---- despues de configurar el evento personalizado vamos a el template del componente padre 
+---- y en la etiqueda del componente app-form vamos a ejecutar ese evento emitido
+
+=======SERVICIOS==========
+---- En Angular, los servicios son clases que se utilizan para compartir datos o lógica de 
+---- negocio entre componentes de una aplicación. Los servicios se definen
+---- una vez y se pueden inyectar en varios componentes para su uso
+
+---- Para esto entonces creamos una carpeta llamada Services que en la que figuraran 
+---- Para tener en cuenta los servicios obligaroriamente deben tener el decorador injectable para especificar
+---- que se va a inyectar en otros componentes
+---- para que se puedan inyectar tambien se deben registrar en el archivo module de nuestro modulo
+---- y se registran en un arreglo llamado providers
+
+======== CENTRALIZAR EL ACCESO DE LOS PERSONAJES EN EL CERVICIO ========
+---- Para centralizar los datos del modulo creamos la nueva rama de git llamada feature/services esto para no 
+---- cambiar todo lo aprendido y los apuntes anteriores.
+
+==== Refactorizar nuestra app
+---- Lo primero que se hara sera pasar toda la informacion de los personajes que esta en main-component
+---- hasta nuestro servicio DbzService, incluido el evento para crear agrear un personaje
