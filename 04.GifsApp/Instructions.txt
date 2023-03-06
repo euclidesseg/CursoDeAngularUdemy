@@ -1,0 +1,3 @@
+======= GifsApp ========
+---- En esta ocacion trabajaremos con una aplicacion mas dinamica consumiendo una api 
+---- para mostrar gifs la cual es muy usada por redes como whatsap facebook entre otros
