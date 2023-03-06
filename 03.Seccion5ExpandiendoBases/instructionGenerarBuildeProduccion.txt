@@ -1,0 +1,16 @@
+---- Recomendable hacer limpieza de la aplicacion por ejempli dependencias que no utilizemos
+---- ng build --configuration production == con este comando se general el build de produccion
+---- cuando se genera esta version se generan varios archivos
+---- polyfills = funciones que se encargan de que la aplicacion funciones en cualquier aplicacion que 
+---- necesite correr la aplicacion
+---- styles = los estilos de la aplicacion 
+
+---- todos estos archivos quedan en la carpeta dist que se crea automaticamente
+
+---- desplegar en netlify
+---- para desplegar en netlify nos logueamos con github estando en la pantalla 
+---- elegimos imporar desde guit o arrastrar directamente desde el directorio del archivo
+---- para este caso solo tomamos la carpeta con nombre de nuestro proyecto que se genera 
+---- dentro de la carpeta dist luego de generar el comando 
+
+---- https://cute-parfait-b006cf.netlify.app/
