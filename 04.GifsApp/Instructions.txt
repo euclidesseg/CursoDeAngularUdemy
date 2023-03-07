@@ -1,3 +1,12 @@
 ======= GifsApp ========
 ---- En esta ocacion trabajaremos con una aplicacion mas dinamica consumiendo una api 
 ---- para mostrar gifs la cual es muy usada por redes como whatsap facebook entre otros
+
+---- Creamos un nuevo modulo llamado shared al nivel de la aplicacion 
+     ---- este modulo tendra todas las vistas que se van a compartir 
+     ---- a los demas componentes de la app 
+
+---- Creamos un nuevo componente llamado sidebar dentro de shared 
+---- exportamos el sidebarComponent en el modulo que creamos 
+---- importamos el shared.module dentro de app.module
+---- poner el sidebar dentro del app.component.html para que se vea en la pantalla
