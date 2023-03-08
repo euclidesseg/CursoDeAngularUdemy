@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { GifsPageComponent } from './gifs-page/gifs-page.component';
 import { SearchGifsComponent } from './search-gifs/search-gifs.component';
 import { ListGifsComponent } from './list-gifs/list-gifs.component';
+import { GifsServiceService } from './services/gifs-service.service';
 
 
 
@@ -17,6 +18,9 @@ import { ListGifsComponent } from './list-gifs/list-gifs.component';
   ],
   imports: [
     CommonModule
+  ],
+  providers:[
+    GifsServiceService
   ]
 })
 export class GifsModule { }

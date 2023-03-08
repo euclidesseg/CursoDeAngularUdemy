@@ -17,3 +17,12 @@
 
 ---- A continuacion crearemos dos componentes uno que se encargue de hacer la busqueda y otro que 
 ---- se encargara de mostrar los resultados en el gifs-Page
+
+========= @ViewChild Para obtener referencias a objetos del HTML=================
+---- el decorador "@ViewChild" se utiliza en Angular principalmente para acceder a 
+---- elementos HTML  desde un componente.
+---- los podemos usar con directivavs clases o nombres de cajas de texto
+
+=========== GifsService =============
+---- Ahora crearemos un servicio centralizado para almacenas todo lo relacionado a los gifs
+---- 
