@@ -4,9 +4,16 @@
 
 ---- Creamos un nuevo modulo llamado shared al nivel de la aplicacion 
      ---- este modulo tendra todas las vistas que se van a compartir 
-     ---- a los demas componentes de la app 
+     ---- a los demas componentes de la app como lo es menus navbar foter o en este caso 
+     ---- sidebar
 
 ---- Creamos un nuevo componente llamado sidebar dentro de shared 
 ---- exportamos el sidebarComponent en el modulo que creamos 
 ---- importamos el shared.module dentro de app.module
 ---- poner el sidebar dentro del app.component.html para que se vea en la pantalla
+
+---- Ahora crearemos un modulo para manejar toda la logica de gift
+---- creamos un gifs-page que agrupara todos los demas subcomponentes
+
+---- A continuacion crearemos dos componentes uno que se encargue de hacer la busqueda y otro que 
+---- se encargara de mostrar los resultados en el gifs-Page
