@@ -25,4 +25,25 @@
 
 =========== GifsService =============
 ---- Ahora crearemos un servicio centralizado para almacenas todo lo relacionado a los gifs
----- 
+---- lo primero que vamos a almacenar es cada una de las razones de busqueda que el usuario haga
+---- creamos el servicio para guardar termino de busqueda, el componente de busqueda solo va a guardar lo que se busque
+---- y el de obtener los terminos de busqueda
+---- este ultimo seran los que se muestran en nuestro sidebar
+---- En el componente de search se validan que no se agregen campos vacios 
+---- y en el servicio se valida que no se agreuen mas de 10 elementos al arreglo
+
+
+============ Creando ApKey y haciendo una peticion a Giphy===========
+---- Giphy es la pagina a la que haremos la peticion para traer las imagenes que coincidan 
+---- con los terminos de busqueda que ya configuramos para eso nos logueamos en la pagina 
+---- https://giphy.com/reactions
+
+---- Vamos a developers y a  dashboards creamos uno nuevo y elegimos con API
+---- nos traeos el apykey y lo guardamos en un archivo de recursos y posterior mente 
+---- lo traemos en nuestro servicio
+
+---- vamos a la pagina de giphy y buscamos el enpoint para buscar 
+---- cuando vamos a obtener la url de la busqued nos informa que devemos enviar entre los parametros 
+---- nuestro apyKey junto con otros parametros, antes probamos nuestra url con pstman
+---- el query de busqueda tambien se debe especificar para que nos retorne 
+---- lo devemos hacer sin espacios

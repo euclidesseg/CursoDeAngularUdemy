@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { GifsService,} from '../services/gifs.service';
 
 @Component({
   selector: 'app-search-gifs',
@@ -10,9 +11,18 @@ export class SearchGifsComponent {
   // debido a que usamos un tipado estricto devemos indicar a ts que el txtBuscar no hay 
   // que inicializarlo ya que no va a ser vacio lo hacemos con el operador!
   // o tambien podemos poner como false la estructura estricta en tsconfig.json
+
+
+  constructor(
+    private gifsService: GifsService
+  ){}
   buscar(){
-    const valor = this.txtBuscar.nativeElement.value;
-    console.log(valor);
+    const busqueda = this.txtBuscar.nativeElement.value;
+    if(busqueda.trim().length === 0){
+      return
+    }
+    //condicional para evitar que se agreguen strings vacios al arreglo
+    this.gifsService.buscarGifts(busqueda)
     this.txtBuscar.nativeElement.value = "";
   }
 }
