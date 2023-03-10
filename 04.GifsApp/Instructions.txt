@@ -33,7 +33,7 @@
 ---- y en el servicio se valida que no se agreuen mas de 10 elementos al arreglo
 
 
-============ Creando ApKey y haciendo una peticion a Giphy===========
+============ Creando ApKey y probando el endpoint de Giphy===========
 ---- Giphy es la pagina a la que haremos la peticion para traer las imagenes que coincidan 
 ---- con los terminos de busqueda que ya configuramos para eso nos logueamos en la pagina 
 ---- https://giphy.com/reactions
@@ -47,3 +47,18 @@
 ---- nuestro apyKey junto con otros parametros, antes probamos nuestra url con pstman
 ---- el query de busqueda tambien se debe especificar para que nos retorne 
 ---- lo devemos hacer sin espacios
+
+============ Haciendo una peticion a Giphy===========
+---- para hacer el llamado o hacer la peticion tomamos toda la ruta que probamos en el postman 
+---- y la agregamos como perametros en la funcion fetch esto lo hacermos en el cervicio
+---- dentro de nuestra funcion de buscarGifs
+
+---- para hacer las peticiones angular usa un objeto para eso y para ello debemos importar un modulo 
+---- llamado httpClientModule en nuestro 
+---- app.module.ts para que sea global 
+---- este modulo ofrese un servicio que puedo inyectar en el servicio de mi app
+---- el http trabaja con observable que es mas poderoso que las promesas
+
+======== Mostrando los resultados en del enpint en el componente list ========
+---- En nustro servicio creamos un arreglo que alamcene los resultados de la busqueda
+---- en nuestro componente de lista insertamos el servicio
