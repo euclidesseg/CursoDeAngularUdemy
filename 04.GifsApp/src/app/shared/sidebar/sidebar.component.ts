@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { GifsService } from 'src/app/gifs/services/gifs.service';
 
 @Component({
@@ -16,5 +16,9 @@ export class SidebarComponent {
 
   get mostrarHistorial() {
     return this.gifsService.getHistorial
+  }
+
+  buscar(busqueda:string){
+    this.gifsService.buscarGifts(busqueda)
   }
 }

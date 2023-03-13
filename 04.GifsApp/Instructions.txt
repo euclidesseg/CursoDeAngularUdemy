@@ -79,3 +79,24 @@
 ---- debido a que todo eso son arreglos y objetos ya sabemos manejar mejor los metodos.
 ---- la idea de todo esto es para que TS sepa que existen todas estas propiedades y que se pueden 
 ---- Manipular.
+
+===== LocalStorage =======
+---- Ahora veremos como guardar informacion en localStorage para que no se nos borre el historial cuando 
+---- recarguemos el navegador el local storage es un lugar para guardar informacion no sencible 
+
+---- Para grabar en el local storage no hace falta importar nada para ver el ejemplo nos vamos a ir hasta nuestro
+---- servicio
+---- Para obtener elementos desde el localStorage lo hacemos desde el constructor de ese servicio
+
+==== Cargar Imagenes Automaticamente Al entrar A la pagina =======
+---- para cargar las imagenes cada que recargue la pagina devo guardar el resultado la ultima 
+---- busqueda en el localStorage, es decir cada que haga la peticion debo guardarla
+---- en el localStorage
+
+=============================================================================================
+     RECORDAD QUE EL HISTORIAL DE BUSQUEDA ES EL TERMINO DE BUSQUEDA Y QUE EL ULTIMO RESULTADO 
+     ES LA ULTIMA RESPUESTA A LA BUSQUEDA
+=============================================================================================
+
+======== HttpParams ========
+---- La idea con http params es mandarle parametros a la peticion 
