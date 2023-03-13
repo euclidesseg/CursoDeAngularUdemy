@@ -1,3 +1,16 @@
-<div class="col">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos error, quos praesentium alias odit impedit eum aperiam beatae pariatur ullam maiores veniam velit modi quia minus illum dicta rem corrupti?
-</div>
+<div class="row">
+    <div class="col-md-4 col-sm-6" *ngFor="let imagen of resultadosGifs">
+     <div class="card">
+
+        <img [src]=" imagen.images.downsized_medium.url "
+             [alt]=" imagen.title"
+             class="card-img-top">
+         <div class="car-body">
+             <p class="card-text">
+               
+                {{ imagen.title }}
+             </p>
+         </div>
+     </div>
+    </div>
+ </div>

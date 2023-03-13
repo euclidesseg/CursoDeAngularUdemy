@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import * as  Resource from '../../shared/resource/api-giphy.resouce'
+import { Gif } from '../interfaces/gifs.interface';
+import {SearchGifsResponse} from '../interfaces/gifs.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +25,7 @@ export class GifsService {
   private apiKey = Resource.ApiKey;
 
   // declaramos un arreglo donde guardaremos todas las imagenes que nos trera la peticion
-  public imagenes: any[] = []
+  public imagenes: Gif[] = []
   
   // obtener los valores del historial
   get getHistorial() {
@@ -67,11 +69,11 @@ export class GifsService {
       // para no usar fetch lo hacemos con un objeto de angular que es el encargado de hacer peticiones http
       // este objeto es el HttpClient
 
-      this.http.get(url)
+      this.http.get<SearchGifsResponse>(url)
       // si trabajaramos con promesa usariamos .then 
       // pero usamos mejor un subscribe y le mandamos una funcion como argumento
       //  y dentro de ella pedimos un parametro de cualquier tipo
-      .subscribe((response:any) => {
+      .subscribe((response) => {
         console.log(response.data)
          this.imagenes = response.data
       })

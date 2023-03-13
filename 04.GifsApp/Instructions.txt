@@ -38,6 +38,7 @@
 ---- con los terminos de busqueda que ya configuramos para eso nos logueamos en la pagina 
 ---- https://giphy.com/reactions
 
+==== En la pagina =======
 ---- Vamos a developers y a  dashboards creamos uno nuevo y elegimos con API
 ---- nos traeos el apykey y lo guardamos en un archivo de recursos y posterior mente 
 ---- lo traemos en nuestro servicio
@@ -59,6 +60,22 @@
 ---- este modulo ofrese un servicio que puedo inyectar en el servicio de mi app
 ---- el http trabaja con observable que es mas poderoso que las promesas
 
-======== Mostrando los resultados en del enpint en el componente list ========
+======== Mostrando los resultados del enpint en el componente list ========
 ---- En nustro servicio creamos un arreglo que alamcene los resultados de la busqueda
 ---- en nuestro componente de lista insertamos el servicio
+---- y mediante ese servicio nos traemos los datos de la respuesta que son arreglor 
+---- en el componente recorremos ese arreglo y pintamos las imagenes que vienen en los objetos
+---- del arreglo
+
+===== Colocando tipado a las peticiones ======
+---- Las respuesta de las peticiones estan de tipo any debemos ponerles un tipado 
+---- para saber si se ocurre un error y para eso nos copiamos toda la respuesta desde 
+---- el pstman y entramos a quicktype.io para pasar el json de la respuesta a una interfaz
+---- seguido agregamos la interfaz que nos retorna hasta nuestra app
+
+---- Indicamos que la respuesta get sera de tipo de la interfaz que acabamos de traer
+---- ahora la respuesta luce como la interfaz que agregamos de tipo <SearchGifsResponse>
+---- la data que es la que viene con la respuesta sera de tipo <Gif>
+---- debido a que todo eso son arreglos y objetos ya sabemos manejar mejor los metodos.
+---- la idea de todo esto es para que TS sepa que existen todas estas propiedades y que se pueden 
+---- Manipular.

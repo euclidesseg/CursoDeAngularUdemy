@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GifsService } from '../services/gifs.service';
 
 @Component({
   selector: 'app-list-gifs',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
 })
 export class ListGifsComponent {
 
-  constructor(){
-    
+  constructor(
+    private gifsService: GifsService
+  ){ }
+  get resultadosGifs(){
+    return this.gifsService.imagenes
   }
+
 }
