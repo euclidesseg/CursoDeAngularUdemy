@@ -1,0 +1,60 @@
+====== En esta Ocasion vamos a trabajar con una aplicacion llamada PaisesApp =====
+
+
+Para trabajar con esta app y esta seccion se ha creado una rama diferente llamada section8SPA
+==============================================================================================
+
+
+---- Estaremos trabajando con una api consumiendo diferentes enpoints
+---- Buscaremos por pais por capital y por region desde esta pagina https://restcountries.com/
+
+---- Vamos a trabar en base a modulos con la siguiente estructura
+
+---- Shared = componentes reutilizables
+     ____nadvar
+     ____sidebar
+     ____footer
+
+---- Componenentes 
+---- Interfaces 
+---- Services
+---- Pages 
+     ____indican que es un contenedor principal 
+     ____van a cambiar segun la url en que nos encontremos
+     ____no son mas que componentes tambien
+
+
+====== Creando modulos y componentes ========
+---- creamos los modulos de shared y pais
+---- creamos el componente para shared el cual se declara en el respectivo modulo
+
+====== Crearemos las paginas en pages que son componentes
+---- creamos buscar por region
+---- creamos buscar por pais
+---- creamos buscar por capital
+---- creamor otra para ver la informacion del pais
+
+---- Ahora veamos que componentes vamosa exportar fuera de nuestros modulos
+
+
+====== estructura html del componente sidebar =====
+
+======= Router Module ========
+---- Ya que tenemos una pagina para buscar por pais,
+---- Una pagina para buscar por region,y otra para buscar por capital,
+---- Ne cesitamos declarar rutar principales para acceder a ellas cuando se precione un boton de opciones
+---- en el sidebar para eso primero creamos un archvo routing module que sera nuestro modulo 
+---- principal de rutas 
+
+---- En ese archivo de rutas creamos la estructura basica de un modulo creamos una constante 
+---- llamada routes de tipo Routes la cual sera un arreglo que contendra cada una de las rutas de 
+---- la app
+---- Despues de crear el arreglo que incluye las rutas de nuestra app debemos agregar en las importqaciones 
+---- del modulo al RouterModule
+
+---- Luego de configurar modulo dentro de nuestro modulo principal de App
+---- lo importamos en nuestro componente principal app.module
+
+---- Ahoara para cambiar desde el sidebar dependiendo de la pagina en la que se encuentre
+---- en el html agregamos <router-otlet></router-otlet>
+---- Paara ello en nuesto modulo de shared devemos importar el approuting-module
