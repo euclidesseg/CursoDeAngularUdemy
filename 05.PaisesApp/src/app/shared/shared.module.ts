@@ -13,6 +13,8 @@ import { AppRoutingModule } from '../app-routing.module';
   imports: [
     CommonModule,
     PaisModule,
+    // Aqui podermos importar tanto el el modulo donde estan nuestrar rutas como el propio 
+    // RouterModule
     AppRoutingModule
   ],
   exports:[
