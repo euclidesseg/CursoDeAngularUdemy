@@ -1,1 +1,15 @@
-<app-sidebar></app-sidebar>
+<div class="row container mt-4">
+    <div class="col-3">
+        <app-sidebar></app-sidebar>
+    </div>
+
+    <!-- Contenido para las tutas del sidebar -->
+    <div class="col">
+        <router-outlet></router-outlet>
+        <!-- <router-outlet> es el marcador que indica dónde se renderizarán 
+            los componentes correspondientes a las rutas definidas en la aplicación Angular.
+            Cuando el usuario navega a través de la aplicación y accede a una ruta, Angular 
+            buscará el componente correspondiente y lo renderizará dentro de <router-outlet>.
+         -->
+    </div>
+</div>
