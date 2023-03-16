@@ -39,7 +39,8 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 
 ====== estructura html del componente sidebar =====
 
-======= Router Module ========
+
+======= ROUTER MODULE ========
 ---- Ya que tenemos una pagina para buscar por pais,
 ---- Una pagina para buscar por region,y otra para buscar por capital,
 ---- Ne cesitamos declarar rutar principales para acceder a ellas cuando se precione un boton de opciones
@@ -50,7 +51,7 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 ---- llamada routes de tipo Routes la cual sera un arreglo que contendra cada una de las rutas de 
 ---- la app
 ---- Despues de crear el arreglo que incluye las rutas de nuestra app debemos agregar en las importqaciones 
----- del modulo al RouterModule
+---- de ese modulo al RouterModule
 
 ---- Luego de configurar modulo dentro de nuestro modulo principal de App
 ---- lo importamos en nuestro componente principal app.module
@@ -58,3 +59,14 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 ---- Ahoara para cambiar desde el sidebar dependiendo de la pagina en la que se encuentre
 ---- en el html agregamos <router-otlet></router-otlet>
 ---- Paara ello en nuesto modulo de shared devemos importar el approuting-module
+
+====== ROUTER LINK =======
+---- En esta ocacion vamos a hacer que nuestro menu lateral funcione para poder navegar a otras pantallas
+---- para agregar link a nuestros botones de navegacion usamos routerlink que nos ofrese el RouterModule
+---- EJ: <li routerLink="capital" class="list-group-item sidebarLink">Buscar capital</li>
+---- capital es el nombre de la ruta y recordemos que ya esa ruta tiene asociado un componente
+
+---- par indicar que una ruta esta activa ponemos otra caracteristica que nos importa RouterModule
+---- routerLinkActive="active" endica cuando una ruta esta activa
+---- pero la ruta princial siempre estara activa po lo que definimos en al routing module 
+---- para eso agregamos otro atributo

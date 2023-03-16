@@ -2,13 +2,21 @@
     <div class="col-3">
         <h2>Busquedas</h2>
         <hr>
-        <ul class="list-group">
-            <li class="list-group-item active">Buscar Pais</li>
-            <li class="list-group-item">Buscar Region</li>
-            <li class="list-group-item">Buscar capital</li>
+        <ul class="list-group ">
+            <li routerLink=""           routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"   class="list-group-item sidebarLink">Buscar Pais</li>
+            <!-- ahora gracias a [routerLinkActiveOptions]="{exact:true}" la ruta principal se pondra azul solo cuando el path sea exsacto -->
+            <li routerLink="region"     routerLinkActive="active"    class="list-group-item sidebarLink">Buscar Region</li>
+            <li routerLink="capital"    routerLinkActive="active"   class="list-group-item sidebarLink">Buscar capital</li>
         </ul>
     </div>
+
+    <!-- Contenido para las tutas del sidebar -->
     <div class="col">
         <router-outlet></router-outlet>
+        <!-- <router-outlet> es el marcador que indica dónde se renderizarán 
+            los componentes correspondientes a las rutas definidas en la aplicación Angular.
+            Cuando el usuario navega a través de la aplicación y accede a una ruta, Angular 
+            buscará el componente correspondiente y lo renderizará dentro de <router-outlet>.
+         -->
     </div>
 </div>
