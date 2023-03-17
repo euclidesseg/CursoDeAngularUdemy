@@ -2,3 +2,6 @@
     margin-bottom: 2px;
 
 }
+li{
+    cursor: pointer;
+}

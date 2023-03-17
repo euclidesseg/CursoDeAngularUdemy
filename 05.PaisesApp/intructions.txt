@@ -70,3 +70,22 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 ---- routerLinkActive="active" endica cuando una ruta esta activa
 ---- pero la ruta princial siempre estara activa po lo que definimos en al routing module 
 ---- para eso agregamos otro atributo
+
+====== Component Buscar Por pais ========
+---- para este componente creamos el formulario deonde ingresaremos el nombre del pais a buscar
+---- debajoun aviso que informe si se encontro el pais y la tabla que mostrara el contenido del pais
+---- vamos a usar el formModule para enviar el formulario por loq ue debemos importar este modulo en nuestro
+---- PaisdModule y este modulo nos permite usar la sintaxis bananaInBox de ngModel
+
+---- Para manejar el posteo del formulario cuandoo el usuario precione enter 
+---- lo hacemos con el ngSubmmit desde el formaulario
+
+
+====== Servicio Para Buscar Paises ====== 
+---- En nuestro modulo agregamos la carpeta service para el servicio
+---- este servicio al estar en nuestro modulo esta como global para todos los componentes de nuestro
+---- modulo
+
+---- creamos el servicio y luego de eso usamos el Http para mandar la peticion,
+---- recordemos que para usar ese servicio debemos importar el htttpClientModule e nuestro modulo
+---- y en nuestro componente

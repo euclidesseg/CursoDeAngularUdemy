@@ -8,7 +8,7 @@ import { SearchGifsResponse } from '../interfaces/gifs.interface';
   providedIn: 'root'
   // agregar provideIN: root
   // indica que este servicio se podra usas de manera global
-  // y asi no hay que especificarlo en los providers
+  // y asi no hay que especificarlo en los providers del modulo
 })
 export class GifsService {
 
