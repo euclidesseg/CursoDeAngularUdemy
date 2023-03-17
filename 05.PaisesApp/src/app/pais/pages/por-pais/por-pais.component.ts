@@ -17,8 +17,8 @@ export class PorPaisComponent {
       return
     }
     this.paisService.buscarPorPais(this.termino)
-      .subscribe((res) => {
-        console.log(res)
+      .subscribe((respuesta) => {
+        console.log(respuesta)
       })
     console.log(this.termino)
     this.termino = ''

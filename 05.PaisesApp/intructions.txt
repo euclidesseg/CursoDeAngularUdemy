@@ -89,3 +89,10 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 ---- creamos el servicio y luego de eso usamos el Http para mandar la peticion,
 ---- recordemos que para usar ese servicio debemos importar el htttpClientModule e nuestro modulo
 ---- y en nuestro componente
+
+======= Manejo de errores ===========
+---- Cuando se manda una peticion a ese enpoint y el dato enviado no existe el backend va a reponder
+---- con un 404 que indica que indica que no se enconstro el recurso solicitado no es un error del front
+---- simplemente es la respuesta que nos manda el backend
+
+---- Ahoara lo aprenderemos a manejar desde el front incluyendolo
