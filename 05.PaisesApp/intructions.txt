@@ -95,4 +95,16 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 ---- con un 404 que indica que indica que no se enconstro el recurso solicitado no es un error del front
 ---- simplemente es la respuesta que nos manda el backend
 
----- Ahoara lo aprenderemos a manejar desde el front incluyendolo
+---- Ahoara lo aprenderemos a manejar desde el front para heso lo haremos justamente al momento
+---- del subscribe ya que es ahi cuando mandamos el parametro para resibir la respuesta 
+---- y tambien es ahi cuando podemos mandar el parametro para recibir un error par esto establecemos 
+---- una bander la cual era booleana que cambiara a true dentro de la funcion error mandada 
+---- como parametro como sabemos la funcion error se ejecutara solo si la peticion manda error
+---- .subscribe({
+        next: (respuesta) => { console.log(respuesta) },
+        error: (error) => { this.hayError = true; console.log(error) }
+        // desde la version 8 rxjs permite mandar las funciones del parametro envueltas en un 
+        // objeto
+      })
+
+

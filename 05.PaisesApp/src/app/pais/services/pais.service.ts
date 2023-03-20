@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core'
 import {HttpClient} from '@angular/common/http'
+import { Observable, of } from 'rxjs'
+import { catchError } from 'rxjs/operators'
+
 import * as GeneralEnpoint from '../../../environment/pais.environments'
-import { Observable } from 'rxjs'
+
 
 @Injectable({
     providedIn: 'root'
@@ -22,7 +25,17 @@ export class PaisService {
         // Para obtener la respuesta esta vez lo haremos de manera diferente ya que en vez de obtenerla en una argumento
         // Lo aremos retornando le peticion y como esto retorna a un observable debemos indicar el tipo
         // de retorno del metodo
-        return  this.http.get(url)
-        // y para esto nos suscribimos sl observable pero en nuestro metodo del componente
+        return  this.http.get(url);
+        // y para esto nos suscribimos al observable pero en nuestro metodo del componente
+
+            // La siguiente funcion pipe() es una funcion que maneja operadores de rxjs
+            // el operadores son unas funciones que se ejecutan en vace al producto de una peticion
+            // en este caso usamos el operador catchError que lo que hace es transformar el error 
+            // en un observable mediante la funcion of en este caso ele observable que nos retorna
+            // en caso de error es una rreglo basio pero es opcional ya que en el componente
+            // lo estamos haciendo mediante funcion error
+            // .pipe(
+            //     catchError((err) => of([]))
+            // );
     }
 }

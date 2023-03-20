@@ -15,14 +15,14 @@
     </div>
 </div>
 <hr>
-<div class="alert alert-danger">
-    No se envontro nada con el termino
+<div class="alert alert-danger" *ngIf="hayError">
+    <b> No se encontro nada con el termino {{termino}}</b>
 </div>
 <div class="col">
-    <table class="table table-hover">
+    <table class="table table-hover" *ngIf="!hayError">
         <thead>
             <tr>
-                <th>#</th>
+                <th>#</th> 
                 <th>Bandera</th>
                 <th>Nombre</th>
                 <th>Poblacion</th>
