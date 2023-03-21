@@ -18,11 +18,11 @@ export class PorPaisComponent {
     
     this.paisService.buscarPorPais(this.termino)
       .subscribe({
-        next: (respuesta) => { console.log(respuesta) },
+        next: (respuesta) => { console.log(respuesta); console.log( respuesta[0].capital)},
         error: (error) => { this.hayError = true; console.log(error)}
       })
 
     console.log(this.termino)
-    this.termino = ''
+    // this.termino = ''
   }
 }

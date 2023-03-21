@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs'
 import { catchError } from 'rxjs/operators'
 
 import * as GeneralEnpoint from '../../../environment/pais.environments'
+import { Country } from '../interfaces/pais.interface'
 
 
 @Injectable({
@@ -20,12 +21,12 @@ export class PaisService {
     // Esta url viene desde los environment
     private apiUrl = GeneralEnpoint.generalEnpoint
 
-    buscarPorPais(termino : string) : Observable<any>{
+    buscarPorPais(termino : string) : Observable<Country[]>{
         const url = `${this.apiUrl}/name/${termino}`
         // Para obtener la respuesta esta vez lo haremos de manera diferente ya que en vez de obtenerla en una argumento
         // Lo aremos retornando le peticion y como esto retorna a un observable debemos indicar el tipo
         // de retorno del metodo
-        return  this.http.get(url);
+        return  this.http.get<Country[]>(url);
         // y para esto nos suscribimos al observable pero en nuestro metodo del componente
 
             // La siguiente funcion pipe() es una funcion que maneja operadores de rxjs
@@ -34,6 +35,7 @@ export class PaisService {
             // en un observable mediante la funcion of en este caso ele observable que nos retorna
             // en caso de error es una rreglo basio pero es opcional ya que en el componente
             // lo estamos haciendo mediante funcion error
+
             // .pipe(
             //     catchError((err) => of([]))
             // );

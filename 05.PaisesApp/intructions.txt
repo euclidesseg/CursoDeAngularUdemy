@@ -108,3 +108,10 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
       })
 
 
+=========== Tipado de nuestra peticion =============
+---- Para trabajar con el tipado convertimos la respuesta a la peticion en una interfaz desde la 
+---- web https://app.quicktype.io
+
+---- En la pagina marcamos la respuesta en el lenguaje y verificamos el json
+---- copiamos la interfaz, creamos un archivo en nuestra carpeta de Interfaces y pegamos hi todo 
+---- el contenido de nuestra de la pagina
