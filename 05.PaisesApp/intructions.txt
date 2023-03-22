@@ -115,3 +115,9 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 ---- En la pagina marcamos la respuesta en el lenguaje y verificamos el json
 ---- copiamos la interfaz, creamos un archivo en nuestra carpeta de Interfaces y pegamos hi todo 
 ---- el contenido de nuestra de la pagina
+
+
+====== Llenar nuestra tabla de paises ======
+---- Para llenar esta tabla lo haremos como tarea asi que lo primero que hare sera 
+---- crearme una propiedad llamada paises en donde recibire voy a almacenar el arreglo 
+---- que me retorna la respuesta

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Country, Name } from '../../interfaces/pais.interface';
 import { PaisService } from '../../services/pais.service';
 
 @Component({
@@ -8,21 +9,35 @@ import { PaisService } from '../../services/pais.service';
 })
 export class PorPaisComponent {
   hayError: boolean = false
+  termino: string = "Colombia"
+  paises: Country[] = []
   constructor(private paisService: PaisService) { }
-  termino: string = "Hola mundo"
 
   buscar() {
     if (this.termino.trim().length === 0) {
       return
     }
-    
+
     this.paisService.buscarPorPais(this.termino)
       .subscribe({
-        next: (respuesta) => { console.log(respuesta); console.log( respuesta[0].capital)},
-        error: (error) => { this.hayError = true; console.log(error)}
+        next: (respuesta) => {
+          this.hayError = false
+          console.log(respuesta);
+          this.paises = respuesta
+          console.log(this.paises)
+          this.termino = ''
+        },
+        error: (error) => {
+          this.hayError = true; console.log(error);
+          // para que me borre el termino despues de 3 segundos
+          setTimeout(() => {
+            this.termino = ''
+            this.hayError = false
+          }, 3000);
+        }
       })
 
     console.log(this.termino)
-    // this.termino = ''
+
   }
 }
