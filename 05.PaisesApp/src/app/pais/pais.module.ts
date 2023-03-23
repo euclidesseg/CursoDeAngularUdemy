@@ -9,6 +9,8 @@ import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
 import { PaisService } from './services/pais.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { PaisTablaComponent } from './components/pais-tabla/pais-tabla.component';
+import { InputComponent } from './components/input/input.component';
 
 
 
@@ -17,7 +19,9 @@ import { RouterModule } from '@angular/router';
     PorCapitalComponent,
     PorPaisComponent,
     PorRegionComponent,
-    VerPaisComponent
+    VerPaisComponent,
+    PaisTablaComponent,
+    InputComponent
   ],
   imports: [
     CommonModule,

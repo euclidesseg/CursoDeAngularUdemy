@@ -9,11 +9,12 @@ import { PaisService } from '../../services/pais.service';
 })
 export class PorPaisComponent {
   hayError: boolean = false
-  termino: string = "Colombia"
+  termino: string = ""
   paises: Country[] = []
   constructor(private paisService: PaisService) { }
 
-  buscar() {
+  buscar(query:string) {
+    this.termino = query
     if (this.termino.trim().length === 0) {
       return
     }

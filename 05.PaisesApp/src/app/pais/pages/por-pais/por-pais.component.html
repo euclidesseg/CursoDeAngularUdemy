@@ -3,15 +3,7 @@
 
 <div class="row">
     <div class="col">
-        <form (ngSubmit)="buscar()" autocomplete="off">
-            <input 
-            class="form-control"
-            type="text" 
-            name="termino" 
-            placeholder="Buscar Pais...."
-            [(ngModel)] = "termino"
-            >
-        </form>
+        <app-input (onQuery)="buscar($event)"></app-input>
     </div>
 </div>
 <hr>
@@ -19,30 +11,5 @@
     No se encontro nada con el termino {{termino}}
 </div>
 <div class="col" *ngIf="paises.length > 0">
-    <table class="table table-hover" *ngIf="hayError == false">
-        <thead>
-            <tr>
-                <th>#</th> 
-                <th>Bandera</th>
-                <th>Nombre</th>
-                <th>Poblacion</th>
-                <th>Accion</th>
-            </tr>
-        </thead>
-        <tbody *ngFor="let pais of paises; index as i;">
-            <tr>
-                <td>{{i}}</td>
-                <td><img [src]="pais.flags.png" class="img-flag img-fluid"></td>
-                <td>{{pais.altSpellings[2] | titlecase}}</td>
-                <td>{{pais.population | number}}</td>
-                <td>
-                    <a [routerLink] = "['/pais', pais.altSpellings[0]]" class="btn btn-primary">Ver pais</a>
-                    <!-- Can't bind to 'routerLink' since it isn't a known property of 'a'
-                        para este error debemos impoprtar el RouterModule
-                    -->
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
+    <app-tabla-pais [paises]="paises" [hayError]="hayError"></app-tabla-pais>
 </div>

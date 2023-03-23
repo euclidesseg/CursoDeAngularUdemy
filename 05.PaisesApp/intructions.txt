@@ -119,5 +119,18 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 
 ====== Llenar nuestra tabla de paises ======
 ---- Para llenar esta tabla lo haremos como tarea asi que lo primero que hare sera 
----- crearme una propiedad llamada paises en donde recibire voy a almacenar el arreglo 
----- que me retorna la respuesta
+---- crearme una propiedad llamada paises en donde  voy a almacenar el arreglo 
+---- que me retorna la respuesta seguido de eso en la tabla voy a recorrer ese arreglo y pintare
+---- las tablas con los objetos que voy recorriendo en el trmplate
+
+
+============== Componnete input y Tabla ============
+---- En esta casa vamos a optimizar nuestro codigo, la funcionalidad sera que el input y la tabla 
+---- que tenemos en el componente buscar por pais tambien sea el mismo que se muestre en el componente
+---- por region y por pais esta tambien sera una tarea para la cual esta vez vamos a hacer uso de nuestra
+---- carpeta de componente en donde crearemos un componente llamado pais pais-tabla
+---- dentro de ese componente vamos a poner el html que corresponde a la tabla de paises
+---- que se encuentra en el componente buscar por pais.
+
+---- debido a que tambien vamos a reutilizar el inpupt en otros componentes como buscar por capital y por region
+---- lo vamos a pasar a un componente aparte llamado input-component
