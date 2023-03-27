@@ -21,9 +21,10 @@ export class InputComponent implements OnInit{
     ngOnInit(){
         // nos suscribimos a los eventos del observable que acabamos de crear con Subject
        this.debouncer
-       .pipe(debounceTime(300) )
+       .pipe(debounceTime(3000) )
         // no se va a emitir el subscribe hasta que el observable deje de emitir valores por 3 seg
        .subscribe((valor) =>{
+        console.log(valor)
         this.onDebounce.emit(valor)
         })
     }
