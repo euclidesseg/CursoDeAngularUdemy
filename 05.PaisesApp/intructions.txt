@@ -134,3 +134,17 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 
 ---- debido a que tambien vamos a reutilizar el inpupt en otros componentes como buscar por capital y por region
 ---- lo vamos a pasar a un componente aparte llamado input-component
+
+========= DebounceTime en el input ==========
+---- la idea de debounse es crear una caja de busqueda es decir que mediante precionemos teclas 
+---- en el input nos aparezca una sugerencia de busqueda
+
+---- Para usar el debouncetime vamos a ir hasta nuestro componente de input y vamos a emitir
+---- nuevamente mediante un output
+
+---- el debounce funciona creando un observable manualmente usando Subject el cual permite
+---- crear observables manualmente lo importamos desde rxjs
+
+
+======== Por capital =========
+---- Para hacer la parte de buscar por capital lo hare como tarea

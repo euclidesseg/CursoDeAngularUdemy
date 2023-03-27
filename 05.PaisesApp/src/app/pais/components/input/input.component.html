@@ -1,10 +1,14 @@
-<form (ngSubmit)="buscar()" autocomplete="off">
+<form  autocomplete="off">
     <!-- autocomplete para que no me genere sugerencias al momento de intentar escribir -->
     <input 
     class="form-control"
     type="text" 
     name="termino" 
-    placeholder="Buscar Pais...."
+    [placeholder]="title"
     [(ngModel)] = "termino"
+    (input)="teclaPrecionada()"
     >
+    <!-- input para emitir el debounse -->
+    
+    <input type="submit" (click)="buscar()" value="Buscar" class="btn btn-primary" >
 </form>

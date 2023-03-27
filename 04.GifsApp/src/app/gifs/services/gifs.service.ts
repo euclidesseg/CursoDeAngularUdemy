@@ -64,7 +64,7 @@ export class GifsService {
     console.log(params)
     const urlGif = Resource.Url
 
-    /*  fetch(url)
+    /*  fetch(urlGif)
         //esta funcion nos devuelve una promesa esta primera promesa le mansamos un parametro que es 
         // una funcion declarada  la cual pide como parametro un objeto esta funcion se llama en otra funcion
         // la cual seria un proceso1 en mandan en el objeto una funcion llamada json
