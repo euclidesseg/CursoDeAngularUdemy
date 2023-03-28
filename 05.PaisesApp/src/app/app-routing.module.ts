@@ -25,7 +25,7 @@ const routes:Routes = [
 
     },
     {
-        path:'pais/:id',            //Indico que cuando valla a ir a la ruta de este componente
+        path:'pais/:code',            //Indico que cuando valla a ir a la ruta de este componente
                                     // le debo mandar un argumento atravez de la ruta
         component: VerPaisComponent,
     },

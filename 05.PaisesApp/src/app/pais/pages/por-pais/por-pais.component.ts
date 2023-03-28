@@ -23,7 +23,6 @@ export class PorPaisComponent {
     this.paisService.buscarPorPais(this.termino)
       .subscribe({
         next: (respuesta) => {
-          console.log(respuesta);
           this.paises = respuesta
           console.log(this.paises)
           this.termino = ''
@@ -33,8 +32,6 @@ export class PorPaisComponent {
           console.log(error);
         }
       })
-
-    console.log(this.termino)
 
   }
 

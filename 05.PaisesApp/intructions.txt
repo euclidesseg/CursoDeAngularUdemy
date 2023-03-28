@@ -148,3 +148,18 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 
 ======== Por capital =========
 ---- Para hacer la parte de buscar por capital lo hare como tarea
+
+======== Ver Pais Independiente ==============
+---- Para hacer esta parte nos vamos suscribir a los cambios del url
+---- que indica cuando el componente esta inicializado, el constructor es antes de que se inicialice
+---- private activatedRoute : ActivatedRoute importamos este servicio el cual nos permite 
+---- suscribirnos a los cambios del url creamos una nueva peticion a consultar por codigo atravez del
+---- codigo que se envia por la url, Como nos damos canta devido a que en la pantalla de ver pais
+---- no existe un boton de consultar por codigo todo el metodo se pone en el OnInit esto para 
+---- que una vez que se inicialice la ruta o la pagina se ejecute el metodo que trae la inforacion
+---- y la pinte en la vista de la pagina.
+
+
+======= Rxjs SwithMap ========
+---- para trabajar con operadores de rxjs esta vez usaremos el operador switch SwithMap
+---- este operador nos permite recibir un observable y regresar otro

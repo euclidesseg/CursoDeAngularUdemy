@@ -24,7 +24,6 @@ export class InputComponent implements OnInit{
        .pipe(debounceTime(3000) )
         // no se va a emitir el subscribe hasta que el observable deje de emitir valores por 3 seg
        .subscribe((valor) =>{
-        console.log(valor)
         this.onDebounce.emit(valor)
         })
     }

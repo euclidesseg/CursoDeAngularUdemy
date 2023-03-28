@@ -44,4 +44,9 @@ export class PaisService {
         const url = `${this.apiUrl}/capital/${termino}`
         return this.http.get<Country[]>(url)
     }
+
+    buscarPorCodigo(code:string):Observable<Country[]>{
+        const url = `${this.apiUrl}/alpha/${code}`
+        return this.http.get<Country[]>(url)
+    }
 }
