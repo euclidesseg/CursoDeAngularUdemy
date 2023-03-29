@@ -33,9 +33,20 @@
                     <strong> Extencion: {{ pais.area }} Mill-KM</strong>
                 </li>
             </ul>
-        </div>
-        <div class="row">
-            <span class="badge bg-primay mr-1"> Traducciones: {{pais.languages.spa}}</span>
+            <div class="col">
+                <span class="badge bg-primary mr-1">{{pais.translations['spa'].official}}</span>
+                <span class="badge bg-primary mr-1">{{pais.translations['jpn'].official}}</span>
+                <span class="badge bg-primary mr-1">{{pais.translations['ara'].official}}</span>
+                <span class="badge bg-primary mr-1">{{pais.translations['nld'].official}}</span>
+                <span class="badge bg-primary mr-1">{{pais.translations['slk'].official}}</span>
+                <span class="badge bg-primary mr-1">{{pais.translations['fin'].official}}</span>
+                <span class="badge bg-primary mr-1">{{pais.translations['fra'].official}}</span>
+            </div>
         </div>
     </div>
+    <!-- preformatear codigo -->
+    
+    <!-- <pre class="met-5">
+        {{pais | json}}
+    </pre> -->
 </ng-template>
