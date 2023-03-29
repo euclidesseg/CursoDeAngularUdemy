@@ -21,21 +21,28 @@
             <h3>Informacion</h3>
             <ul class="list-group">
                 <li class="list-group-item">
-                    <strong> Poblacion: {{ pais.population }}</strong>
+                    <span> Poblacion: {{ pais.population }}</span>
                 </li>
                 <li class="list-group-item">
-                    <strong> Capital: {{ pais.capital }}</strong>
+                    <span> Capital: {{ pais.capital }}</span>
                 </li>
                 <li class="list-group-item">
-                    <strong> Continente: {{ pais.continents }}</strong>
+                    <span> Continente: {{ pais.continents }}</span>
                 </li>
                 <li class="list-group-item">
-                    <strong> Extencion: {{ pais.area }} Mill-KM</strong>
+                    <span> Extencion: {{ pais.area }} Mill-KM</span>
                 </li>
             </ul>
-        </div>
-        <div class="row">
-            <span class="badge bg-primay mr-1"> Traducciones: {{pais.languages.spa}}</span>
+            <div class="row traducc">
+                <h3>Traducciones</h3>
+                <span class="badge bg-primary mr-1">{{pais.translations['ara'].official}}</span>
+                <span class="badge bg-primary mr-1">{{pais.translations['spa'].official}}</span>
+                <span class="badge bg-primary mr-1">{{pais.translations['deu'].official}}</span>
+                <span class="badge bg-primary mr-1">{{pais.translations['jpn'].official}}</span>
+                <span class="badge bg-primary mr-1">{{pais.translations['pol'].official}}</span>
+            </div>
+            
         </div>
     </div>
+    
 </ng-template>

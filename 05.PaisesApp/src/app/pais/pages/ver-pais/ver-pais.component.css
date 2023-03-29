@@ -1,0 +1,11 @@
+.mr-1{
+    margin: 5px;
+    width: 150px;
+}
+.traducc{
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
