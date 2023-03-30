@@ -163,3 +163,8 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 ======= Rxjs SwithMap ========
 ---- para trabajar con operadores de rxjs esta vez usaremos el operador switch SwithMap
 ---- este operador nos permite recibir un observable y regresar otro
+
+======= Buscar por region ==========
+---- Para buscar por region vamos a agregar tres botonos a nuestra 
+---- template de buscar por region de acuerdo al numero de regionoes o continenentes
+

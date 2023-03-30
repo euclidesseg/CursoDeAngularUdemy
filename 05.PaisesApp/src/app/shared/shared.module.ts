@@ -19,7 +19,6 @@ import { AppRoutingModule } from '../app-routing.module';
   ],
   exports:[
     SidebarComponent,
-    
   ],
 })
 export class SharedModule { }

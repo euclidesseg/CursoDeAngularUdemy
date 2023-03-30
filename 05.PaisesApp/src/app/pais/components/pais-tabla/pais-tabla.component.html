@@ -12,7 +12,7 @@
         <tr>
             <td>{{i}}</td>
             <td><img [src]="pais.flags.png" class="img-flag img-fluid"></td>
-            <td>{{pais.altSpellings[2] | titlecase}}</td>
+            <td>{{pais.name.common | titlecase}}</td>
             <td>{{pais.population | number}}</td>
             <td>
                 <a [routerLink] = "['/pais', pais.altSpellings[0]]" class="btn btn-primary">Ver pais</a>
