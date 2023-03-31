@@ -17,8 +17,8 @@
         <a class="nav-link" [routerLink]="['/pais',pais.altSpellings[0]]">{{pais.name.common}}</a>
         
     </li>
-    <li class="list-group-item list-group-item-action">
-        <a class="nav-link" (click)="buscarSugerido(termino)">Buscar: "{{termino}} "</a>
+    <li  *ngIf="sugerenciassearch != true"  class="list-group-item list-group-item-action">
+        <a class="btn btn-primary" (click)="buscarSugerido()">Buscar: "{{termino}} "</a>
         
     </li>
 </ul>

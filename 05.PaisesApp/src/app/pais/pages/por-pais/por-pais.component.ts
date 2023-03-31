@@ -14,6 +14,7 @@ export class PorPaisComponent {
   paises  : Country[] = []
   paisesSugeridos : Country[] = []
   sugerencias     : boolean = true
+  sugerenciassearch     : boolean = true
 
   constructor(private paisService: PaisService) { }
 
@@ -41,6 +42,7 @@ export class PorPaisComponent {
     // para que me borre el termino despues de 3 segundos
     this.hayError = false
     this.termino = termino
+    this.sugerenciassearch = false
 
     // cuando el usuario precione y deje suelto 3 segundos necesito buscar en el servicio lo que 
     // ha escrito 
@@ -57,7 +59,7 @@ export class PorPaisComponent {
     })
   }
 
-  buscarSugerido(termino: string){
-    this.buscar(termino);
+  buscarSugerido(){
+    this.buscar(this.termino);
   }
 }
