@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
-import {HttpClient} from '@angular/common/http'
+import {HttpClient, HttpParams} from '@angular/common/http'
 import { Observable, of } from 'rxjs'
-import { catchError } from 'rxjs/operators'
+import { catchError, tap } from 'rxjs/operators'
 
 import * as GeneralEnpoint from '../../../environment/pais.environments'
 import { Country } from '../interfaces/pais.interface'
@@ -15,14 +15,18 @@ import { Country } from '../interfaces/pais.interface'
 })
 
 export class PaisService {
-    constructor(
-        private http : HttpClient
-    ){}
+    constructor( private http : HttpClient ){}
     // Esta url viene desde los environment
-    private apiUrl = GeneralEnpoint.generalEnpoint
+    private apiUrl = GeneralEnpoint.generalEnpoint;
+
+    // get que me retorna los parametros que necesito para las peticiones 
+    // en esos veremos que haci varias maneras de hacerlo
+    get httpParams():HttpParams{
+        return new HttpParams().set('fields','altSpellings,flags,name,population')
+    }
 
     buscarPorPais(termino : string) : Observable<Country[]>{
-        const url = `${this.apiUrl}/name/${termino}`
+        const url = `${this.apiUrl}/name/${termino}?fields=altSpellings,flags,name,population `
         // Para obtener la respuesta esta vez lo haremos de manera diferente ya que en vez de obtenerla en una argumento
         // Lo aremos retornando le peticion y como esto retorna a un observable debemos indicar el tipo
         // de retorno del metodo
@@ -42,7 +46,7 @@ export class PaisService {
     }
     buscarPorcapital(termino:string):Observable<Country[]>{
         const url = `${this.apiUrl}/capital/${termino}`
-        return this.http.get<Country[]>(url)
+        return this.http.get<Country[]>(url,{params: this.httpParams})
     }
 
     buscarPorCodigo(code:string):Observable<Country[]>{
@@ -51,7 +55,14 @@ export class PaisService {
     }
 
     buscarPorRegion(region : string):Observable<Country[]>{
+        const httpParams = new HttpParams()
+        .set('fields','altSpellings,flags,name,population')
         const url = `${this.apiUrl}/region/${region}`
-        return this.http.get<Country[]>(url)
+        return this.http.get<Country[]>(url,{params:httpParams}) 
+        .pipe(
+            tap(console.log)
+        )
+        //indicamos que le vamos a mandar parametros en la utl para que nos retorne solo lo que necesitamos
+        // se ha dejado en la busqueda por pais la url mas larga par notar que se puede hacer de dos maneras
     }
 }

@@ -168,3 +168,18 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 ---- Para buscar por region vamos a agregar tres botonos a nuestra 
 ---- template de buscar por region de acuerdo al numero de regionoes o continenentes
 
+======= Optimizando las peticiones ==============
+---- Para optimizar estas peticiones lo bamos a hacer pidiendo unicamente los
+---- datos que necesitamos pintar en la tabla de paises entonces eso lo haremos en el endpoint
+---- de buscar pais y de buscr por capital depende del API que usemos, esta nos permite filtar
+
+---- para eso nos traemos solamente lo siguiente
+---- fields=altSpellings,flags,name,population
+---- que corresponde a el alphacode de la url para ver el pais 
+---- la vandera, el nombre y la poblacion
+
+---- En buscar por alphacode no le agregamos porque vamos a necesitar toda la informacion
+
+===== Caja de sugerencias para las busquedas ========
+---- Para crear la caja de sugerencias primero devemos hacer el html para saber como queremos que se
+---- vea nuestra caja de sugerencias
