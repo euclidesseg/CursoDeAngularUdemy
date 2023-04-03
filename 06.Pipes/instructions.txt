@@ -1,0 +1,21 @@
+====== Pipes =======
+---- Un pipe es una forma de transformar la informacion que esta en el html
+---- por ejemplo si tenemos una informacion en nuestr base de datos en toda en mayuscula
+---- no seria feo ponerla en mayuscula en la parte visual en nuestro componente visual
+---- propiedad | pipe  : esta es la sintaxis para usar los pipes
+
+
+---- Para trabajar con pipe vamos a trabajar al tiempo con la libreria 
+---- PRIME NG
+
+---- Prime Ng es un conjunto de componentes estilizados y 
+
+---- Con Prime NG podemos usar los componentes por separado solo importando los componente que necesitemos
+---- por ejemplo en un proyecto no tal vez no necesitemos el modulo de calendar o checkbox o group
+---- Datos par ainstalar PrimeNG
+---- npm install primeng --save
+---- npm install primeng primeicons
+
+---- cll 6 sur nro 43 a 96 off 501 ed afinity
+
+---- Los pipes de angular sirven para trnsformar visualmente la informacion
