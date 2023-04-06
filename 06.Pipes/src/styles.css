@@ -1,0 +1,12 @@
+/* Estilos glovales, estos estilis vienen directamente desde prime ng de un archivo
+ * que representa el css gloval de la aplicacion ubicada en la carpeta de node-Modules */
+html, body{
+    margin: 0;
+    background-color: var(--surface-b);
+    font-family: var(--font-family);
+}
+
+/* aplicar esta clase al texto que lo requiera cuando lo requiera */
+.text__layout{
+    color: var(--text-color);
+}

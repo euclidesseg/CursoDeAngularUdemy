@@ -1,0 +1,42 @@
+====== Pipes =======
+---- Un pipe es una forma de transformar la informacion que esta en el html
+---- por ejemplo si tenemos una informacion en nuestr base de datos en toda en mayuscula
+---- no seria feo ponerla en mayuscula en la parte visual en nuestro componente visual
+---- propiedad | pipe  : esta es la sintaxis para usar los pipes
+
+
+---- Para trabajar con pipe vamos a trabajar al tiempo con la libreria 
+---- PRIME NG
+
+---- Prime Ng es un conjunto de componentes estilizados y 
+
+---- Con Prime NG podemos usar los componentes por separado solo importando los componente que necesitemos
+---- por ejemplo en un proyecto no tal vez no necesitemos el modulo de calendar o checkbox o group
+---- Datos par ainstalar PrimeNG
+---- npm install primeng --save
+---- npm install primeicons
+---- Los pipes de angular sirven para trnsformar visualmente la informacion
+
+
+---- Para continuar vamos a configurar primeNg en nuestro proyecto para continuar...
+-----"styles": [
+        "node_modules/primeicons/primeicons.css",
+        "node_modules/primeng/resources/themes/vela-blue/theme.css",
+        "node_modules/primeng/resources/primeng.min.css",
+        ...
+-----]
+
+---- estos archivos los agregamos a nuestros estilos de angular.json 
+---- para usar las directivas de primeNg es decir las etiquetas personalizadas 
+---- devemos importar dicho modulo 
+
+==== NOTA: Para usar cualquier estili de angular devemos importar el modulo correspondiente del paquete
+---- en nuestro modulo, tambien lo podemos referenciar en los componentes
+
+---- Ahora vamos a estilizar nuestro botton para lo cual importamos el modulo a nuestro componente
+---- para agregar etiquetas personalizadas usamos los modulos de primeNG pero si queremos dar colores
+---- o estilos usamos las variables de css estaplecidas en el archivo temes de los paquetes de primeicons
+
+
+---- para darle mas estilos a nuestro componente tambien tomamos los estilos propios 
+---- de bariable sde css 
