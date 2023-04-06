@@ -10,6 +10,18 @@
         ></app-input>
     </div>
 </div>
+
+<!-- crearemos nuestra caja de busqueda a continuacion -->
+<ul *ngIf="sugerencias" class="list-group">
+    <li *ngFor="let pais of paisesSugeridos" class="list-group-item list-group-item-action">
+        <a class="nav-link" [routerLink]="['/pais',pais.altSpellings[0]]">{{pais.name.common}}</a>
+        
+    </li>
+    <li  *ngIf="sugerenciassearch != true"  class="list-group-item list-group-item-action">
+        <a class="btn btn-primary" (click)="buscarSugerido()">Buscar: "{{termino}} "</a>
+        
+    </li>
+</ul>
 <hr>
 <div class="alert alert-danger" *ngIf="hayError">
     No se encontro nada con el termino {{termino}}

@@ -9,7 +9,7 @@ export class HeroeComponent{
     nombre:string = 'Ironman';
     edad:number = 45;
 
-    obtenerNombre():string{
+    get obtenerNombre():string{
         return `${this.nombre} - ${this.edad}`
       
     }
