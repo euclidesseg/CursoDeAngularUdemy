@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Pipes';
+  title = 'PrimeNg';
   nombre : string = 'Euclides seGundo Perez FernandeZ'
   valor  : number = 1000
   objeto = {

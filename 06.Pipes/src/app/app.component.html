@@ -7,6 +7,19 @@
 
 </div>
 
-<button pButton label="cambiar nombre" (click)="getNombre()">
+<div class="buttons">
+  <p-button label="cambiar nombre" (click)="getNombre()">
+  </p-button>
 
-</button>
+  <p-button label="Submit" icon="pi pi-chevron-right" iconPos="right" styleClass="p-button-help"></p-button>
+</div>
+
+<div pCard class="cards">
+
+  <p-card header="{{title}}" subheader="Description">
+    <p class="m-0">
+      PrimeNG es una biblioteca de componentes de interfaz de usuario de código abierto para Angular, que ofrece una
+      amplia variedad de componentes para construir aplicaciones web modernas y receptivas.
+    </p>
+  </p-card>
+</div>

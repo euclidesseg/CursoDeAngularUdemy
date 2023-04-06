@@ -30,7 +30,13 @@
 ---- para usar las directivas de primeNg es decir las etiquetas personalizadas 
 ---- devemos importar dicho modulo 
 
-==== NOTA: Para usar cualquier estili de angular devemos importar el modulo correspondiente al paquete
+==== NOTA: Para usar cualquier estili de angular devemos importar el modulo correspondiente del paquete
 ---- en nuestro modulo, tambien lo podemos referenciar en los componentes
 
 ---- Ahora vamos a estilizar nuestro botton para lo cual importamos el modulo a nuestro componente
+---- para agregar etiquetas personalizadas usamos los modulos de primeNG pero si queremos dar colores
+---- o estilos usamos las variables de css estaplecidas en el archivo temes de los paquetes de primeicons
+
+
+---- para darle mas estilos a nuestro componente tambien tomamos los estilos propios 
+---- de bariable sde css 
