@@ -9,129 +9,37 @@ import { MenuItem } from 'primeng/api';
 export class MenuComponent implements OnInit{
   
   items:MenuItem [] = []
+    //   arreglo de tipo MenuItem de prime
 
   ngOnInit(): void {
-        this.items = [
+        // llenamos el arreglo con su tipado de MenuItem
+        this.items = [ 
             {
-                label: 'File',
-                icon: 'pi pi-fw pi-file',
-                items: [
+                label: 'Pipes de Angular',
+                icon : 'pi pi-desktop',
+                items:[
                     {
-                        label: 'New',
-                        icon: 'pi pi-fw pi-plus',
-                        items: [
-                            {
-                                label: 'Bookmark',
-                                icon: 'pi pi-fw pi-bookmark'
-                            },
-                            {
-                                label: 'Video',
-                                icon: 'pi pi-fw pi-video'
-                            }
-                        ]
+                        // cada item tiene su label que seria su texto y un routerlink 
+                        // para redireccionar a su componente segun el componente de prime
+                        label:'Textos Y fechas',
+                        icon: 'pi pi-align-left',
+                        routerLink:''
                     },
                     {
-                        label: 'Delete',
-                        icon: 'pi pi-fw pi-trash'
+                        label:'numeros',
+                        icon: 'pi pi-dollar',
+                        routerLink:'numeros'
                     },
                     {
-                        separator: true
-                    },
-                    {
-                        label: 'Export',
-                        icon: 'pi pi-fw pi-external-link'
+                        label:'no-comunes',
+                        icon: 'pi pi-globe',
+                        routerLink:'no-comunes'
                     }
                 ]
             },
             {
-                label: 'Edit',
-                icon: 'pi pi-fw pi-pencil',
-                items: [
-                    {
-                        label: 'Left',
-                        icon: 'pi pi-fw pi-align-left'
-                    },
-                    {
-                        label: 'Right',
-                        icon: 'pi pi-fw pi-align-right'
-                    },
-                    {
-                        label: 'Center',
-                        icon: 'pi pi-fw pi-align-center'
-                    },
-                    {
-                        label: 'Justify',
-                        icon: 'pi pi-fw pi-align-justify'
-                    }
-                ]
-            },
-            {
-                label: 'Users',
-                icon: 'pi pi-fw pi-user',
-                items: [
-                    {
-                        label: 'New',
-                        icon: 'pi pi-fw pi-user-plus'
-                    },
-                    {
-                        label: 'Delete',
-                        icon: 'pi pi-fw pi-user-minus'
-                    },
-                    {
-                        label: 'Search',
-                        icon: 'pi pi-fw pi-users',
-                        items: [
-                            {
-                                label: 'Filter',
-                                icon: 'pi pi-fw pi-filter',
-                                items: [
-                                    {
-                                        label: 'Print',
-                                        icon: 'pi pi-fw pi-print'
-                                    }
-                                ]
-                            },
-                            {
-                                icon: 'pi pi-fw pi-bars',
-                                label: 'List'
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                label: 'Events',
-                icon: 'pi pi-fw pi-calendar',
-                items: [
-                    {
-                        label: 'Edit',
-                        icon: 'pi pi-fw pi-pencil',
-                        items: [
-                            {
-                                label: 'Save',
-                                icon: 'pi pi-fw pi-calendar-plus'
-                            },
-                            {
-                                label: 'Delete',
-                                icon: 'pi pi-fw pi-calendar-minus'
-                            }
-                        ]
-                    },
-                    {
-                        label: 'Archieve',
-                        icon: 'pi pi-fw pi-calendar-times',
-                        items: [
-                            {
-                                label: 'Remove',
-                                icon: 'pi pi-fw pi-calendar-minus'
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                label: 'Quit',
-                icon: 'pi pi-fw pi-power-off'
+                label:'Pipes Personalizados',
+                icon:'pi pi-cog'
             }
         ];
   }

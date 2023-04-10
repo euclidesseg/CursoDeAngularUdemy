@@ -44,3 +44,18 @@
 ==== Ahora nos crearemos un modulo especializado para todos los modulos que trabajan con el primeNG
 ---- Este modulo solo me va a servir para exportar los modulos que voy a utilizar
 ---- Seguido de esto se agregan las carpetas para la estructuras de la app
+
+
+==== Rutas de la Aplicacion ====
+
+
+==== Cambiar Rutas usando el MenuBar ====
+---- En esta ocacion veremos como cambiar rutas desde el menu bariable
+---- Aunque en el html no se vean las etiquetas a para navegar
+
+---- Para eso el arreglo de items que nos pide el p.menubar 
+---- los llenaremos manual mente, ahi nos damos cuanta que el tipado que viene directamente del componente
+---- de prime nos pide datos principales como label: titulo, icon: icono del label,
+---- y el mas importante que es el routerLink con el cual navegaremos hasta nuestro componente de eleccrion
+
+----
