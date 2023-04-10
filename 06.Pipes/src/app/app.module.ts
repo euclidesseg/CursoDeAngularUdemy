@@ -1,21 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {ButtonModule} from 'primeng/button'
-import {CardModule} from 'primeng/card'
-
 import { AppComponent } from './app.component';
+
+// Modulo personalizado
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    ButtonModule,
-    CardModule
+    SharedModule,
+  ],
+  exports:[
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

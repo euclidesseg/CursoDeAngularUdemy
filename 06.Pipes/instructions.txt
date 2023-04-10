@@ -30,7 +30,7 @@
 ---- para usar las directivas de primeNg es decir las etiquetas personalizadas 
 ---- devemos importar dicho modulo 
 
-==== NOTA: Para usar cualquier estili de angular devemos importar el modulo correspondiente del paquete
+==== NOTA: Para usar cualquier estilo de angular devemos importar el modulo correspondiente del paquete
 ---- en nuestro modulo, tambien lo podemos referenciar en los componentes
 
 ---- Ahora vamos a estilizar nuestro botton para lo cual importamos el modulo a nuestro componente
@@ -40,3 +40,7 @@
 
 ---- para darle mas estilos a nuestro componente tambien tomamos los estilos propios 
 ---- de bariable sde css 
+
+==== Ahora nos crearemos un modulo especializado para todos los modulos que trabajan con el primeNG
+---- Este modulo solo me va a servir para exportar los modulos que voy a utilizar
+---- Seguido de esto se agregan las carpetas para la estructuras de la app
