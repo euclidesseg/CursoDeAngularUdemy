@@ -58,4 +58,13 @@
 ---- de prime nos pide datos principales como label: titulo, icon: icono del label,
 ---- y el mas importante que es el routerLink con el cual navegaremos hasta nuestro componente de eleccrion
 
-----
+==== LLenar Basicos Textos y Fechas Con prime Flex====
+---- Para trabajar con Prime Flex Devemos hacer la instalcion de prime Flex
+---- npm install primeflex --save
+---- prime flex lo que hace es darnos otro tipo de clases que estan orientadas a trabajar con flex box
+
+---- Tambien debemos importar el modulo Prime hasta nuestro modulo personalizados,
+---- importamos el modulo ventas hasta el modulo appModulo para que se muestre, 
+---- y en el modulo personalizado de prime lo importamos hasta el modulo personalizado
+
+---- UpperCase LowerCase Y TitleCase ----

@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./basicos.component.css']
 })
 export class BasicosComponent {
-
+  nombreLower : string = "euclides"
+  nombreUpper : string = "EUCLIDES"
+  nombreCompleto : string = "euCliDes PEreZ"
 }
