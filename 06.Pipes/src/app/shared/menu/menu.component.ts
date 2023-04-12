@@ -23,7 +23,7 @@ export class MenuComponent implements OnInit{
                         // para redireccionar a su componente segun el componente de prime
                         label:'Textos Y fechas',
                         icon: 'pi pi-align-left',
-                        routerLink:''
+                        routerLink: 'basicos'
                     },
                     {
                         label:'numeros',

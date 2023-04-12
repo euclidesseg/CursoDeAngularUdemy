@@ -1,1 +1,27 @@
-<p>numeros works!</p>
+<div class="text__layout">
+    <h1>Pipes Numericos y de Pocentaje</h1>
+    <p>
+        Pipes incluidos en angular - usualmente incluidos en el Common Module
+    </p>
+    <div class="grid">
+        <div class=".md:col-6 sm:col-4">
+            <p-card header="ventas netas" subheader=" del presene año">
+                <!-- sin argumentos me lo redondea a 3 decimales -->
+                <!-- Con el argumento  1.2-2 me lo redondea a solo decmales-->
+                <!-- ya sabemos que al redondear si es menor  de la mitad lo redonea hacia 0 yi si es igual o 
+                     o mas de la mitad lo redondea a 10 -->
+                {{ ventaNeta | number :'1.2-2'}}
+            </p-card>
+        </div>
+        <div class=".md:col-6 sm:col-4">
+            <p-card header="ventas Brutas" subheader=" del presene año">
+                {{ ventaNeta - 200000 | currency: 'USD':'symbol-narrow' :'1.4-4'}}
+            </p-card>
+        </div>
+        <div class=".md:col-6 sm:col-4">
+            <p-card header="Ganancia Porcentual" subheader=" del presene año">
+                {{ porcentaje | percent:'2.2-2'}}
+            </p-card>
+        </div>
+    </div>
+</div>

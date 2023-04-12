@@ -19,6 +19,58 @@
                 {{ nombreCompleto }}
             </p-card>
         </div>
-        
+
+    </div>
+</div>
+
+<div class="text__layout">
+    <h1>Date | Fecha | Pipe</h1>
+    <p>
+        Pipe para mostrar las fechas
+    </p>
+
+    <div class="grid">
+        <div class=".md:col-6 sm:col-6">
+            <p-card>
+                <ul>
+                    <li>fecha</li>
+                    <li>fecha | date</li>
+                    <!-- mandando un argumento para darle formato a la fecha -->
+                    <li>fecha | date : 'short'</li>
+                    <li>fecha | date : 'long'</li>
+                    <li>fecha | date : 'EEE dd MM YYYY'</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>fecha | date : 'long' :'GMT-6'</li>
+                    <li>fecha | date : 'long' :'GMT-4'</li>
+                    <li>fecha | date : 'long' :'GMT-2':'es-CO'</li>
+                    <li>fecha | date : 'long' :'GMT-2':'Fr'</li>
+
+                </ul>
+            </p-card>
+        </div>
+        <div class=".md:col-6 sm:col-6">
+            <p-card>
+
+                <ul>
+                    <li>{{fecha}}</li>
+                    <li>{{fecha | date}}</li>
+                    <li>{{fecha | date : 'short'}}</li>
+                    <li>{{fecha | date : 'long'}}</li>
+                    <li>{{fecha | date : 'EEE dd MM YYYY'}}</li>
+                </ul>
+                <hr>
+                <ul>
+                    <!-- Me generara una hora menos -->
+                    <li>{{fecha | date : 'long' :'GMT-6'}}</li>
+                    <li>{{fecha | date : 'long' :'GMT-2'}}</li>
+                    <!-- si quisiera agregar otro idioma deveria importarlo en nuestro appmodule y agregarlo a la funcion -->
+                    <li>{{fecha | date : 'long' :'GMT-2':'es-CO'}}</li>
+                    <li>{{fecha | date : 'long' :'GMT-2':'fr'}}</li>
+
+                </ul>
+            </p-card>
+        </div>
     </div>
 </div>

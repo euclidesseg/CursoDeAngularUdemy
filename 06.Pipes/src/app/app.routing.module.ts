@@ -8,7 +8,7 @@ import { OrdenarComponent } from "./ventas/pages/ordenar/ordenar.component";
 
 const routes:Routes = [
     {
-        path:'',
+        path:'basicos',
         component:BasicosComponent,
         pathMatch:'full'
 
@@ -27,7 +27,7 @@ const routes:Routes = [
     },
     {
         path:'**',
-        redirectTo:''
+        redirectTo:'basicos'
     }
 ]
 

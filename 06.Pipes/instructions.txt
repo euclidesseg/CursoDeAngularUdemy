@@ -68,3 +68,35 @@
 ---- y en el modulo personalizado de prime lo importamos hasta el modulo personalizado
 
 ---- UpperCase LowerCase Y TitleCase ----
+
+==== DatePipe ====
+---- {{ value_expression | date [ : format [ : timezone [ : locale ] ] ] }}
+
+==== Cambiar el idioma de los pipes ====
+---- para cambiar el idioma de los pipe lo hacemos desde la raiz de la app den el app module
+---- importamos el local desde @ angular/common/locales/es-CO
+---- tambien importamos register localData que es una funcion
+---- import {registerLocaleData} from '@angular/common';
+
+---- registerLocaleData(local)
+---- esta funcion recibe el local de nuestra app como data
+
+---- Ahoar lo podemos usar y para usarlo lo registramos como un provedor providers en nuestro appModule
+
+==== TimeZone y cambiar a otro idioma mandando argumento desde el pipe ======
+---- vallamos a nuestro appcomponent
+
+==== Decimal Pipe ===== 
+---- Es hora de comenzar con nuestro Componente de Numeros
+
+==== Currency pipe o monedas ==== 
+---- Continuaremos con numeeros
+
+==== PrimeNG Fieldset ====
+---- en esta clase vamos a aprender un nuevo componente de primeNg 
+---- para preparar na vista para los nuevos pipes
+---- Como de costumbre para usar este componente vamos hasta nuestro modulo 
+---- personalizado y lo agregamos luego de eso en nuestro modulo appmodule debemos agregar 
+---- import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+---- para poderlo usar, generalmente cualquier componente de primeng que tenga animacion requiere de BrowserAnimationsModule
+---- animationModule

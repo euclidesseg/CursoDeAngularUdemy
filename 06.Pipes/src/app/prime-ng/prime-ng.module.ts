@@ -1,8 +1,10 @@
-import { CardModule } from 'primeng/card';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import {FieldsetModule} from 'primeng/fieldset'
 import { MenubarModule } from 'primeng/menubar';
-import { NgModule } from '@angular/core';
+
 
 
 // Lo unico que va hace este modulo es importar el modulo y exportarlo
@@ -12,7 +14,8 @@ import { NgModule } from '@angular/core';
     CommonModule,
     ButtonModule,
     CardModule,
-    MenubarModule
+    MenubarModule,
+    FieldsetModule
   ]
 })
 export class PrimeNgModule { }
