@@ -100,3 +100,22 @@
 ---- import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 ---- para poderlo usar, generalmente cualquier componente de primeng que tenga animacion requiere de BrowserAnimationsModule
 ---- animationModule
+
+==== pipe i18Selected y i18Plural ====
+---- El nombre i18selectedpipe significa 
+---- "internationalization selected pipe" y su función principal
+---- es mostrar la traducción de un valor seleccionado en una lista desplegable.
+
+---- este paipe lo usaremos para que en caso de que un nombre en una frace sea femenina
+---- toda la frase tome el comportamiento de ir dirigida hacia una mujer o lo contrario 
+---- si es hombre valla dirigidaa hombre
+
+---- para determinar si es hombre o mujer debemos tener una vandera que me ayude a determinar
+---- si es hombre o mujer
+
+---- este pipe siempre recibe un objeto como argumento para poder funcionar en el componente 
+---- se ven los ejemplos
+
+==== pipe slice ==== 
+---- este pipe usualmente se utiliza para cortar elelementos de un arreglo o de strings
+---- pfara ver su funcionamiento en el componente de no-comunes se observa
