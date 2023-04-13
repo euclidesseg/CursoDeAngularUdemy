@@ -119,3 +119,9 @@
 ==== pipe slice ==== 
 ---- este pipe usualmente se utiliza para cortar elelementos de un arreglo o de strings
 ---- pfara ver su funcionamiento en el componente de no-comunes se observa
+
+==== KeyValue Pipe ====
+---- este pipe se usa cuando se necesita mostrar un objeto literal en el html
+---- es decir, para usar ngFor es necesario un objeto iterable(arreglo)
+---- con este pipe podemos usar un ngFor con un objeto
+
