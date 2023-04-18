@@ -125,3 +125,17 @@
 ---- es decir, para usar ngFor es necesario un objeto iterable(arreglo)
 ---- con este pipe podemos usar un ngFor con un objeto
 
+
+
+============ Pipes Personalizados =============
+---- Para trabajar con pipes personalizados vamos a crear un nuevo componente en nuestra Aplicacion
+---- para tener nuestros pipes personalizados
+---- para eso dicha pagina la asociamos al segundo elemento de nuestro navbar 
+
+
+==== togleCasePage ==== 
+---- Ahora vamos a crear nuestros primer pipe de angular y lo haremos en la carpeta pipes
+---- para que el pipe funcione debe estar declarado en el un modulo cercano por ende lo vamos a declarar en
+---- products module
+
+==== Enviar argumentos Al Pipe =====
