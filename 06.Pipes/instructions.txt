@@ -125,3 +125,12 @@
 ---- es decir, para usar ngFor es necesario un objeto iterable(arreglo)
 ---- con este pipe podemos usar un ngFor con un objeto
 
+==== Json Pipe ====
+---- el pipe json nos sera util para depurar un objeto y saver sus llaves y valores
+---- su limitacion es que si trae funciones y esas funciones imprimen valores
+---- no nos va a funcionar
+
+==== Asunc Pipe ====
+---- El async pipe es una directiva de Angular que se utiliza para manejar la respuesta
+---- asincrónica de una solicitud HTTP
+---- es decir, para poder usar este pipe lo devemos hacer con un observable o una promesa

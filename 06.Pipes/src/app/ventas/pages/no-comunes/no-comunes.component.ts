@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -57,4 +58,42 @@ export class NoComunesComponent {
     direccion: 'Antioquia Colombia'
 
   }
+
+  // json Pipe
+  heroes =[
+    {
+      nombre : 'Superman',
+      vuela: true,
+    },
+    {
+      nombre: 'robin',
+      vuela : false,
+    },
+    {
+      nombre : 'acuaman',
+      vuela : false
+    }
+      
+  ] 
+
+
+  // async pype 
+  // para usarlo creamos una promesa
+
+  miObservable = interval(3000);
+
+
+  promesa =  new Promise((resolve) => {
+      const arreglo:string[] = ['Juan', 'Ana', 'Mairia'];
+      setTimeout(() => {
+        resolve(arreglo);
+      }, 2000);
+    });
+  
+
+  valorPromesa = new Promise((resolve) =>{
+    setTimeout(() => {
+      resolve('esta es la data de la promesa');
+    }, 3000);
+  });
 }

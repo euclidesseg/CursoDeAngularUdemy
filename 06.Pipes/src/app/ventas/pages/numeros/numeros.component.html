@@ -4,7 +4,7 @@
         Pipes incluidos en angular - usualmente incluidos en el Common Module
     </p>
     <div class="grid">
-        <div class=".md:col-6 sm:col-4">
+        <div class="md:col-6 sm:col-4">
             <p-card header="ventas netas" subheader=" del presene año">
                 <!-- sin argumentos me lo redondea a 3 decimales -->
                 <!-- Con el argumento  1.2-2 me lo redondea a solo decmales-->
@@ -13,12 +13,12 @@
                 {{ ventaNeta | number :'1.2-2'}}
             </p-card>
         </div>
-        <div class=".md:col-6 sm:col-4">
+        <div class="md:col-6 sm:col-4">
             <p-card header="ventas Brutas" subheader=" del presene año">
                 {{ ventaNeta - 200000 | currency: 'USD':'symbol-narrow' :'1.4-4'}}
             </p-card>
         </div>
-        <div class=".md:col-6 sm:col-4">
+        <div class="md:col-6 sm:col-4">
             <p-card header="Ganancia Porcentual" subheader=" del presene año">
                 {{ porcentaje | percent:'2.2-2'}}
             </p-card>
