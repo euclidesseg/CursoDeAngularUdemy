@@ -148,3 +148,16 @@
 ---- products module
 
 ==== Enviar argumentos Al Pipe =====
+
+==== argumentos dinamicos a pipes personalizados ==== 
+---- para esta clase nos vamos hasta el componente order 
+---- para cambiar el argumento dinamico que le mandaremos al pipe personalizado
+
+===== PrimeNG Table =====
+---- Continuaremos con nuestro order component ----
+
+==== Tarea Canfly Pipe =====
+---- Para crear esta tarea recibiremos el valor de canfly de tipo boolean
+---- y segun lo que sea retornaremos vuela o no vuela
+---- para eso tengamos en cuanta que cada pipe debera ser una clase diferente y se debe inportar
+---- en un modulo 

@@ -6,6 +6,7 @@ import { BasicosComponent } from './pages/basicos/basicos.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { OrderComponent } from './pages/order/order.component';
 import { ToggleCasePipe } from './pipes/toggle-case.pipe';
+import { CanflyPipe } from './pipes/can-fly.pipe';
 
 
 
@@ -18,6 +19,7 @@ import { ToggleCasePipe } from './pipes/toggle-case.pipe';
 
     // pipes
     ToggleCasePipe,
+    CanflyPipe
   ],
   imports: [
     CommonModule,
