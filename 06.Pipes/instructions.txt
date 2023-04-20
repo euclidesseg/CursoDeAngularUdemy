@@ -161,3 +161,14 @@
 ---- y segun lo que sea retornaremos vuela o no vuela
 ---- para eso tengamos en cuanta que cada pipe debera ser una clase diferente y se debe inportar
 ---- en un modulo 
+
+
+==== sortBy ====
+---- hasta este momento momento tenemos una tabla de listado de heroes los cuales vamos a ordenar por 
+---- nombre o color lo que elijamos y lo vamos a hacer con un pipe
+---- para verificar como se crea en la carpeta de pipes se detalla la manera
+
+==== Por nombre volar o color ====
+---- En esta clase le daremos uso a los botones que tenemos en nuestro componente de order
+---- para  ordenar dinamicamente nuestra tabla
+---- para eso vamos a nuestro order component y creamos una propiedad llamada orderBy
