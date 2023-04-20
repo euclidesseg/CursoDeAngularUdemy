@@ -1,0 +1,7 @@
+
+==== Rutas hijas y LazyLoading =====
+---- Lo que haremos esta seccion sera, entre otras aprender el concepto de layouts
+---- para especificar las rutas y contenido de las rutas ejemplo un login es totalmente e independiente 
+---- al  componente de dashboard
+
+---- En el layout vamos a especificar en alguna parte el router-outlet
