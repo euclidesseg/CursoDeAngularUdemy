@@ -5,3 +5,12 @@
 ---- al  componente de dashboard
 
 ---- En el layout vamos a especificar en alguna parte el router-outlet
+
+===== Creacion de componentes =====
+---- vamos a crear una carpeta que se llamara auth en donde tendremos todo lo relacionado con la autenticacion
+---- otro que se llamara heroes y uno que se llame maeterial
+---- el material solo sera un modulo para exportar ciertos modulos de angulas material
+
+---- dentro de auth creamos una que se llame pages y dentro de pages un componente 
+---- llamado layout page que sera la pagina en la cual se van a recepcionar todas las peticiones 
+---- relacionadas con la autenticacion
