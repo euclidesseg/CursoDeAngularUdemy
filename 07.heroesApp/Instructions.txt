@@ -14,3 +14,22 @@
 ---- dentro de auth creamos una que se llame pages y dentro de pages un componente 
 ---- llamado layout page que sera la pagina en la cual se van a recepcionar todas las peticiones 
 ---- relacionadas con la autenticacion
+
+
+
+===== Rutas hijas y LazyLoad =======
+---- Luego de crear todos los archivos ya estamos listos para ver las rutas y enlazarlas
+---- pero para eso debemos configrar los routing module de cada modulo.
+
+---- nosotros podemos tener un dashboard que tiene una apariencia
+---- tambien tenemos un login con otra apariencia podemos tener la dificultad de implementar los 
+---- estilos por rutas y eso es lo que haremos en esta seccion
+---- continuamos configurando nuestro modulo auth y el modulo heroes
+
+---- luego de configurar esos modulos vamos hasta nuestro routing module principal 
+---- app routing module para configurar las rutas que le queremos dar a esos dos submodulos 
+---- que serian como hijos de mi modulo principal
+
+---- Ya luego de hacer lazyload desde mi modulo principal appRoutingModule hasta los submodulos
+---- necesitamos acceder las demas rutas de los submodulos no solo a la ruta principal
+---- y para eso requerimos indicarle a los submodulos que ellos tambien tendran rutas hijas
