@@ -47,7 +47,17 @@
 ---- http://localhost:4200/heroes/search
 ---- http://localhost:4200/heroes/edit/6465464646 = donde el 6465464646 es un i y parametro de ruta
 ---- http://localhost:4200/heroes/49649
----- http://localhost:4200/heroes/list = ruta por defecto si no se agrega una ruta desconocida
+---- http://localhost:4200/heroes/list = ruta por defecto si se agrega una ruta desconocida
 
 ---- Luego de crear las rutas hijas para nuestro heroesModule hacemos lo mismo 
 ---- para nuestro modulo de de authModule y de esta manera todas nuestras rutas quedarian listas
+
+
+============ Angular Material ==========
+---- Esta parte de angular material es parte de una nueva seccion, en la cual aprenderemos a usar
+---- angular material en nuestros componentes
+---- tambien aprenderemos primeflex
+---- ng add @angular/material   instalacion de angular material
+
+---- para instalar primeFlex unicamente nos traemos el CDN o el link de la libreria hasta nuestro
+---- index.html

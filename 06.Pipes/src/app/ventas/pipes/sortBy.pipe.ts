@@ -7,7 +7,7 @@ import { Hero } from "../interfaces/hero.interface";
 export class SortByPipe implements PipeTransform{
     // indicamos que el primer dato que se va a capitalizar es un arreglo de heroes
     // Y que el valor del argumento va a estar controlado por una propiedad del argumento
-    // es decir, solo se aceptare una propiedad que este dentro del arreglo del arreglo
+    // es decir, solo se aceptare una propiedad que este dentro del arreglo del hero
     transform(heroes:Hero[], sortBy? :keyof Hero | ''):Hero[] {
         switch(sortBy){
             case 'name':
