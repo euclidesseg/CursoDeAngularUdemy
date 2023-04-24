@@ -33,3 +33,21 @@
 ---- Ya luego de hacer lazyload desde mi modulo principal appRoutingModule hasta los submodulos
 ---- necesitamos acceder las demas rutas de los submodulos no solo a la ruta principal
 ---- y para eso requerimos indicarle a los submodulos que ellos tambien tendran rutas hijas
+
+---- luego de configurar tosas las rutas de nuestro modulo HeroesModule devemos
+---- especificar donde se van a pintar  las rutas hijas de nuestro modulo para eso 
+---- tengamos en cuenta que si tenemos varios routingModule en nuestro componente podemos usar varios
+---- <router-outlet></router-outlet>
+
+---- y de esta manera ya puedo usar toas las rutas de la siguiente manera
+---- tengamos en cuanta que se accede a heroes desde nuestro appouting y de ahi a las rutas 
+---- hijas de heroes las cuales se pintaran en el <router-outlet></router-outlet> del modulo
+
+---- http://localhost:4200/heroes/new-hero
+---- http://localhost:4200/heroes/search
+---- http://localhost:4200/heroes/edit/6465464646 = donde el 6465464646 es un i y parametro de ruta
+---- http://localhost:4200/heroes/49649
+---- http://localhost:4200/heroes/list = ruta por defecto si no se agrega una ruta desconocida
+
+---- Luego de crear las rutas hijas para nuestro heroesModule hacemos lo mismo 
+---- para nuestro modulo de de authModule y de esta manera todas nuestras rutas quedarian listas

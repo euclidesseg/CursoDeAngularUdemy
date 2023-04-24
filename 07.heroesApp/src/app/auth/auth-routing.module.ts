@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
-import { NewPageComponent } from '../herores/pages/new-page/new-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
 
 
 // En Angular, RouterModule.forRoot(routes) se utiliza para configurar las rutas
@@ -19,9 +20,18 @@ const routes: Routes = [
         // si no a los demas comonenentes con la siguiente sintaxis http://localhost:50202/auth
         children:[
             {
-                path:'new-hero',
-                component: NewPageComponent,
+               path:'login',
+               component:LoginPageComponent
+            },
+            {
+                path:'new-account',
+                component:RegisterPageComponent
+            },
+            {
+                path:'**',
+                redirectTo:'login'
             }
+
         ]
     }
 ];

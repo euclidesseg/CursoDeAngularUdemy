@@ -24,6 +24,7 @@ const routes:Routes =[
     },
 
     // la siguiente ruta solo se activara si la ruta coincide exsactamente con la cadena vacia
+    // es decir, es aqui donde entrara la ruta por defecto cuando se inicie la pagina
     {
         path:'',
         redirectTo: 'heroes',
