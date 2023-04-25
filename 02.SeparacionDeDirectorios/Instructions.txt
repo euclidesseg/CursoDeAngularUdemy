@@ -54,3 +54,16 @@
 ---- en los imports de nuestro modulo principal.
 
 ---- El common module es fundamental cuando estamos trabajando con directivas personalizadas de angular
+
+====================================
+---- de esta manera accedo a las propiedades del input con even
+ checkAceptar2(event:Event){
+      // alert(event.target)
+      // event.target para ver el objeto del evento ese objeto me permite acceder a las propiedades del input
+      if((<HTMLInputElement>event.target).value == `si`){
+        this.textoAceptacion = `El  Usuario acepto los terminos y condiciones`;
+      }
+      else if((<HTMLInputElement>event.target).value == `no`){
+        this.textoAceptacion = `Hasta el momento el usuario no ha aceptado los trermino y condiciones`;
+      }
+    }
