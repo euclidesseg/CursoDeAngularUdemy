@@ -66,4 +66,49 @@
 ---- Para crear el login importamos nuestro modulo de Material hasta nuestro modulo auth
 ---- mat-form-field // todo componente que inicia con mat- indica que biene de angular material
 
-=========== Material Sidenav Toolbar e icons ===========s
+=========== Material Sidenav Toolbar e icons ===========
+---- Para crear sidenav vamos hasta el respectivo modulo y de ahi al layout donde se 
+---- encontraran las instrucciones
+
+======== Heroes Backend-json-server =========
+---- json server es un servidor para pruebas que nos permite hacer muchas
+---- cosas relacionado a backend como paginacion entpoints ordenar etc
+---- instalamos json server ======= npm install --save-dev json-server
+---- hemos agregado dev para indicar que sera una dependencia solo para desarroll y cuando hagamos el build
+---- no se cargara a produccion
+
+---- en el package.json creamos un nuevo script
+---- "backend": "json-server --watch data/db.json",
+
+---- seguido vamos hasta el path de nuestra carpeta y corremos el siguiente comando
+---- npm run backend
+---- esto creara dos rutas 
+---- http://localhost:3000/users
+---- http://localhost:3000/heroes
+---- me crea dos rutas porque en el db.json encontro dos dos arreglos en todo ese json 
+
+---- en potsman provamos esas dos rutas y ya podemos consultar todo y por id
+---- esto tiene toda la estructura de un rest full tradicional
+
+======= Variables de Enotornos =========
+---- Una variable de entorno es el valor de una variable que varia dependiendo si estoy en produccion 
+---- si estoy en desarrollo, testing preproduccion por eso se llaman variable de entorno
+---- porque varian dependiendo el entorno 
+---- la variable que vamos a crear es localhost ya que esta ruta va a cambiar estando en produccion
+---- si estamos en desarrollo si sera localhost pero en produccion no va a ser localhost
+---- creamos la carpeta environment y dentro environment.ts, environment.prod.ts
+
+---- y de esta manera tenemos una ruta para produccion y una para desarrollo
+---- pero tengo que decirle a angular aque utilice uno en funcion de si estoy desarrollando o si estoy
+---- en produccion para hacer eso vamos a angular.json
+---- buscamos el json de produccion y dentro de ese agregamos un nuevo json
+----  "fileReplacements": [
+                {
+                  "replace":"src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+        ]
+
+---- debido a que agregamos esto en el json production  lo que hace angular es que cuando se hace 
+---- buil me reemplaza el primer archivo "src/environments/environment.ts", 
+---- con "src/environments/environment.prod.ts" 
