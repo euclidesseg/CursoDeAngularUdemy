@@ -8,6 +8,7 @@ import { ListPageComponent } from './pages/list-page/list-page.component';
 import { NewPageComponent } from './pages/new-page/new-page.component';
 import { SearchPageeComponent } from './pages/search-pagee/search-pagee.component';
 import { MaterialModule } from '../material/material.module';
+import { CardComponent } from './components/card/card.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { MaterialModule } from '../material/material.module';
     ListPageComponent,
     NewPageComponent,
     SearchPageeComponent,
+    CardComponent,
 
   ],
   imports: [

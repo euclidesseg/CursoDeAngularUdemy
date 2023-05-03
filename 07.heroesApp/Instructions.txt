@@ -112,3 +112,11 @@
 ---- debido a que agregamos esto en el json production  lo que hace angular es que cuando se hace 
 ---- buil me reemplaza el primer archivo "src/environments/environment.ts", 
 ---- con "src/environments/environment.prod.ts" 
+
+==== Heroes service =====
+---- creamos el servicio para heroes
+
+==== Mostrando listado de heroes ====
+---- se crearan con cards
+---- y para eso crearemos un nuevo componente para las cards 
+---- <heroes-hero-card></heroes-hero-card>
