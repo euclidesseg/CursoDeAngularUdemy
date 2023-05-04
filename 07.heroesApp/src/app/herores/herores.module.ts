@@ -9,6 +9,7 @@ import { NewPageComponent } from './pages/new-page/new-page.component';
 import { SearchPageeComponent } from './pages/search-pagee/search-pagee.component';
 import { MaterialModule } from '../material/material.module';
 import { CardComponent } from './components/card/card.component';
+import { HeroesImagePipe } from './pipes/heroes-image.pipe';
 
 
 @NgModule({
@@ -19,6 +20,9 @@ import { CardComponent } from './components/card/card.component';
     NewPageComponent,
     SearchPageeComponent,
     CardComponent,
+
+    //pipes
+    HeroesImagePipe,
 
   ],
   imports: [
