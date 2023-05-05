@@ -126,3 +126,11 @@
 ---- tambien se debe mostrar una imagen por defecto en caso que la imagen original no exista o se borre
 ---- para lo que vamos a crear un pipe directamente que me genere una url automaticamente cuando 
 ---- le pasemos un elemento de nuestro arreglo de heroes
+
+
+==== Obtener Eroe Por Url ====
+---- En esta clase nos vamos a centrar en obtener al eroe que se envia
+---- atravez de la url del listado de heroes 
+
+---- agregamos el metodo en el servicio de heroes y posterior mente vamos hasta nuestro
+---- componente de heroe 
