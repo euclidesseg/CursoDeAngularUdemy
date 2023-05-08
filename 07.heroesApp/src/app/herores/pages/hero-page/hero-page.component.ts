@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroesService } from '../../services/heroes.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { switchMap } from 'rxjs';
+import { delay, switchMap } from 'rxjs';
 import { Hero } from '../../interfaces/hero.interface';
 
 @Component({
@@ -30,6 +30,7 @@ export class HeroPageComponent implements OnInit{
     //obtenemos acceso a todos los parametros de la ruta como un observable
     this.activateRoute.params
     .pipe(
+      delay(1000),// hace que tarde 3 segundos en empezar la peticion para que se cargue el loadding en el html
       switchMap((params) => this.heroService.getHeroById(params['id']))
 
       // tambien puedo desestructurar el obgeto de parametros de la ruta
@@ -42,5 +43,9 @@ export class HeroPageComponent implements OnInit{
       return;
     })
 
+  }
+
+  goBack():void{
+    this.router.navigateByUrl('heroes/list')
   }
 }

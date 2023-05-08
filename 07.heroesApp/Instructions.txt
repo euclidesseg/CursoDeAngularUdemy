@@ -133,4 +133,7 @@
 ---- atravez de la url del listado de heroes 
 
 ---- agregamos el metodo en el servicio de heroes y posterior mente vamos hasta nuestro
----- componente de heroe 
+---- componente de heroe en donde pintaremos la informacion del heroe obtenido
+
+==== Agregando pagina del heroe ====
+---- para ver la informacion del heoe vamos hasta nuestro componente de heroe
