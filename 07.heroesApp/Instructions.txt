@@ -137,3 +137,13 @@
 
 ==== Agregando pagina del heroe ====
 ---- para ver la informacion del heoe vamos hasta nuestro componente de heroe
+
+==== autocomplete =====
+---- para crear el autocomplete vamos hasta angular material a revisar la documentacion
+---- la idea es implementar un debouse time que cuando precione una letra automaticamente
+---- se este mostrando el resultado es decir consultar en el backend por una query
+---- http://localhost:3000/heroes?q=a&_limit=6 usamos esta query para consultar los que tengan la letra a 
+---- en su nombre y que me de un limite de solo 6
+
+---- luego de confirugar el formsModule en nuestro componente de search agregamos una propiedad
+---- para almacenar los resultados que se iran mostrando como resultado de la busqueda

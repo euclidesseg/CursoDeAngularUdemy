@@ -10,6 +10,7 @@ import { SearchPageeComponent } from './pages/search-pagee/search-pagee.componen
 import { MaterialModule } from '../material/material.module';
 import { CardComponent } from './components/card/card.component';
 import { HeroesImagePipe } from './pipes/heroes-image.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { HeroesImagePipe } from './pipes/heroes-image.pipe';
 
   ],
   imports: [
+    ReactiveFormsModule,
     CommonModule,
     HeroresRoutingModule,
     MaterialModule

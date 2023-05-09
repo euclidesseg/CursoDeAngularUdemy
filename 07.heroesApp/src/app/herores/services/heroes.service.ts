@@ -28,4 +28,11 @@ export class HeroesService {
       // el Observable devolverá el valor undefined en lugar del error. 
       // Si da error voy a regresar un observable que retorna undefined
   }
+
+
+  // para hacer un debouse time
+  getSuggestions(query:string):Observable<Hero[]>{
+    return this.http.get<Hero[]>(`${this.baseUrl}/heroes?q=${query}&_limit=6`)
+    // esta peticion me traera los heroes cuyo nombre contenga toda la query o una letra del query 
+  }
 }

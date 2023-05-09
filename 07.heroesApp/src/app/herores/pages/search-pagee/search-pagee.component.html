@@ -1,1 +1,40 @@
-<p>search-pagee works!</p>
+<div class="flex flex-column p-2">
+    <h3>Buscador</h3>
+        <mat-form-field>
+            <mat-label>Buscar Heroe</mat-label>
+            <input matInput placeholder="search"
+            [formControl] = "searchInput"
+            (input)="searchHero()"
+            [matAutocomplete]="auto"
+            >
+            <!-- se agrega input porque el backend va a buscar mediante se valla introduciendo valores -->
+            <!-- este formControl solo cumple la labor de hacer un binding con una propiedad dentro 
+            de mi componente  -->
+            <mat-autocomplete utoActiveFirstOption 
+                #auto="matAutocomplete"
+                (optionSelected)="onSelectedOption($event)"
+                > <!---esta propiedad # indica a que elemento apunta y estara en el input-->
+                
+                <mat-option *ngFor="let heroe of heroes" [value]="heroe">
+                  {{heroe.superhero}}
+                </mat-option>
+                <mat-option
+                
+                 *ngIf="heroes.length == 0 && searchInput.value && searchInput.value.length > 0">
+                 <!-- Este ngIf muestra un mensaje al usuario indicando que no se encontraron 
+                    resultados de búsqueda si la lista de héroes está vacía y se ha ingresado un 
+                    término de búsqueda válido. -->
+                    No se encontro nada con el termino{{searchInput.value}}
+                </mat-option>
+              </mat-autocomplete>
+        </mat-form-field>
+
+        {{selectedHero | json}}
+    </div>
+    <!-- {{searchInput.value | json}} me mostrara el valor del formulario
+    {{searchInput.touched | json}} me indica si el formulario fue tocado boolean
+    {{searchInput.pristine | json}} me indica si el formulario fue modificado boolean -->
+
+
+    <!-- cuando precionamos un resultado se nos agrega un comportamiento el input y es que se nos agrega 
+        object al input  -->
