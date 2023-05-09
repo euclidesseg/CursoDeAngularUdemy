@@ -12,7 +12,8 @@
 ---- Crearemos una carpeta para el listado de heroes
 ---- Crear un componente de forma automatica
 
-
+======== Selector ========
+---- El selector se utiliza para indicar a Angular qué elemento HTML se vinculará con el componente "HeroCardComponent".
 
 ========= Directiva ngFor ============
 
