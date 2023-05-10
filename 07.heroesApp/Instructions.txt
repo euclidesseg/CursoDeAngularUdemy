@@ -147,3 +147,7 @@
 
 ---- luego de confirugar el formsModule en nuestro componente de search agregamos una propiedad
 ---- para almacenar los resultados que se iran mostrando como resultado de la busqueda
+
+==== Agregar Heroe Html =====
+---- A continuacion se trabajara en la parte de editar y/o agregar heroe
+---- para lo que iremos hasta nuestro componente de new-page.component
