@@ -7,26 +7,27 @@
             (input)="searchHero()"
             [matAutocomplete]="auto"
             >
-            <!-- se agrega input porque el backend va a buscar mediante se valla introduciendo valores -->
-            <!-- este formControl solo cumple la labor de hacer un binding con una propiedad dentro 
-            de mi componente  -->
-            <mat-autocomplete utoActiveFirstOption 
+            <!--mientras escribo en el input se ejecuta el evento searchHero() -->
+
+            <mat-autocomplete utoActiveFirstOption
                 #auto="matAutocomplete"
-                (optionSelected)="onSelectedOption($event)"
-                > <!---esta propiedad # indica a que elemento apunta y estara en el input-->
-                
+                (optionSelected)="onSelectedOption($event)">
+                <!-- cuando se escoja una de las opciones de mat-option se ejecuta el metodo onselecTedOption-->
+                <!-- este metodo manda el eevento y ese evento contiene los valores de searcHero-->
+
                 <mat-option *ngFor="let heroe of heroes" [value]="heroe">
                   {{heroe.superhero}}
                 </mat-option>
+                <!-- estas opciones se llenean con el arreglo que me retorna el componente cuando escribo en el input -->
+                <!-- La opción seleccionada contiene el valor de la propiedad [value] -->
                 <mat-option
-                
                  *ngIf="heroes.length == 0 && searchInput.value && searchInput.value.length > 0">
-                 <!-- Este ngIf muestra un mensaje al usuario indicando que no se encontraron 
-                    resultados de búsqueda si la lista de héroes está vacía y se ha ingresado un 
+                 <!-- Este ngIf muestra un mensaje al usuario indicando que no se encontraron
+                    resultados de búsqueda si la lista de héroes está vacía y se ha ingresado un
                     término de búsqueda válido. -->
                     No se encontro nada con el termino{{searchInput.value}}
                 </mat-option>
-              </mat-autocomplete>
+            </mat-autocomplete>
         </mat-form-field>
 
         {{selectedHero | json}}
@@ -36,5 +37,5 @@
     {{searchInput.pristine | json}} me indica si el formulario fue modificado boolean -->
 
 
-    <!-- cuando precionamos un resultado se nos agrega un comportamiento el input y es que se nos agrega 
+    <!-- cuando precionamos un resultado se nos agrega un comportamiento el input y es que se nos agrega
         object al input  -->
