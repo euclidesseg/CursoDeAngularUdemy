@@ -12,3 +12,6 @@
 
 ====ng new my-first-project====
 ----generar un nuevo proyecto
+
+--- intalar prime ng npm install primeng@^15.3.0
+--- escogemos la version compatible 
