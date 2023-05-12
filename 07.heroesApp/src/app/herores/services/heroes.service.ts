@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, of } from 'rxjs';
+import { Observable, catchError, map, of } from 'rxjs';
 import { Hero } from '../interfaces/hero.interface';
 import { environments } from 'src/environments/environment.prod';
 
@@ -34,5 +34,30 @@ export class HeroesService {
   getSuggestions(query:string):Observable<Hero[]>{
     return this.http.get<Hero[]>(`${this.baseUrl}/heroes?q=${query}&_limit=6`)
     // esta peticion me traera los heroes cuyo nombre contenga toda la query o una letra del query 
+  }
+
+
+  // agregar heroe
+  addHero(hero: Hero):Observable<Hero>{ // que me retorne un observable y este observable retornara un heroe
+    return this.http.post<Hero>(`${this.baseUrl}/heroes/`, hero )
+    // que me retorne un heroe y que el segundo parametro sea al objeto heroe
+  }
+
+  // actualizar
+  updateHero(hero: Hero):Observable<Hero>{
+    if(!hero.id) throw Error('Hero id is required')
+    
+    return this.http.patch<Hero>(`${this.baseUrl}/heroes/${hero.id}`, hero ) 
+    // el segundo parametro seria lo que se conoce como e cuerpo de la peticion lo que se envia por el body
+    // patch solo me actualiza partes del objeto
+  }
+  deleteHeroByid(id: string):Observable<Boolean>{
+
+    return this.http.delete(`${this.baseUrl}/heroes/${id}`) 
+    .pipe(
+      catchError((error) => of(false)),
+      map((response) => true)
+    );
+    // patch solo me actualiza partes del objeto
   }
 }

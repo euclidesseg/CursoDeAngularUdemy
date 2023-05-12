@@ -77,8 +77,15 @@
 ---- hemos agregado dev para indicar que sera una dependencia solo para desarroll y cuando hagamos el build
 ---- no se cargara a produccion
 
----- en el package.json creamos un nuevo script
+---- en la raiz de nuestro proyecto vamos a crear una carpeta llamada data
+---- dentro de esta un archivo llamado db.json, en el cual sera un json con los datos 
+---- que simularemos como una db   
+
+---- en el package.json creamos un nuevo script dentro del objeto scripts
 ---- "backend": "json-server --watch data/db.json",
+ 
+---- ese script se crea con el fin de ejecutar el json script de db.json 
+---- en en la siguiente instruccion se muestra como se ejecutaria
 
 ---- seguido vamos hasta el path de nuestra carpeta y corremos el siguiente comando
 ---- npm run backend
@@ -151,3 +158,11 @@
 ==== Agregar Heroe Html =====
 ---- A continuacion se trabajara en la parte de editar y/o agregar heroe
 ---- para lo que iremos hasta nuestro componente de new-page.component
+
+
+==== Continuacion de Heroes =====
+---- para esta seccion vamos a mandar un heroe hasta nuestro json o backend
+---- nos daremos inicio a formsReactive 
+
+---- para empezar vallamos hasta nuevo servicio de heroes para agregarl el metodo addHero
+
