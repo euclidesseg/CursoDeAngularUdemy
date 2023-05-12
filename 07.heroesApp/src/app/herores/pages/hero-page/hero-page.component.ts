@@ -16,7 +16,7 @@ export class HeroPageComponent implements OnInit{
   constructor(
     private heroService:HeroesService,
     private activateRoute:ActivatedRoute,
-    // el servicio de activateRoute nos permite obtener la ruta que nos llega a esta 
+    // el servicio de activateRoute nos permite obtener los parametros dela ruta que nos llega a esta
     // componente atravez de la ruta de este mismo.
     private router:Router,
     ){}
@@ -36,16 +36,23 @@ export class HeroPageComponent implements OnInit{
       // tambien puedo desestructurar el obgeto de parametros de la ruta
       // switchMap(({id}) => this.heroService.getHeroById(id))
     )
+    // tesnicamente debido al que el metodo pipe obtiene lo que nos retorna el metodo get nos suscribimos
+    // directamente al resultado del pipe
     .subscribe((hero) =>{
       if(!hero) return this.router.navigate(['/heroes/list']);
       console.log(hero)
       this.hero = hero;
       return;
     })
-
+    //
   }
 
   goBack():void{
     this.router.navigateByUrl('heroes/list')
   }
 }
+// delay() y switchMap() son dos operadores de RxJS que se combinan utilizando el método pipe()
+// para crear una cadena de operadores que transforman los datos de un flujo observable.
+// n este caso, el operador delay(1000) introduce un retraso de 1 segundo antes de continuar
+// con la siguiente operación, y el operador switchMap() se utiliza para cancelar cualquier
+// solicitud anterior y obtener un héroe por su ID a través del método getHeroById()
