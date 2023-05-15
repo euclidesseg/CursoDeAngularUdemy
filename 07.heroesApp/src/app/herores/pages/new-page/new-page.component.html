@@ -8,40 +8,60 @@
         <div class="col-12 sm:col-6">
             <mat-card>
                 <mat-card-content>
-                    <div class="grid">
+
+                  <!-- === Indicamos que este sera como el formGroup === -->
+                    <form class="grid" [formGroup]="heroForm" (ngSubmit)="onSubmitForm()"> <!---con [formGroupp] conextamos todo el formulario-->
+
                         <mat-form-field class="col-12 sm:col-6">
                             <mat-label>Super Heroe</mat-label>
-                            <input matInput type="text" required="">
+                            <input matInput type="text" required="" formControlName = "superhero" >
+                            <!---con formControlName conextamos el input con su elemento dentro del formGroup-->
                         </mat-form-field>
+                        <!-- ======================================================== -->
                         <mat-form-field class="col-12 sm:col-6">
                             <mat-label>Alter ego</mat-label>
-                            <input matInput type="text" required="">
+                            <input matInput type="text" required="" formControlName = "alter_ego">
                         </mat-form-field>
+                        <!-- ======================================================== -->
+
                         <mat-form-field class="col-12">
                             <mat-label>Primera aparicion</mat-label>
-                            <input matInput type="text" required="">
+                            <input matInput type="text" required="" formControlName="first_appearance">
                         </mat-form-field>
+                        <!-- ======================================================== -->
+
                         <mat-form-field class="col-12">
                             <mat-label>Personajes</mat-label>
-                            <input matInput type="text" required="">
+                            <input matInput type="text" required="" formControlName="characters">
                         </mat-form-field>
+                        <!-- ======================================================== -->
+
                         <mat-form-field class="col-12">
                             <mat-label>Creador</mat-label>
-                            <mat-select required="">
+                            <mat-select required="" formControlName = "publisher">
                                 <mat-option *ngFor="let publisher of publishers"
                                     [value]="publisher.id">
                                     {{publisher.value}}
                                 </mat-option>
                             </mat-select>
                         </mat-form-field>
-                    </div>
+                        <!-- ======================================================== -->
+
+                        <mat-form-field class="col-12">
+                          <mat-label>Alternative Image</mat-label>
+                          <input matInput type="text" formControlName="alt_image">
+                      </mat-form-field>
+                        <!-- ======================================================== -->
+
+                    </form>
                     <div class="flex justify-content-between">
                         <button mat-flat-button
                             color="warn">
                             Borrar
                         </button>
-                        <button mat-flat-button
-                            color="primary">
+                        <button mat-flat-button color="primary" (click)="onSubmitForm()">
+                          <!-- si este boton estubiera dentro del formulario solo le dariamos de tipo tipe
+                               submit--->
                             Guardar
                         </button>
                     </div>

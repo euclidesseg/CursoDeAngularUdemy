@@ -14,7 +14,7 @@ export class SearchPageeComponent{
 
   constructor(private heroService:HeroesService){}
 
-  public searchInput = new FormControl('')
+  public searchInput = new FormControl('') //estp seria un input reactivo
   public selectedHero?:Hero
   // para poder usar esta propiedad FormControl se deve importar un modulo llamado ReactiveFormsModule
   // lo hacemos en nuestro modulo principal

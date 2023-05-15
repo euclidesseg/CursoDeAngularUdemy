@@ -1,7 +1,7 @@
 
 ==== Rutas hijas y LazyLoading =====
 ---- Lo que haremos esta seccion sera, entre otras aprender el concepto de layouts
----- para especificar las rutas y contenido de las rutas ejemplo un login es totalmente e independiente 
+---- para especificar las rutas y contenido de las rutas ejemplo un login es totalmente e independiente
 ---- al  componente de dashboard
 
 ---- En el layout vamos a especificar en alguna parte el router-outlet
@@ -11,8 +11,8 @@
 ---- otro que se llamara heroes y uno que se llame maeterial
 ---- el material solo sera un modulo para exportar ciertos modulos de angulas material
 
----- dentro de auth creamos una que se llame pages y dentro de pages un componente 
----- llamado layout page que sera la pagina en la cual se van a recepcionar todas las peticiones 
+---- dentro de auth creamos una que se llame pages y dentro de pages un componente
+---- llamado layout page que sera la pagina en la cual se van a recepcionar todas las peticiones
 ---- relacionadas con la autenticacion
 
 
@@ -22,12 +22,12 @@
 ---- pero para eso debemos configrar los routing module de cada modulo.
 
 ---- nosotros podemos tener un dashboard que tiene una apariencia
----- tambien tenemos un login con otra apariencia podemos tener la dificultad de implementar los 
+---- tambien tenemos un login con otra apariencia podemos tener la dificultad de implementar los
 ---- estilos por rutas y eso es lo que haremos en esta seccion
 ---- continuamos configurando nuestro modulo auth y el modulo heroes
 
----- luego de configurar esos modulos vamos hasta nuestro routing module principal 
----- app routing module para configurar las rutas que le queremos dar a esos dos submodulos 
+---- luego de configurar esos modulos vamos hasta nuestro routing module principal
+---- app routing module para configurar las rutas que le queremos dar a esos dos submodulos
 ---- que serian como hijos de mi modulo principal
 
 ---- Ya luego de hacer lazyload desde mi modulo principal appRoutingModule hasta los submodulos
@@ -35,12 +35,12 @@
 ---- y para eso requerimos indicarle a los submodulos que ellos tambien tendran rutas hijas
 
 ---- luego de configurar tosas las rutas de nuestro modulo HeroesModule devemos
----- especificar donde se van a pintar  las rutas hijas de nuestro modulo para eso 
+---- especificar donde se van a pintar  las rutas hijas de nuestro modulo para eso
 ---- tengamos en cuenta que si tenemos varios routingModule en nuestro componente podemos usar varios
 ---- <router-outlet></router-outlet>
 
 ---- y de esta manera ya puedo usar toas las rutas de la siguiente manera
----- tengamos en cuanta que se accede a heroes desde nuestro appouting y de ahi a las rutas 
+---- tengamos en cuanta que se accede a heroes desde nuestro appouting y de ahi a las rutas
 ---- hijas de heroes las cuales se pintaran en el <router-outlet></router-outlet> del modulo
 
 ---- http://localhost:4200/heroes/new-hero
@@ -49,7 +49,7 @@
 ---- http://localhost:4200/heroes/49649
 ---- http://localhost:4200/heroes/list = ruta por defecto si se agrega una ruta desconocida
 
----- Luego de crear las rutas hijas para nuestro heroesModule hacemos lo mismo 
+---- Luego de crear las rutas hijas para nuestro heroesModule hacemos lo mismo
 ---- para nuestro modulo de de authModule y de esta manera todas nuestras rutas quedarian listas
 
 
@@ -67,7 +67,7 @@
 ---- mat-form-field // todo componente que inicia con mat- indica que biene de angular material
 
 =========== Material Sidenav Toolbar e icons ===========
----- Para crear sidenav vamos hasta el respectivo modulo y de ahi al layout donde se 
+---- Para crear sidenav vamos hasta el respectivo modulo y de ahi al layout donde se
 ---- encontraran las instrucciones
 
 ======== Heroes Backend-json-server =========
@@ -78,29 +78,29 @@
 ---- no se cargara a produccion
 
 ---- en la raiz de nuestro proyecto vamos a crear una carpeta llamada data
----- dentro de esta un archivo llamado db.json, en el cual sera un json con los datos 
----- que simularemos como una db   
+---- dentro de esta un archivo llamado db.json, en el cual sera un json con los datos
+---- que simularemos como una db
 
 ---- en el package.json creamos un nuevo script dentro del objeto scripts
 ---- "backend": "json-server --watch data/db.json",
- 
----- ese script se crea con el fin de ejecutar el json script de db.json 
+
+---- ese script se crea con el fin de ejecutar el json script de db.json
 ---- en en la siguiente instruccion se muestra como se ejecutaria
 
 ---- seguido vamos hasta el path de nuestra carpeta y corremos el siguiente comando
 ---- npm run backend
----- esto creara dos rutas 
+---- esto creara dos rutas
 ---- http://localhost:3000/users
 ---- http://localhost:3000/heroes
----- me crea dos rutas porque en el db.json encontro dos dos arreglos en todo ese json 
+---- me crea dos rutas porque en el db.json encontro dos dos arreglos en todo ese json
 
 ---- en potsman provamos esas dos rutas y ya podemos consultar todo y por id
 ---- esto tiene toda la estructura de un rest full tradicional
 
 ======= Variables de Enotornos =========
----- Una variable de entorno es el valor de una variable que varia dependiendo si estoy en produccion 
+---- Una variable de entorno es el valor de una variable que varia dependiendo si estoy en produccion
 ---- si estoy en desarrollo, testing preproduccion por eso se llaman variable de entorno
----- porque varian dependiendo el entorno 
+---- porque varian dependiendo el entorno
 ---- la variable que vamos a crear es localhost ya que esta ruta va a cambiar estando en produccion
 ---- si estamos en desarrollo si sera localhost pero en produccion no va a ser localhost
 ---- creamos la carpeta environment y dentro environment.ts, environment.prod.ts
@@ -116,28 +116,28 @@
                 }
         ]
 
----- debido a que agregamos esto en el json production  lo que hace angular es que cuando se hace 
----- buil me reemplaza el primer archivo "src/environments/environment.ts", 
----- con "src/environments/environment.prod.ts" 
+---- debido a que agregamos esto en el json production  lo que hace angular es que cuando se hace
+---- buil me reemplaza el primer archivo "src/environments/environment.ts",
+---- con "src/environments/environment.prod.ts"
 
 ==== Heroes service =====
 ---- creamos el servicio para heroes
 
 ==== Mostrando listado de heroes ====
 ---- se crearan con cards
----- y para eso crearemos un nuevo componente para las cards 
+---- y para eso crearemos un nuevo componente para las cards
 ---- <heroes-hero-card></heroes-hero-card>
 
 ==== HeroImage Pipe =====
 ---- cuando actualizamos una imagen se deve mostrar esa imagen basada un una url
 ---- tambien se debe mostrar una imagen por defecto en caso que la imagen original no exista o se borre
----- para lo que vamos a crear un pipe directamente que me genere una url automaticamente cuando 
+---- para lo que vamos a crear un pipe directamente que me genere una url automaticamente cuando
 ---- le pasemos un elemento de nuestro arreglo de heroes
 
 
 ==== Obtener Eroe Por Url ====
 ---- En esta clase nos vamos a centrar en obtener al eroe que se envia
----- atravez de la url del listado de heroes 
+---- atravez de la url del listado de heroes
 
 ---- agregamos el metodo en el servicio de heroes y posterior mente vamos hasta nuestro
 ---- componente de heroe en donde pintaremos la informacion del heroe obtenido
@@ -149,7 +149,7 @@
 ---- para crear el autocomplete vamos hasta angular material a revisar la documentacion
 ---- la idea es implementar un debouse time que cuando precione una letra automaticamente
 ---- se este mostrando el resultado es decir consultar en el backend por una query
----- http://localhost:3000/heroes?q=a&_limit=6 usamos esta query para consultar los que tengan la letra a 
+---- http://localhost:3000/heroes?q=a&_limit=6 usamos esta query para consultar los que tengan la letra a
 ---- en su nombre y que me de un limite de solo 6
 
 ---- luego de confirugar el formsModule en nuestro componente de search agregamos una propiedad
@@ -162,7 +162,29 @@
 
 ==== Continuacion de Heroes =====
 ---- para esta seccion vamos a mandar un heroe hasta nuestro json o backend
----- nos daremos inicio a formsReactive 
+---- nos daremos inicio a formsReactive
 
----- para empezar vallamos hasta nuevo servicio de heroes para agregarl el metodo addHero
+---- para empezar vallamos hasta nuevo servicio de heroes para agregarl el metodo addHero y los demas relacionados
 
+==== FORMULARIOS REACTIVOS INTRODUCCION =====
+---- En esta clase veremos introduccion a formularios reactivos
+
+---- Los formularios reactivos en Angular son una técnica para manejar formularios en la aplicación que se basa
+---- en el uso de objetos FormControl, FormGroup y FormArray para representar y manipular los datos del
+---- formulario en tiempo real.
+
+---- el FormControl o control de los formularios en Angular se utiliza para enlazar datos bidireccionalmente
+---- entre un componente y su plantilla HTML.
+
+---- los formularios reactivos a diferencia de los formularios por template indican que
+---- su logica y validaciones iran principal mente en el componente typescript
+
+
+---- para trabajar con formularios reactivos devemos importar hasta nuestro modulo
+---- el ReactiveFormsModule de @angular forms
+---- para saver como se crea el formulario reactivo vamos hasta nuestro componente de new-page
+
+========= CONECTAR FORM CONTROL CON HTML =======
+---- Ya aprendimos la estructura basica de un formulario reactivo ahora veamos como conectarlo con nuestro
+---- template HTML
+---- para poder conectar  nuestro formGropu devemos agregar  un elemento html que los envuelva como un form de html
