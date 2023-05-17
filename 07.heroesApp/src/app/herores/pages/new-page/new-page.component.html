@@ -70,8 +70,10 @@
         </div>
         <div class="col-12 sm:col-6">
             <mat-card>
-                <img [src]="" alt=imagen del heroe>
+                <img [src]="currentHero | heroesImagePipe " alt=imagen del heroe>
             </mat-card>
         </div>
     </div>
 </h1>
+
+<!-- {{currentHero | json}} -->

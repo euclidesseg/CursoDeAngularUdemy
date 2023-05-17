@@ -188,3 +188,11 @@
 ---- Ya aprendimos la estructura basica de un formulario reactivo ahora veamos como conectarlo con nuestro
 ---- template HTML
 ---- para poder conectar  nuestro formGropu devemos agregar  un elemento html que los envuelva como un form de html
+
+====== Getter Dentro del Componente ======
+---- En esta clase vamos a agregar setter dentro de nuestro search component
+---- el get nos servira para darle el tipado al formulario que necesitamos enviar 
+
+====== Actualizar y crear Heroe ====== 
+---- para actualizar o guardar heroe devemos especificar si tiene o no tiene id
+---- en el metodo de nuestro componente

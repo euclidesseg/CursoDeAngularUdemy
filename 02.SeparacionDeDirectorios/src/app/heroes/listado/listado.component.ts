@@ -16,3 +16,9 @@ export class ListadoComponent {
    this.heroeBorrado = this.heroes.shift() || '';
   }
 }
+
+// Notas:La expresión this.heroeBorrado = this.heroes.shift() || ''; 
+// utiliza el operador lógico OR (||) para asignar el valor resultante a la variable
+
+// si this.heroes.shift() devuelve un valor falsy (por ejemplo, si el array this.heroes está vacío),
+//  entonces se considera como falso y se asigna '' 

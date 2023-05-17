@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Publisher } from '../../interfaces/hero.interface';
+import { Hero, Publisher } from '../../interfaces/hero.interface';
+import { HeroesService } from '../../services/heroes.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-new-page',
@@ -8,7 +11,31 @@ import { Publisher } from '../../interfaces/hero.interface';
   styles: [
   ]
 })
-export class NewPageComponent {
+export class NewPageComponent implements OnInit{
+
+  constructor(
+    private herosServise:HeroesService,
+    private activateRoute:ActivatedRoute,
+    private router: Router // esta me sierve par redireccionar hasta el listado nuevamente si el id no
+    // no existe
+    ){}
+
+  ngOnInit(): void {
+   if(!this.router.url.includes('edit')) return
+    //  si no incluye la palabra edit no le dare un valor por defecto al formulario
+    this.activateRoute.params
+    .pipe(
+      switchMap((params) => this.herosServise.getHeroById(params['id']))
+    )
+    .subscribe((hero)=>{
+      if(!hero) return this.router.navigateByUrl('/');
+
+      this.heroForm.reset(hero)
+      return
+    })
+  }
+
+
 
   public publishers = [
     {id: 'DC Comics', value: 'Dc - Comics'},
@@ -34,7 +61,27 @@ export class NewPageComponent {
 
 
   onSubmitForm():void{
-    console.log({formIsvalid:this.heroForm.valid, value:this.heroForm.value})
+    // console.log({formIsvalid:this.heroForm.valid, value:this.heroForm.value})
+    if(this.heroForm.invalid)return
+    if(this.currentHero.id){
+      this.herosServise.updateHero(this.currentHero)
+      .subscribe((hero) => {
+        //mostrar snakbar
+      })
+    }
+    else{
+      this.herosServise.addHero(this.currentHero)
+      .subscribe((hero) => {
+        //mostrar snakbar
+      })
+    }
+  }
+  // cuando intentamos enviar este formulario con heroForm.value nos da error ya que no es del mismo tipo
+  // exacto de lo que esper el updateHero de nuestro servicio es por eso que nos creamos un get
+
+  get currentHero():Hero{
+    const hero = this.heroForm.value as Hero; // que lo trate como un hero
+    return hero
   }
 }
 

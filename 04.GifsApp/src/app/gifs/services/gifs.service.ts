@@ -22,6 +22,11 @@ export class GifsService {
     // Aqui nos da error porque esto puede ser nulo, entonces ponemos ! poara indicar a js que sabemos lo que hacemos
     // si no esta el historial con || indicamos que me retorne un arrego basio
 
+    // ||: El operador lógico OR evalúa la expresión a su izquierda 
+    // (JSON.parse(localStorage.getItem('historial')!)) y, 
+    // si ese valor es considerado falsy (es decir, se evalúa como falso), 
+    // se evalúa y devuelve el valor de la expresión a su derecha ([] bacio en este caso).
+
     // Ahora hacemos lo mismo con la ultima busqueda 
     this.imagenes = JSON.parse(localStorage.getItem('ultimaBusqueda')!) || []
   }
