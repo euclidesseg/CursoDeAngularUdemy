@@ -55,9 +55,8 @@ export class HeroesService {
 
     return this.http.delete(`${this.baseUrl}/heroes/${id}`) 
     .pipe(
-      catchError((error) => of(false)),
-      map((response) => true)
+      map((response) => true),
+      catchError((error) => of(false))
     );
-    // patch solo me actualiza partes del objeto
   }
 }

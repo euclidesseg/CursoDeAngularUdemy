@@ -1,7 +1,7 @@
 <h1>
-    Editar / Agregar
-    Heroe
-    <small>Superman</small>
+   {{currentHero.id? 'Editar Heroe':'Agregar Heroe'}}
+    
+</h1>
 
     <mat-divider class="mb-2"></mat-divider>
     <div class="grid">
@@ -56,9 +56,13 @@
                     </form>
                     <div class="flex justify-content-between">
                         <button mat-flat-button
-                            color="warn">
+                            color="warn"
+                            *ngIf="currentHero.id"
+                            (click) = "onConfirmDeletion()"
+                            >
                             Borrar
                         </button>
+                        <span></span>
                         <button mat-flat-button color="primary" (click)="onSubmitForm()">
                           <!-- si este boton estubiera dentro del formulario solo le dariamos de tipo tipe
                                submit--->
@@ -74,6 +78,6 @@
             </mat-card>
         </div>
     </div>
-</h1>
+
 
 <!-- {{currentHero | json}} -->

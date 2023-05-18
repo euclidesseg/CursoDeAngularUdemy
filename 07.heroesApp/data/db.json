@@ -22,7 +22,7 @@
       "alter_ego": "Kal-El",
       "first_appearance": "Action Comics #1",
       "characters": "Kal-El",
-      "alt_image": "https://media.gq.com.mx/photos/640cc85eb32b4a9eead726ea/1:1/w_1731,h_1731,c_limit/dfp01m3-9f6f1230-88c6-4f18-946a-440801dbbc0a%20(1).jpg"
+      "alt_image": "https://i.pinimg.com/originals/ea/22/3e/ea223ecbd299cb2d872f0866adc873a4.jpg"
     },
     {
       "id": "dc-flash",
@@ -170,12 +170,21 @@
     },
     {
       "id": "9YlYo8L",
-      "superhero": "euclides",
+      "superhero": "EL poderoso Tanos",
       "publisher": "Marvel Comics",
       "alter_ego": "tanos",
       "first_appearance": "jun #1",
       "characters": "backm, front",
       "alt_image": "https://i.pinimg.com/236x/ea/72/2a/ea722a4b87321af2dd37bbf588610a68.jpg"
+    },
+    {
+      "id": "H_wMDMU",
+      "superhero": "groot",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Groot",
+      "first_appearance": "Guardianes de la galaxia vol1",
+      "characters": "Groot",
+      "alt_image": "https://www.xtrafondos.com/descargar.php?id=3180&vertical=1"
     }
   ]
 }

@@ -196,3 +196,14 @@
 ====== Actualizar y crear Heroe ====== 
 ---- para actualizar o guardar heroe devemos especificar si tiene o no tiene id
 ---- en el metodo de nuestro componente
+
+
+===== SnackBar y redireccion =======
+---- en esta ocacion vamos a trabajar en mostrar un snackbar para mostrarlo cuando 
+---- se cree o se actualice un heroe
+---- tambien trabajaremos en la redireccion hasta la ruta 
+---- para eso necesitamos agregar un servicio lalmado snackbar en nuestro componente
+
+===== Material Dialog ====
+---- aprenderemos a crear un matDialog que basicamente es mandar a llamar a un componente
+---- y mostrarlo mediante una ventana Emergente
