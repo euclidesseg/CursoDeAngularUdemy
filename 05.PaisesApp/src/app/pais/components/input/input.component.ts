@@ -9,7 +9,7 @@ import { debounceTime } from "rxjs/operators";
 })
 
 export class InputComponent implements OnInit{
-    
+
     termino:string = ""
     @Input() title!:string;
     @Output() onQuery    : EventEmitter<string> = new EventEmitter<string>()
@@ -24,7 +24,7 @@ export class InputComponent implements OnInit{
        .pipe(
             debounceTime(1000)
         )
-        // no se va a emitir el subscribe hasta que el observable deje de emitir valores por 3 seg
+        // no se va a emitir el subscribe hasta que el observable deje de emitir valores por 1 seg
        .subscribe((valor) =>{
         this.onDebounce.emit(valor)
         })
@@ -45,7 +45,7 @@ export class InputComponent implements OnInit{
     es similar al método emit() en Angular.
     entonces emito desde tecla precionada y me notifican en ngOnInit
 
-    flujo: emito el termino desde teclaprecionada y me notifican en 
+    flujo: emito el termino desde teclaprecionada y me notifican en
     ngOnInit emitiendo hasta otro componente el valor recibido en la funcion callback
 
     recordemos que aun obseervble nos suscribimos y el debouncer al ser un

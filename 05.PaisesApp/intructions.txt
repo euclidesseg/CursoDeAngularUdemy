@@ -15,11 +15,11 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
      ____sidebar
      ____footer
 
----- Componenentes 
----- Interfaces 
+---- Componenentes
+---- Interfaces
 ---- Services
----- Pages 
-     ____indican que es un contenedor principal 
+---- Pages
+     ____indican que es un contenedor principal
      ____van a cambiar segun la url en que nos encontremos
      ____no son mas que componentes tambien
 
@@ -44,13 +44,13 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 ---- Ya que tenemos una pagina para buscar por pais,
 ---- Una pagina para buscar por region,y otra para buscar por capital,
 ---- Ne cesitamos declarar rutar principales para acceder a ellas cuando se precione un boton de opciones
----- en el sidebar para eso primero creamos un archvo routing module que sera nuestro modulo 
----- principal de rutas 
+---- en el sidebar para eso primero creamos un archvo routing module que sera nuestro modulo
+---- principal de rutas
 
----- En ese archivo de rutas creamos la estructura basica de un modulo creamos una constante 
----- llamada routes de tipo Routes la cual sera un arreglo que contendra cada una de las rutas de 
+---- En ese archivo de rutas creamos la estructura basica de un modulo creamos una constante
+---- llamada routes de tipo Routes la cual sera un arreglo que contendra cada una de las rutas de
 ---- la app
----- Despues de crear el arreglo que incluye las rutas de nuestra app debemos agregar en las importqaciones 
+---- Despues de crear el arreglo que incluye las rutas de nuestra app debemos agregar en las importqaciones
 ---- de ese modulo al RouterModule
 
 ---- Luego de configurar modulo dentro de nuestro modulo principal de App
@@ -68,7 +68,7 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 
 ---- par indicar que una ruta esta activa ponemos otra caracteristica que nos importa RouterModule
 ---- routerLinkActive="active" endica cuando una ruta esta activa
----- pero la ruta princial siempre estara activa po lo que definimos en al routing module 
+---- pero la ruta princial siempre estara activa po lo que definimos en al routing module
 ---- para eso agregamos otro atributo
 
 ====== Component Buscar Por pais ========
@@ -77,11 +77,11 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 ---- vamos a usar el formModule para enviar el formulario por loq ue debemos importar este modulo en nuestro
 ---- PaisdModule y este modulo nos permite usar la sintaxis bananaInBox de ngModel
 
----- Para manejar el posteo del formulario cuandoo el usuario precione enter 
+---- Para manejar el posteo del formulario cuandoo el usuario precione enter
 ---- lo hacemos con el ngSubmmit desde el formaulario
 
 
-====== Servicio Para Buscar Paises ====== 
+====== Servicio Para Buscar Paises ======
 ---- En nuestro modulo agregamos la carpeta service para el servicio
 ---- este servicio al estar en nuestro modulo esta como global para todos los componentes de nuestro
 ---- modulo
@@ -96,36 +96,36 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 ---- simplemente es la respuesta que nos manda el backend
 
 ---- Ahoara lo aprenderemos a manejar desde el front para heso lo haremos justamente al momento
----- del subscribe ya que es ahi cuando mandamos el parametro para resibir la respuesta 
----- y tambien es ahi cuando podemos mandar el parametro para recibir un error par esto establecemos 
----- una bander la cual era booleana que cambiara a true dentro de la funcion error mandada 
+---- del subscribe ya que es ahi cuando mandamos el parametro para resibir la respuesta
+---- y tambien es ahi cuando podemos mandar el parametro para recibir un error par esto establecemos
+---- una bander la cual era booleana que cambiara a true dentro de la funcion error mandada
 ---- como parametro como sabemos la funcion error se ejecutara solo si la peticion manda error
 ---- .subscribe({
         next: (respuesta) => { console.log(respuesta) },
         error: (error) => { this.hayError = true; console.log(error) }
-        // desde la version 8 rxjs permite mandar las funciones del parametro envueltas en un 
+        // desde la version 8 rxjs permite mandar las funciones del parametro envueltas en un
         // objeto
       })
 
 
 =========== Tipado de nuestra peticion =============
----- Para trabajar con el tipado convertimos la respuesta a la peticion en una interfaz desde la 
+---- Para trabajar con el tipado convertimos la respuesta a la peticion en una interfaz desde la
 ---- web https://app.quicktype.io
 
 ---- En la pagina marcamos la respuesta en el lenguaje y verificamos el json
----- copiamos la interfaz, creamos un archivo en nuestra carpeta de Interfaces y pegamos hi todo 
+---- copiamos la interfaz, creamos un archivo en nuestra carpeta de Interfaces y pegamos hi todo
 ---- el contenido de nuestra de la pagina
 
 
 ====== Llenar nuestra tabla de paises ======
----- Para llenar esta tabla lo haremos como tarea asi que lo primero que hare sera 
----- crearme una propiedad llamada paises en donde  voy a almacenar el arreglo 
+---- Para llenar esta tabla lo haremos como tarea asi que lo primero que hare sera
+---- crearme una propiedad llamada paises en donde  voy a almacenar el arreglo
 ---- que me retorna la respuesta seguido de eso en la tabla voy a recorrer ese arreglo y pintare
 ---- las tablas con los objetos que voy recorriendo en el trmplate
 
 
 ============== Componnete input y Tabla ============
----- En esta casa vamos a optimizar nuestro codigo, la funcionalidad sera que el input y la tabla 
+---- En esta casa vamos a optimizar nuestro codigo, la funcionalidad sera que el input y la tabla
 ---- que tenemos en el componente buscar por pais tambien sea el mismo que se muestre en el componente
 ---- por region y por pais esta tambien sera una tarea para la cual esta vez vamos a hacer uso de nuestra
 ---- carpeta de componente en donde crearemos un componente llamado pais pais-tabla
@@ -136,7 +136,7 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 ---- lo vamos a pasar a un componente aparte llamado input-component
 
 ========= DebounceTime en el input ==========
----- la idea de debounse es crear una caja de busqueda es decir que mediante precionemos teclas 
+---- la idea de debounse es crear una caja de busqueda es decir que mediante precionemos teclas
 ---- en el input nos aparezca una sugerencia de busqueda
 
 ---- Para usar el debouncetime vamos a ir hasta nuestro componente de input y vamos a emitir
@@ -152,10 +152,10 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 ======== Ver Pais Independiente ==============
 ---- Para hacer esta parte nos vamos suscribir a los cambios del url
 ---- que indica cuando el componente esta inicializado, el constructor es antes de que se inicialice
----- private activatedRoute : ActivatedRoute importamos este servicio el cual nos permite 
+---- private activatedRoute : ActivatedRoute importamos este servicio el cual nos permite
 ---- suscribirnos a los cambios del url creamos una nueva peticion a consultar por codigo atravez del
 ---- codigo que se envia por la url, Como nos damos canta devido a que en la pantalla de ver pais
----- no existe un boton de consultar por codigo todo el metodo se pone en el OnInit esto para 
+---- no existe un boton de consultar por codigo todo el metodo se pone en el OnInit esto para
 ---- que una vez que se inicialice la ruta o la pagina se ejecute el metodo que trae la inforacion
 ---- y la pinte en la vista de la pagina.
 
@@ -165,7 +165,7 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 ---- este operador nos permite recibir un observable y regresar otro
 
 ======= Buscar por region ==========
----- Para buscar por region vamos a agregar tres botonos a nuestra 
+---- Para buscar por region vamos a agregar tres botonos a nuestra
 ---- template de buscar por region de acuerdo al numero de regionoes o continenentes
 
 ======= Optimizando las peticiones ==============
@@ -175,7 +175,7 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 
 ---- para eso nos traemos solamente lo siguiente
 ---- fields=altSpellings,flags,name,population
----- que corresponde a el alphacode de la url para ver el pais 
+---- que corresponde a el alphacode de la url para ver el pais
 ---- la vandera, el nombre y la poblacion
 
 ---- En buscar por alphacode no le agregamos porque vamos a necesitar toda la informacion
@@ -183,3 +183,15 @@ Para trabajar con esta app y esta seccion se ha creado una rama diferente llamad
 ===== Caja de sugerencias para las busquedas ========
 ---- Para crear la caja de sugerencias primero devemos hacer el html para saber como queremos que se
 ---- vea nuestra caja de sugerencias
+
+====== Operadores de Rxjs ======
+---- Los operadores de RxJS son funciones de alto nivel que se utilizan para manipular y transformar
+---- secuencias de eventos o datos en programación reactiva. RxJS es una biblioteca de JavaScript que implementa
+---- el patrón de diseño Observable, que permite trabajar con flujos de datos asincrónicos y facilita la composición
+---- y manipulación de esos flujos.
+
+---- Los operadores de RxJS actúan sobre los Observables, que son las fuentes de eventos o datos, y
+---- permiten realizar diversas operaciones en los flujos de datos, como
+---- filtrar, transformar, combinar, agrupar, retrasar, mapear, reducir, entre otros.
+
+---- en este cado sera usado para crear un debounce time
