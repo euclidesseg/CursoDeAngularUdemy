@@ -36,7 +36,7 @@ export class HeroPageComponent implements OnInit{
       // tambien puedo desestructurar el obgeto de parametros de la ruta
       // switchMap(({id}) => this.heroService.getHeroById(id))
     )
-    // tesnicamente debido al que el metodo pipe obtiene lo que nos retorna el metodo get nos suscribimos
+    // tesnicamente debido al que el metodo pipe obtiene lo que nos retorna el metodo get del servicico nos suscribimos
     // directamente al resultado del pipe
     .subscribe((hero) =>{
       if(!hero) return this.router.navigate(['/heroes/list']);
