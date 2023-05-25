@@ -14,7 +14,7 @@ export class SearchPageeComponent{
 
   constructor(private heroService:HeroesService){}
 
-  public searchInput = new FormControl('') //estp seria un input reactivo
+  public searchInput = new FormControl('') // esto seria un input reactivo y sera el valor del input
   public selectedHero?:Hero
   // para poder usar esta propiedad FormControl se deve importar un modulo llamado ReactiveFormsModule
   // lo hacemos en nuestro modulo principal
@@ -22,9 +22,6 @@ export class SearchPageeComponent{
   // search input almacenara los datos escritos en el input mediante el control de formularios
 
   public heroes:Hero[] = []
-
-  // lo que haremos aqui se puede agregar en el html con las propiedades de angular material
-  // pero lo haremos de otra manera
 
   searchHero(){
     // tomamos el valor del input para asignarlo a value y hacer la peticion
