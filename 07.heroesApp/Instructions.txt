@@ -207,3 +207,16 @@
 ===== Material Dialog ====
 ---- aprenderemos a crear un matDialog que basicamente es mandar a llamar a un componente
 ---- y mostrarlo mediante una ventana Emergente
+
+===== AuthService serviio de autenticacion ===== 
+---- Para crear el servicio de autenticacion vamos hasta nuestro modulo de autenticacion
+---- para crear el servivicio y los metodos de logIn y logOut 
+---- en el componente de login accedemos el metodo logIn y en el layout de el modulo heroes el metodo logOut
+
+
+===== Mantener La seccion de del Usuario =====
+---- hasta el momento ya iniciamos secion del Usuario
+---- peor al recargar la sesion vuelve y se borra el inicio de sesion
+---- para eso vamos a agregar un metodo que me permita validar si ya tengo un token agregado 
+
+---- para eso vamos a nuestro  authService par implementar un nuevo metodo

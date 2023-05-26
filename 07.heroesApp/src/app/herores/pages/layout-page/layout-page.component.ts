@@ -28,8 +28,9 @@ export class LayoutPageComponent {
   }
 
   onLogout() {
-    this.authService.logout();
-    this.router.navigate(['/auth/login'])
+    this.authService.logout(); // Llama a la función de cierre de sesión del servicio authService para cerrar la sesión del usuario
+    this.router.navigate(['/auth/login']); // Redirige al usuario a la ruta de inicio de sesión ("/auth/login") utilizando el servicio de enrutamiento 'router'
   }
+  
 
 }
