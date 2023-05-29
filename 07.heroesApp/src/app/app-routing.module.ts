@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { Error404PagesComponent } from "./shared/pages/error404-pages/error404-pages.component";
+import { AuthGurd } from "./auth/guards/auth.guard";
 
 
 const routes:Routes =[
@@ -17,6 +18,8 @@ const routes:Routes =[
     {
         path: 'heroes',
         loadChildren: () => import('./herores/herores.module').then( (module) => module.HeroresModule),
+        canActivate:[AuthGurd],
+        canMatch:[AuthGurd]
     },
     {
         path: '404',

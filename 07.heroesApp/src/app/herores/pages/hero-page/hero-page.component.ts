@@ -40,7 +40,7 @@ export class HeroPageComponent implements OnInit{
     // directamente al resultado del pipe
     .subscribe((hero) =>{
       if(!hero) return this.router.navigate(['/heroes/list']);
-      console.log(hero)
+      // console.log(hero)
       this.hero = hero;
       return;
     })

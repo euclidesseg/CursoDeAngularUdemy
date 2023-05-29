@@ -220,3 +220,19 @@
 ---- para eso vamos a agregar un metodo que me permita validar si ya tengo un token agregado 
 
 ---- para eso vamos a nuestro  authService par implementar un nuevo metodo
+
+======= GUARDS DE ANGULAR =======
+---- Los guards de angular son un tipo de proyeccion o guardias de seguridad
+---- cosa que si un usuario quiere entrar a una ruta y no cumple cierta condicion no lo dejara entrar
+
+---- Si todos los guardias regresan true, la navegación continúa.
+---- Si algún guardia regresa false, se cancela la navegación.
+
+---- adicional mente ni si quiera podra cargar el modulo principal 
+---- la ventaja de usarlos es que son un servicio solo que en lugar de inyectarlos de manera tradicional
+---- en nuestros constructores los colocamos en un lugar especiale ne el router
+
+---- para trabajarlos en nuestro paquete de auth creamos una carpeta llamada guards
+---- luego creamos el archivo guards.ts
+---- despues de conigurar el guard lo podemos implementar en nuestro sistema de rutas principal 
+---- por ejemplo en el path heroes esta implementado para que solo usuarios autenticados lo puedan ver
