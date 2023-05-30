@@ -236,3 +236,9 @@
 ---- luego creamos el archivo guards.ts
 ---- despues de conigurar el guard lo podemos implementar en nuestro sistema de rutas principal 
 ---- por ejemplo en el path heroes esta implementado para que solo usuarios autenticados lo puedan ver
+
+===== IMPLEMENTAR LA FUNCION DEL GUARD ========
+---- Ahora implementaremos la funcionalidad real de mandarme al login si no estoy autenticado, 
+---- si la sesion expiro, o si el token ya no es valido
+
+---- para eso creamos una funcion en nuestro guard

@@ -48,13 +48,17 @@ export class AuthService {
   // ==========================================================================
   // Verifica si hay un usuario autenticado 
   //este metodo lo vamos a colocar en los guards
-  checkAutentication(): Observable<boolean> | boolean { // devuelve true si no o false si esta autenticado
-    if(!localStorage.getItem('token')) return false // : Esta línea verifica si no hay un token almacenado en el localStorage.
+  checkAutentication(): Observable<boolean> { // devuelve true si no o false si esta autenticado
+    if(!localStorage.getItem('token')) return of (false) // : Esta línea verifica si no hay un token almacenado en el localStorage.
     const token = localStorage.getItem('token')  // Esta línea obtiene el token almacenado en el localStorage
     // lo que indica que si hay un token en el local storage
+
+    // usuario con el ID 1. En un caso real, normalmente se usaría el token 
+    // para autenticar la solicitud y obtener información del usuario 
+    // correspondiente al token optenido.
     return this.http.get<User>(`${this.baseUrl}/users/1`)
     .pipe(
-      tap(user => this.user = user),
+      tap(user => this.user = user), // establese el valor de user
       map(user => !! user), // retorna true si el usuario existe es por eso que se hace doble negacion
       catchError(err => of(false))
     )
@@ -78,3 +82,7 @@ export class AuthService {
 // en los datos dentro de un flujo de observables sin modificar los datos mismos.
 // No transforma ni filtra los valores del flujo, sino que permite realizar acciones
 // adicionales basadas en esos valores sin alterar el flujo en sí.
+
+// of es un método estático proporcionado por la biblioteca de RxJS
+// of se utiliza para crear un observable que emite un conjunto de valores secuencialmente
+// En resumen, of(false) crea un observable que emite el valor false

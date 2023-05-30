@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { Error404PagesComponent } from "./shared/pages/error404-pages/error404-pages.component";
 import { AuthGurd } from "./auth/guards/auth.guard";
+import { PublicGuard } from "./auth/guards/public.guard";
 
 
 const routes:Routes =[
@@ -13,6 +14,7 @@ const routes:Routes =[
     {
         path: 'auth',
         loadChildren: () => import('./auth/auth.module').then( (module) => module.AuthModule),
+        canActivate:[PublicGuard],
     },
     // hacemos lo mismo con nuestro modulo de heores y habrimos su ruta principal
     {
