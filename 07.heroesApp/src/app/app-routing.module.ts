@@ -8,9 +8,10 @@ import { PublicGuard } from "./auth/guards/public.guard";
 const routes:Routes =[
     // la siguiente ruta indica que va a cargra un componente que esta en otro modulo
     // y por ende se importa el modulo  nos suscribimos a la promesa ya que la carga de un modulo
-    // se hace en modo asyncrono entonces estamos entrando desde el modulo principal hasta el 
+    // se hace en modo asyncrono  nos devuelve una promesa
+    //  entonces estamos entrando desde el modulo principal hasta el 
     // modulo de autenticacion atravez de su path y al cargar este modulo se cargara su ruta
-    // principal que es layoutPageComponent
+    // principal que es layoutPageComponent 
     {
         path: 'auth',
         loadChildren: () => import('./auth/auth.module').then( (module) => module.AuthModule),
