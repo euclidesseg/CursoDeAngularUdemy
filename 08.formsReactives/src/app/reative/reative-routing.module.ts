@@ -8,7 +8,7 @@ const routes: Routes = [
   {path:'',
     children:[
       {path:'basic', component:BasicPageComponent},
-      {path:'dinamic', component:DinamicPageComponent},
+      {path:'dynamic', component:DinamicPageComponent},
       {path:'switches', component:SwitchesPageComponent},
       {path:'**', redirectTo:'basic'},
     ]
