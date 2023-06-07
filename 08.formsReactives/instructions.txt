@@ -1,2 +1,14 @@
  ==== Bienvenido a Formularios Reactivos ======
- ---- 
+ ---- Importante en cada modulo en que vallamos a usar formularios importar el modulo 
+ ---- ....ReactiveFormsModule....
+
+ ---- A la hora de crear un formulario reactivo tenemos que lo podemos hacer con formBuilder
+ ---- o formGroup tecnica mente es casi lo mismo asi que cualquiera de los dos es mas gusto de la persona
+ ---- public myForm:FormGroup = new FormGroup({
+    
+  })
+
+
+---- <form [formGroup]="myForm" autocomplete="off"> con [formGroup] enlasa al formulario de html 
+---- con nuestro formGroup del TS
+
