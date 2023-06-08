@@ -12,3 +12,18 @@
 ---- <form [formGroup]="myForm" autocomplete="off"> con [formGroup] enlasa al formulario de html 
 ---- con nuestro formGroup del TS
 
+
+==== VALIDATOR INCLUIDO EN ANGULAR ====
+---- El validator nos ayuda a no escribir toda la logica de las validaciones ej:
+
+  public myForm:FormGroup = this.fBuilder.group({
+    name:['',[],[]],
+    price:[0,[],[]],
+    inStorage:[0,[],[]],
+  })
+
+---- yo se que el nombre debe ser requerido por lo que si no se manda me debe dar un error en pantalla para que no se postee
+---- lo mismo con el precio el cual deve ser 0 o mayor a 0 pero que no este vacio ni sea negativo y que sea numerico
+---- lo mismo para storage que no sea string y que sea numerico 
+
+---- Para eso vamos a ir a importar validator en nuestro componente basic-component de angular/forms
