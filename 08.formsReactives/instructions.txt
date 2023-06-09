@@ -27,3 +27,11 @@
 ---- lo mismo para storage que no sea string y que sea numerico 
 
 ---- Para eso vamos a ir a importar validator en nuestro componente basic-component de angular/forms
+
+====  REESTABLECER VALOR DEL FORMULARIO =====
+---- Siempre despues que hacemos el match de un formulario ocupamos reestableces los valores del mismo
+---- a sus valores por defecto y eso lo logramos con el metodo reset({price:0, inStorage:0}) mandando un objeto con los vlores iniciales 
+
+---- Muchas veces podemos cargar el formulario mediante una url cuando tenemos esa situacion
+---- ocupamos estableces los valores del formulario desde el OnInit para que al cargar el formulario ya tenga 
+---- los datos de la url  vallamos al componente a implementarlo en el OnInit
