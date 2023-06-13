@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validator, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 const rtx5090 ={
   name:'RTX 5090',
@@ -14,7 +14,7 @@ export class BasicPageComponent implements OnInit {
 
   constructor(private fBuilder:FormBuilder){}
   ngOnInit(): void {
-    this.myForm.reset(rtx5090)
+     this.myForm.reset(rtx5090) // asignar valor por defecto cuando al formulario cuando llega a travez de url
   }
 
 
@@ -27,16 +27,20 @@ export class BasicPageComponent implements OnInit {
 
     // Creando el formulario con builder
   public myForm:FormGroup = this.fBuilder.group({
-    name:['',[Validators.required, Validators.minLength(3)],[]],
-    price:[0,[Validators.required, Validators.min(0)],[]],
-    inStorage:[0,[Validators.required, Validators.min(0)],[]],
+    name:['',[Validators.required, Validators.minLength(3)]],
+    price:[0,[Validators.required, Validators.min(0)]],
+    inStorage:[0,[Validators.required, Validators.min(0)]],
   })
-  // despues de crear el areglo de validaciones debemos comprobar el formulario en nuestro metodoOnsave
+  // despues de crear el areglo de validaciones debemos comprobar el formulario en nuestro metodo Onsave
 
   onSave():void{
-    if(this.myForm.invalid) return
-     console.log(this.myForm.value)
-     this,this.myForm.reset({price:0,inStorage:0}) //reestableces el formulario
+    if(this.myForm.invalid){
+      this.myForm.markAllAsTouched(); // esto me disparara todas las validaciones en el formulario
+      return;
+    }
+    
+     console.log(this.myForm.value);
+     this,this.myForm.reset({price:0,inStorage:0}); //reestableces el formulario
   }
 
   

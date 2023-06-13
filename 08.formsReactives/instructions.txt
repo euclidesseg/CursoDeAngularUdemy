@@ -35,3 +35,8 @@
 ---- Muchas veces podemos cargar el formulario mediante una url cuando tenemos esa situacion
 ---- ocupamos estableces los valores del formulario desde el OnInit para que al cargar el formulario ya tenga 
 ---- los datos de la url  vallamos al componente a implementarlo en el OnInit
+
+==== MOSTRAR ERRORES DE VALIDACION EN PANTALLA ====
+---- Para mostar un mensaje de error nos vasamos en los validadores que hemos puesto en nuestro componente basic page component
+---- 
+ 

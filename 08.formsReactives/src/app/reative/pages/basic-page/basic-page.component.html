@@ -17,13 +17,16 @@
                            formControlName = "name"
                            >
 
-                    <span class="form-text text-danger">
-                        <!-- Debe de ser de 3 letras -->
-                        error message
+                    <span *ngIf="myForm.controls['name'].getError('required') && myForm.controls['name'].touched" class="form-text text-danger">
+                        Este campo es requerido
                     </span>
+                    <span *ngIf="myForm.controls['name'].getError('minlength') && myForm.controls['name'].touched" class="form-text text-danger">
+                        Este campo requiere minimo 3 letras
+                    </span>
+                    <!-- Si este campo se obtiene un erroe requerido y es tocado marcara error -->
                 </div>
             </div>
-
+<!-- ======================================================================================================================= -->
             <!-- Campo de producto -->
             <div class="mb-3 row">
                 <label class="col-sm-3 col-form-label">Precio</label>
