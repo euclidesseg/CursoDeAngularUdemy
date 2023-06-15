@@ -17,20 +17,41 @@ export class BasicPageComponent implements OnInit {
      this.myForm.reset(rtx5090) // asignar valor por defecto cuando al formulario cuando llega a travez de url
   }
 
+  // metodo getter validador
+  isValidField(nombreDeCampo:string):boolean | null{
+    return this.myForm.controls[nombreDeCampo].errors && this.myForm.controls[nombreDeCampo].touched
+  }
 
+  // metodo para obtener el tipo de error y en funcion mostrar el mensaje de error
+  getFieldError(nombreDeCampo:string):string | null{
+    if(!this.myForm.controls[nombreDeCampo] ) return null // si no viene campo field retorna null
+    else{
+      const errors = this.myForm.controls[nombreDeCampo].errors || {} // esto me obtiene todos los errores de un campo del formulario en un objeto
+      for(const key of Object.keys(errors)){ // me dara un arreglo con todas las llaves que objtenga del objeto errors
+          console.log(key)
+        switch(key){
+          case 'required':
+            return 'Este campo es requerido'
+          case'minlength':
+            return `Minimo ${errors['minlength'].requiredLength} caracteres` 
+        }
+      }
+      return ''
+    }
+  }
   // Creando el formulario de tipo formGroup
-  // public myForm:FormGroup = new FormGroup({
-  //   name:new FormControl('',[],[]),
-  //   price:new FormControl(0,[],[]),
-  //   inStorage:new FormControl(0,[],[]),
-  // })
-
-    // Creando el formulario con builder
-  public myForm:FormGroup = this.fBuilder.group({
-    name:['',[Validators.required, Validators.minLength(3)]],
-    price:[0,[Validators.required, Validators.min(0)]],
-    inStorage:[0,[Validators.required, Validators.min(0)]],
+  public myForm:FormGroup = new FormGroup({
+    name:new FormControl('',[Validators.required, Validators.minLength(3)]),
+    price:new FormControl(0,[Validators.required, Validators.min(0)]),
+    inStorage:new FormControl(0,[Validators.required, Validators.min(0)]),
   })
+
+  // Creando el formulario con builder
+  // public myForm:FormGroup = this.fBuilder.group({
+  //   name:['',[Validators.required, Validators.minLength(3)]],
+  //   price:[0,[Validators.required, Validators.min(0)]],
+  //   inStorage:[0,[Validators.required, Validators.min(0)]],
+  // })
   // despues de crear el areglo de validaciones debemos comprobar el formulario en nuestro metodo Onsave
 
   onSave():void{

@@ -38,5 +38,10 @@
 
 ==== MOSTRAR ERRORES DE VALIDACION EN PANTALLA ====
 ---- Para mostar un mensaje de error nos vasamos en los validadores que hemos puesto en nuestro componente basic page component
----- 
- 
+
+==== ANTERIORMENTE ACABAMOS DE AGREGAR LOS ERRORES DE VALIDACION EN CADA UNO DE LOS CAMPOS ====
+---- pero ahora lo trabajaremos mediante un getter en el componente
+
+==== FORMULARIOS DINAMICOS ====
+---- Cuando hablamos de formulario dinamicos nos referimos a qu no siempre de antemano vamos a saber la cantidad
+---- de inputs que bamos a tener ni cuantas cajas de texto

@@ -4,38 +4,39 @@
 <div class="row">
     <div class="col">
 
-        <form [formGroup]="myForm" autocomplete="off" (ngSubmit)="onSave()"> <!--- off para decirle al navegador que soy yo quien va a manejar las validaciones--->
+        <form [formGroup]="myForm" autocomplete="off" (ngSubmit)="onSave()">
+            <!--- off para decirle al navegador que soy yo quien va a manejar las validaciones--->
 
             <!-- Campo de producto -->
             <div class="mb-3 row">
                 <label class="col-sm-3 col-form-label">Producto</label>
                 <div class="col-sm-9">
 
-                    <input type="text"
-                           class="form-control"
-                           placeholder="Nombre del producto"
-                           formControlName = "name"
-                           >
+                    <input type="text" class="form-control" placeholder="Nombre del producto" formControlName="name">
 
-                    <span *ngIf="myForm.controls['name'].getError('required') && myForm.controls['name'].touched" class="form-text text-danger">
+                    
+                    <span *ngIf="isValidField('name')" 
+                        class="form-text text-danger">
+                        <!-- el campo tiene un metodo que valida si este fue tocado y si su control no cumple la validacion
+                             para mostrar el mensaje -->
+                        {{getFieldError('name')}} <!---Este me muestra un mensajes en funcion del error que tenga-->
+                    </span>
+                    <!-- <span *ngIf="myForm.controls['name'].getError('required') && myForm.controls['name'].touched" class="form-text text-danger">
                         Este campo es requerido
                     </span>
                     <span *ngIf="myForm.controls['name'].getError('minlength') && myForm.controls['name'].touched" class="form-text text-danger">
                         Este campo requiere minimo 3 letras
-                    </span>
+                    </span> -->
                     <!-- Si este campo se obtiene un erroe requerido y es tocado marcara error -->
                 </div>
             </div>
-<!-- ======================================================================================================================= -->
+            <!-- ======================================================================================================================= -->
             <!-- Campo de producto -->
             <div class="mb-3 row">
                 <label class="col-sm-3 col-form-label">Precio</label>
                 <div class="col-sm-9">
-                    <input type="number"
-                           class="form-control"
-                           placeholder="Precio del producto"
-                           formControlName ="price">
-                    <span class="form-text text-danger">
+                    <input type="number" class="form-control" placeholder="Precio del producto" formControlName="price">
+                    <span *ngIf="isValidField('price')" class="form-text text-danger">
                         El precio debe de ser 0 o mayor
                     </span>
                 </div>
@@ -45,14 +46,11 @@
             <div class="mb-3 row">
                 <label class="col-sm-3 col-form-label">Existencias</label>
                 <div class="col-sm-9">
-                    <input type="number"
-                           class="form-control"
-                           placeholder="Existencias del producto"
-                            formControlName = "inStorage"
-                           >
+                    <input type="number" class="form-control" placeholder="Existencias del producto"
+                        formControlName="inStorage">
 
-                    <span class="form-text text-danger">
-                         Las existencias deben de ser 0 o mayor
+                    <span *ngIf="isValidField('inStorage')" class="form-text text-danger">
+                        Las existencias deben de ser 0 o mayor
                     </span>
                 </div>
             </div>
@@ -60,8 +58,7 @@
 
             <div class="row">
                 <div class="col">
-                    <button type="submit"
-                            class="btn btn-primary float-end">
+                    <button type="submit" class="btn btn-primary float-end">
                         Guardar
                     </button>
                 </div>
