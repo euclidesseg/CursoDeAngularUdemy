@@ -18,8 +18,10 @@ export class BasicPageComponent implements OnInit {
   }
 
   // metodo getter validador
-  isValidField(nombreDeCampo:string):boolean | null{
+  isValidField(nombreDeCampo:string):boolean | null{ // me retornara error o null
     return this.myForm.controls[nombreDeCampo].errors && this.myForm.controls[nombreDeCampo].touched
+    // [nombreDeCampo] esta sintaxis en el formulario me dice que voy a obtener un control de mi Formulario y un control
+    // es uno de los campos del mismo
   }
 
   // metodo para obtener el tipo de error y en funcion mostrar el mensaje de error

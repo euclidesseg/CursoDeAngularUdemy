@@ -44,4 +44,10 @@
 
 ==== FORMULARIOS DINAMICOS ====
 ---- Cuando hablamos de formulario dinamicos nos referimos a qu no siempre de antemano vamos a saber la cantidad
----- de inputs que bamos a tener ni cuantas cajas de texto
+---- de inputs que bamos a tener ni cuantas cajas de texto esto sucede cuando en la consulta vienen un arreglo como por ejemplo 
+---- un listado de juegos en donde en ocaciones nesesitamos o requerimos eliminar uno de esos.
+
+==== VALIDACIONES DINAMICAS =====
+---- ya que creamos este formulario dinamico requerimos tambienn crear validaciones dinamicas
+---- para cada uno de los campos que tenemos en el formulario dinamico.
+---- vallamos hasta nuestro dinamic-page para hacer uso de nuestro formulario

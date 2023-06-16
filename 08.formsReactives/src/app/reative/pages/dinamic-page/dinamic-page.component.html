@@ -7,9 +7,9 @@
     <div class="mb-3 row">
         <label class="col-sm-3 col-form-label">Nombre</label>
         <div class="col-sm-9">
-            <input class="form-control" formControlName = "name" placeholder="Nombre de la persona">
-            <span class="form-text text-danger">
-                   error message
+            <input class="form-control" formControlName="name" placeholder="Nombre de la persona">
+            <span *ngIf="isValidField('name') " class="form-text text-danger">
+                {{getFieldError('name')}}
             </span>
         </div>
     </div>
@@ -20,12 +20,10 @@
         <div class="col-sm-9">
 
             <div class="input-group">
-                <input class="form-control"
-                       placeholder="Agregar favorito">
+                <input class="form-control" placeholder="Agregar favorito">
 
 
-                <button class="btn btn-outline-primary"
-                        type="button">
+                <button class="btn btn-outline-primary" type="button">
                     Agregar favorito
                 </button>
             </div>
@@ -36,23 +34,24 @@
     <!-- Lista de Juegos Favoritos -->
     <div class="mb-3 row">
         <label class="col-sm-3 col-form-label">Favoritos</label>
-        <div class="col-sm-9" formArrayName ="favoriteGames"> <!--indico que este div va a manerjar el formulario juegos favoritos-->
-             <!---Tendra todos los elementos dinamicos que responderan a los elementos dinamcicos de favoriteGames-->
-             <!-- ocuparemos un getter para mostrar aqui todos los elementos -->
-            <div class="mb-1" *ngFor="let game of favoriteGames.controls; let i=index"> <!---los datos de un form array estan dentro de los controles por eso la sintaxis-->
+        <div class="col-sm-9" formArrayName="favoriteGames">
+            <!--indico que este div va a manerjar el formulario juegos favoritos-->
+            <!---Tendra todos los elementos dinamicos que responderan a los elementos dinamcicos de favoriteGames-->
+            <!-- ocuparemos un getter para mostrar aqui todos los elementos -->
+            <div class="mb-1" *ngFor="let game of favoriteGames.controls; let i=index">
+                <!---los datos de un form array estan dentro de los controles por eso la sintaxis-->
 
                 <div class="input-group">
-                    <input class="form-control" [formControlName]="i"  >
+                    <input class="form-control" [formControlName]="i">
 
-                    <button class="btn btn-outline-danger"
-                            type="button">
-                      Eliminar
-                  </button>
+                    <button class="btn btn-outline-danger" type="button">
+                        Eliminar
+                    </button>
                 </div>
-                <span class="form-text text-danger">
-                   Este campo es requerido
+                <span *ngIf="isValidFieldInArray(favoriteGames, i) " class="form-text text-danger">
+                    Este campo es requerido
                 </span>
-
+                <!-- ya que creamos este formulario dinamico requerimos tambienn crear validaciones dinamicas  -->
             </div>
 
         </div>
@@ -62,10 +61,8 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <button type="submit"
-                    class="btn btn-primary float-end"
-                    >
-                    <!-- [disabled]="myForm.invalid" -->
+            <button type="submit" class="btn btn-primary float-end">
+                <!-- [disabled]="myForm.invalid" -->
                 Guardar
             </button>
         </div>
