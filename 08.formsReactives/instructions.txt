@@ -51,3 +51,10 @@
 ---- ya que creamos este formulario dinamico requerimos tambienn crear validaciones dinamicas
 ---- para cada uno de los campos que tenemos en el formulario dinamico.
 ---- vallamos hasta nuestro dinamic-page para hacer uso de nuestro formulario
+
+==== ELIMINAR ELEMENTOS DE UN FORMARRAY ====
+---- vamos hasta nuestro componente de favorite games para agregar un nuevo metodo
+
+==== INSERTAR ELEMENTOS EN NUESTRO FORMARRAY ====
+---- Para insertar elementos en un form array vamos a nuestro componente para 
+---- crear un formcontrol
