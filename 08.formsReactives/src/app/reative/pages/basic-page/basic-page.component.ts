@@ -22,6 +22,7 @@ export class BasicPageComponent implements OnInit {
     return this.myForm.controls[nombreDeCampo].errors && this.myForm.controls[nombreDeCampo].touched
     // [nombreDeCampo] esta sintaxis en el formulario me dice que voy a obtener un control de mi Formulario y un control
     // es uno de los campos del mismo
+    // this.myForm.controls[nombreDeCampo].errors esto me dice que sea verdadero si hay error
   }
 
   // metodo para obtener el tipo de error y en funcion mostrar el mensaje de error
