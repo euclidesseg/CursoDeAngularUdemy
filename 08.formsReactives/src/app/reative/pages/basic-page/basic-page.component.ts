@@ -26,7 +26,7 @@ export class BasicPageComponent implements OnInit {
 
   // metodo para obtener el tipo de error y en funcion mostrar el mensaje de error
   getFieldError(nombreDeCampo:string):string | null{
-    if(!this.myForm.controls[nombreDeCampo] ) return null // si no viene campo field retorna null
+    if(!this.myForm.controls[nombreDeCampo] ) return null // si no viene error campo nombreDeCampo retorna null
     else{
       const errors = this.myForm.controls[nombreDeCampo].errors || {} // esto me obtiene todos los errores de un campo del formulario en un objeto
       for(const key of Object.keys(errors)){ // me dara un arreglo con todas las llaves que objtenga del objeto errors
@@ -35,7 +35,7 @@ export class BasicPageComponent implements OnInit {
           case 'required':
             return 'Este campo es requerido'
           case'minlength':
-            return `Minimo ${errors['minlength'].requiredLength} caracteres` 
+            return `Minimo ${errors['minlength'].requiredLength} caracteres`
         }
       }
       return ''
@@ -61,12 +61,12 @@ export class BasicPageComponent implements OnInit {
       this.myForm.markAllAsTouched(); // esto me disparara todas las validaciones en el formulario
       return;
     }
-    
+
      console.log(this.myForm.value);
      this,this.myForm.reset({price:0,inStorage:0}); //reestableces el formulario
   }
 
-  
+
 }
 
 //Notas:  name:new FormControl('',[],[]),  name:['',[],[]],
