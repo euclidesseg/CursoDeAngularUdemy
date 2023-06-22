@@ -58,3 +58,12 @@
 ==== INSERTAR ELEMENTOS EN NUESTRO FORMARRAY ====
 ---- Para insertar elementos en un form array vamos a nuestro componente para 
 ---- crear un formcontrol
+
+
+==== SEC 18 VALIDACIONES ====
+---- Para esta nueva seccion nos consentraremos en validar formulaios con expresiones regulares
+---- de forma que un string o correo cumpla cierta condicion no solo el minlengt
+---- las funciones validadoras regresan un objeto con el mensajes del error.
+---- o un objeto con otro objeto con la informacion de el porque.
+---- si una validacion regresa null indica qeu no tiene error y angular dejara pasar el formulario
+---- validaremos controles y formularios
