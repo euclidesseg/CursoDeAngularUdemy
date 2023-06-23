@@ -67,3 +67,22 @@
 ---- o un objeto con otro objeto con la informacion de el porque.
 ---- si una validacion regresa null indica qeu no tiene error y angular dejara pasar el formulario
 ---- validaremos controles y formularios
+
+
+==== FORMULARIO DE REGISTRO PARA VALIDACIONES PERSONALIZADAS ====
+---- En esta clase usaremos validaciones personalizadas con expresiones regulares 
+---- orientadads para formularios de registros de usuarios
+
+---- Las expresiones regulares son patrones utilizados para buscar y manipular cadenas de texto.
+---- Permiten realizar búsquedas complejas y realizar manipulaciones específicas.
+---- Se componen de una secuencia de caracteres que define reglas de búsqueda.
+
+----- Patrón: \d{3}-\d{3}-\d{4}
+
+----- Esta expresión regular representa un número de teléfono en el formato XXX-XXX-XXXX,
+----- donde X representa un dígito del 0 al 9. Al aplicar esta expresión regular a un texto, 
+----- coincidiría con cadenas como "123-456-7890" o "987-654-3210", pero no coincidiría con 
+----- cadenas que no cumplan con ese formato, como "12-345-6789" o "abc-def-ghij".
+
+
+===== FUNCIONES VALIDADORAR ======
