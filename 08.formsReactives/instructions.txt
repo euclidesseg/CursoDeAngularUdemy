@@ -85,4 +85,15 @@
 ----- cadenas que no cumplan con ese formato, como "12-345-6789" o "abc-def-ghij".
 
 
-===== FUNCIONES VALIDADORAR ======
+===== FUNCIONES VALIDADORAS ======
+---- Vamos a empezar explicando funciones validadoras sincronas con el campo username para verificar que no sea strider
+---- es decir que no este en la base de datos
+---- para eso nosotros cuando vamos a hacer validasiones ocupamos usarla en varios modulos o componentes 
+---- para lo que no s creamos un nuevo paquete o carpeta en shared llamada validators la cual tendra puramente 
+---- funciones validadoras 
+
+
+===== VALIDACIONES DE EMAIL Y PATRONES ======
+---- Vamos hasta nuestro componente para agregar una validacion con una expresion regular a nuestro formcontrol 
+---- de email las validaciones con expresiones regulares son sincronas es decir van a ir en nuestro primer arreglo de
+---- validaciones

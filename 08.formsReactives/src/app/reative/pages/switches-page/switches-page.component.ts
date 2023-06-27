@@ -49,7 +49,7 @@ export class SwitchesPageComponent implements OnInit{
 }
 
 
-// Notas: el valor de persona no tiene el valor de termsAndNotifications esto se debe a que este dato se 
+// Notas: el valor de person no tiene el valor de termsAndNotifications esto se debe a que este dato se 
 // en ocaciones solo se usa para validar el formulario, no para guardar su valor en base de datos.
 // pero cuando vamos a mandar la persona hasta la persistencia con el metodo onSave 
 // a persona se le asignara todo el valor del formulario incluyendo termsAndNotifications
