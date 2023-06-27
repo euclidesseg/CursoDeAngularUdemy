@@ -97,3 +97,12 @@
 ---- Vamos hasta nuestro componente para agregar una validacion con una expresion regular a nuestro formcontrol 
 ---- de email las validaciones con expresiones regulares son sincronas es decir van a ir en nuestro primer arreglo de
 ---- validaciones
+
+
+==== VALIDATOR SERVICE ====
+---- en esta clase vamos a crear un servicio para alojar nuestros validadores 
+---- que pueden ser validaciones syncronas y asyncronas
+---- vallamos a shared y creamos una carpeta llamada servicios
+
+---- usaremos las mismas constantes que agregamos en nuestra carpeta de validators solo que accederemos 
+---- a travez de un servicio

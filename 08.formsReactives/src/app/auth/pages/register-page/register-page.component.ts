@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import  * as customValidators from 'src/app/shared/validators/validators.functions';
+import { ValidatorService } from 'src/app/shared/services/validators.service';
 
 @Component({
   selector: 'app-register-page',
@@ -9,20 +9,25 @@ import  * as customValidators from 'src/app/shared/validators/validators.functio
 })
 export class RegisterPageComponent {
 
-    constructor(private fBuilder : FormBuilder){}
+    constructor(
+      private fBuilder : FormBuilder,
+      private validatorService : ValidatorService
+        
+    ){}
 
 
 
     public myForm : FormGroup = this.fBuilder.group({
-      name : ['',[Validators.required, Validators.pattern(customValidators.firstNameAndLastnamePattern)] ], // para name usaremos una expresion regular
-      email : ['',[Validators.required, Validators.pattern(customValidators.emailPattern)] ], // para email usaremos una expresion regular
-      username : ['',[Validators.required, customValidators.canBeStrider] ],
+      name : ['',[Validators.required, Validators.pattern(this.validatorService.firstNameAndLastnamePattern)] ], // para name usaremos una expresion regular
+      email : ['',[Validators.required, Validators.pattern(this.validatorService.emailPattern)] ], // para email usaremos una expresion regular
+      username : ['',[Validators.required, this.validatorService.canBeStrider] ],
       password : ['',[Validators.required, Validators.minLength(8)] ], // para password usaremos una expresion regular
       password2 : ['',[Validators.required, Validators.minLength(8)] ],
     })
 
-    isValidField(){
-      // TODO: obtener desde un servicio
+    isInValidField(campo: string):boolean | null{
+      console.log(this.validatorService.isValidField(this.myForm, campo))
+      return this.validatorService.isValidField(this.myForm, campo);
     }
 
     onSubmit(){
