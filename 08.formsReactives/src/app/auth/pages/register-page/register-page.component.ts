@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ValidatorService } from 'src/app/shared/services/validators.service';
+import { EmailValidatorAsync } from 'src/app/shared/validators/email-validator.service';
 
 @Component({
   selector: 'app-register-page',
@@ -19,7 +20,7 @@ export class RegisterPageComponent {
 
     public myForm : FormGroup = this.fBuilder.group({
       name : ['',[Validators.required, Validators.pattern(this.validatorService.firstNameAndLastnamePattern)] ], // para name usaremos una expresion regular
-      email : ['',[Validators.required, Validators.pattern(this.validatorService.emailPattern)] ], // para email usaremos una expresion regular
+      email : ['',[Validators.required, Validators.pattern(this.validatorService.emailPattern)], [new EmailValidatorAsync()] ], // para email usaremos una expresion regular
       username : ['',[Validators.required, this.validatorService.canBeStrider] ],
       password : ['',[Validators.required, Validators.minLength(8)] ], // para password usaremos una expresion regular
       password2 : ['',[Validators.required, Validators.minLength(8)] ],
@@ -45,4 +46,10 @@ export class RegisterPageComponent {
     // y asegurarse de que cumpla con un patrón de expresión regular específico
 
     // al igual que Validators.pattern(customValidators.firstNameAndLastnamePattern)
+
+
+
+    // email : ['',[Validators.required, Validators.pattern(this.validatorService.emailPattern)], [new EmailValidator()] ],
+    // este campo tiene validaciones syncronas y asyncronas y lo primero que se dispara son las validaciones syncronas
+
 }

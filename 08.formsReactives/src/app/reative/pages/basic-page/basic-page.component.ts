@@ -76,3 +76,11 @@ export class BasicPageComponent implements OnInit {
 // [] = el primer corchete representa validador sincrono puede ser una unica validacion o un arreglo de validaciones
 // [] = el segundo corchete representa validador asincrono puede ser una unica validacion o un arreglo de validaciones
 // al establces el valor por defecto tambien indico el tipo de datos que tendra eseo campo
+
+
+
+// Algunos estados de los formControl y FormGroup
+// Pristine: Indica que un campo de formulario no ha sido modificado por el usuario, sera true si no esta modificado.
+// Touched: Indica que un campo de formulario ha sido interactuado por el usuario.
+// Dirty: Indica que un campo de formulario ha sido modificado por el usuario sera true si fue modificado.
+// Valid: Indica que un campo de formulario cumple con las reglas de validación definidas.

@@ -106,3 +106,10 @@
 
 ---- usaremos las mismas constantes que agregamos en nuestra carpeta de validators solo que accederemos 
 ---- a travez de un servicio
+
+==== VALIDADORES ASYNCRONOS =====
+---- En esta ocasion vamos a trabajar con validadores Asyncronos 
+---- los validadores asyncronos no sonmas que funciones las cuales retornan un observable o una promesa.
+---- y eventual mente ese observable emitira un valor
+
+---- para realizar estas funciones nos creamos el servicio en nuestra carpeta validators de shared
