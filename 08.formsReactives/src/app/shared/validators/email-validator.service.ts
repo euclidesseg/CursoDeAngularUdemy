@@ -11,19 +11,22 @@ export class EmailValidatorAsync implements AsyncValidator {
 
   validate(control: AbstractControl<any, any>): Promise<ValidationErrors | null> | Observable<ValidationErrors | null> {
     const email = control.value;
-    console.log(email)
-    return of({
-      emailTaken: true
-    }).pipe(
 
-      delay(5000)
-    )
-  }
-
-
-  registerOnValidatorChange?(fn: () => void): void { //opcional
-    throw new Error('Method not implemented.');
-  }
+      const httpCallObservable = new Observable<ValidationErrors | null>((subscriber) =>{ // creamos un observable
+        console.log(email)
+        if(email === 'fernando@google.com'){
+          subscriber.next({emailExiste:true});
+          subscriber.complete();
+        }else{
+          subscriber.next(null);
+          subscriber.complete();
+        }
+      }).pipe(
+        delay(3000)
+      );
+      return httpCallObservable;
+    }
+   
 }
 
 // para poder usar esta clase como un validador asyncrono debemos implementar un una interfaz a esta 
@@ -46,3 +49,13 @@ export class EmailValidatorAsync implements AsyncValidator {
 // };
 // Un validatorErrors no es mas que un objeto que tiene una llave que define el nombre del error
 // y un valor que define que es el error
+
+// return this.http.get<any[]>(`http://localhost:3000/user?q=${email}`)
+//       .pipe({
+//         map(resp =>{
+//           return(resp.length === 0)? null: {emailExiste:true}
+//         })
+//       })
+// Basicamente lo que haremos es esto en donde hacemos una peticion a un backend con el email 
+// posterior mente esto reggresara una respuesta y si la respuesta es nula significa que si podemos agregar ese correo
+// de lo contrario no se podra agregar.

@@ -24,6 +24,11 @@ export class RegisterPageComponent {
       username : ['',[Validators.required, this.validatorService.canBeStrider] ],
       password : ['',[Validators.required, Validators.minLength(8)] ], // para password usaremos una expresion regular
       password2 : ['',[Validators.required, Validators.minLength(8)] ],
+    },{ // abro un nuevo objeto para validar las contraseñas
+
+      validators:[ // el formulario myForm va a pasar implicitamente como argumento a las funsiones que yo agregue dentro de mi objeto de validador
+        this.validatorService.isFieldOneEqualsFielTwo('password','password2')
+      ]
     })
 
     isInValidField(campo: string):boolean | null{

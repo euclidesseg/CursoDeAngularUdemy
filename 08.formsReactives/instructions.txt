@@ -113,3 +113,14 @@
 ---- y eventual mente ese observable emitira un valor
 
 ---- para realizar estas funciones nos creamos el servicio en nuestra carpeta validators de shared
+---- este servicio implementara la interface ValidatorErrors 
+
+===== ELABORAR EL VALIDADOR DE CORREO ====
+---- A continuacion nos concentrremos en hacer la validacion para el email validatator
+---- lo que se va a hacer es que despues de que se regrese una peticion http se diapare el validador asyncrono 
+---- es decir cuando tengamos los datos de un backend hasta nuestro template se va a hacer la validacion.
+
+
+==== VALIDAR QUE LAS DOS CONTRASEÑAS SEAN CORRECTAS ====
+---- En esta ocasion vamos a validar que nuestras dos contraseñas sen iguales
+---- y para eso lo vamos a hacer dentro de nuestro servicio de validaciones
