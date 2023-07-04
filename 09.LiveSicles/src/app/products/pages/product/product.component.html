@@ -1,0 +1,13 @@
+<p>product works!</p>
+
+<button (click)="isVisibleProduct = !isVisibleProduct">toogle</button> 
+<button (click)="incrementPrice()">incrementPrice</button> 
+
+<!-- en el bton se esta haciendo un cambio por ende  -->
+<product-price
+    *ngIf="isVisibleProduct"
+    [price]="price"
+/>
+<!-- al precionar toogle y poner  isVisibleProduct en true se mostrara el componente hijo y este componente
+     a su vez esta recibiendo el precio y por ende se activara el onchanges ya que esta asignando a la propiedad precio
+     la nueva propiedad que le llega y generando un cambio en su componente-->

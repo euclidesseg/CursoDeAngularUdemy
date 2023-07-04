@@ -1,0 +1,28 @@
+ ==== SICLOS DE VIDA DE LOS COMPONENTES DE ANGULAS ====
+ ---- Los ciclos de vida de los componentes en Angular se refieren a las diferentes etapas por las que pasa 
+ ---- un componente en el desarrollo de una aplicación Angular, como la creación, 
+ ---- actualización y destrucción del componente.
+
+ ==== CONSTRUCTOR ====
+ ---- Se inicia antes de que se llame cualqier otro SICLOS
+ 
+ ==== ngOnChanges ====
+ ---- se llama antes de cualquier cambio a una propiedad
+
+ ==== ngOnInit ====
+ ---- Se llama justo despues del CONSTRUCTOR
+
+ ==== ngOnDestroy ==== 
+ ---- Se llama justo antes de que un componente o directiva sea destruida
+
+ 
+ ===== IMPLEMENTAR TODOS LOS SICLOS DE VIDA =====
+ ---- Los siclos de vida o Hooks son solo metodos que se llmanan en sierto punto del tiempo de ejecucion de un componente
+ ---- o cuando un valor cambia 
+
+ ---- para implementar los siclos de vida lo haremos desde nuestro productComponent
+
+ ==== NgOnDestroy =====
+ ---- el NgOnDestroy se usa basicamente para hacer limpiezas
+ ---- es decir allgo que emita valores usualmente en un componente que emite valores cuando este es destruido 
+ ---- los valores seguiran emitiendose y es aho cuando entra el ondestroy
