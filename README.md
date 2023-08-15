@@ -1,7 +1,7 @@
 ### CursoDeAngularUdemy
 
 <p align = "center">
-  <img width = "400" heigth = "400" src="https://s42509.pcdn.co/wp-content/uploads/2015/08/AngularJS_google.png">
+  <img width = "400" heigth = "400" src="https://d2ms8rpfqc4h24.cloudfront.net/whats_new_in_angular15_9af012d463.jpg">
 </p>
 
 <div align = "center">
