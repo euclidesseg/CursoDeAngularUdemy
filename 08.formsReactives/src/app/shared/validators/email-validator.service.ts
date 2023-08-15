@@ -47,8 +47,8 @@ export class EmailValidatorAsync implements AsyncValidator {
 // export declare type ValidationErrors = {
 //   [key: string]: any;
 // };
-// Un validatorErrors no es mas que un objeto que tiene una llave que define el nombre del error
-// y un valor que define que es el error
+// { [key: string]: any; };, lo que sugiere que ValidationErrors es un objeto 
+// con claves de tipo string y valores de tipo any.
 
 // return this.http.get<any[]>(`http://localhost:3000/user?q=${email}`)
 //       .pipe({
