@@ -59,3 +59,6 @@ export class EmailValidatorAsync implements AsyncValidator {
 // Basicamente lo que haremos es esto en donde hacemos una peticion a un backend con el email 
 // posterior mente esto reggresara una respuesta y si la respuesta es nula significa que si podemos agregar ese correo
 // de lo contrario no se podra agregar.
+
+// Cuando creas un Observable, estás creando una secuencia de eventos que se pueden observar
+// (escuchar). El subscriber es el objeto que "escucha" estos eventos y reacciona a ellos.
