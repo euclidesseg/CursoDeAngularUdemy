@@ -4,6 +4,8 @@ import { FormControl, ValidationErrors } from "@angular/forms";
 // ============================= expresiones regulares para correos y para nombre ====================
 export const firstNameAndLastnamePattern: string = '([a-zA-Z]+) ([a-zA-Z]+)'; // valida que un campo que pida nombre y apellido tenga mas de dos palabras
 export const emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"; // valida que un campo de correo tenga un dominio luego del arroba
+// El problema con este patrón es que exige entre 2 y 4 letras para el dominio final, lo que excluye 
+// dominios de nivel superior como ".com" (con solo 3 caracteres) de ser aceptados.aceptara com.co y .co
 // ===================================================================================================
 
 
